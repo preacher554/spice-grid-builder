@@ -540,12 +540,10 @@ function Hero({ lang, setLang }: { lang: Lang; setLang: (lang: Lang) => void }) 
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-white text-shadow-lg">
             {t.hero.kicker}
           </p>
-          <h1 className="mt-3 text-4xl font-extrabold leading-[1.02] text-white text-balance text-shadow-hero sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="mt-3 bg-[linear-gradient(90deg,#ffffff_0%,#ffffff_70%,#b9f35d_100%)] bg-clip-text text-4xl font-extrabold leading-[1.02] text-transparent text-balance text-shadow-hero sm:text-5xl md:text-6xl lg:text-7xl">
             {t.hero.titleTop}
             <br />
-            <span className="text-white">
-              {t.hero.titleAccent}
-            </span>
+            <span>{t.hero.titleAccent}</span>
           </h1>
           <div className="mt-6 flex items-center gap-3">
             <span className="h-px w-10 bg-white" />
