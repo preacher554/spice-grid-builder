@@ -58,11 +58,13 @@ export const Route = createFileRoute("/")({
 
 /* ───────────── Reusable bits ───────────── */
 
-function Logo({ className = "" }: { className?: string }) {
+function Logo({ className = "", dark = false }: { className?: string; dark?: boolean }) {
+  const textColor = dark ? "text-navy-deep" : "text-white";
+  const subColor = dark ? "text-navy-soft" : "text-white/70";
   return (
     <div className={`flex items-center gap-3 ${className}`}>
-      <div className="relative grid h-11 w-11 shrink-0 place-items-center rounded-full bg-white/10 ring-1 ring-white/30 backdrop-blur">
-        <Globe2 className="h-6 w-6 text-white" strokeWidth={1.5} />
+      <div className={`relative grid h-11 w-11 shrink-0 place-items-center rounded-full ${dark ? "bg-navy-deep/10 ring-navy-deep/20" : "bg-white/10 ring-white/30"} ring-1 backdrop-blur`}>
+        <Globe2 className={`h-6 w-6 ${textColor}`} strokeWidth={1.5} />
         <Leaf
           className="absolute -bottom-1 -right-1 h-5 w-5 text-[var(--brand-green)] drop-shadow"
           strokeWidth={2.5}
@@ -70,11 +72,11 @@ function Logo({ className = "" }: { className?: string }) {
         />
       </div>
       <div className="leading-tight">
-        <div className="text-[15px] font-extrabold tracking-wide text-white">PT ARTHA</div>
+        <div className={`text-[15px] font-extrabold tracking-wide ${textColor}`}>PT ARTHA</div>
         <div className="text-[15px] font-extrabold tracking-wide text-[var(--brand-green)]">
           PRIMA GLOBAL
         </div>
-        <div className="text-[10px] uppercase tracking-[0.18em] text-white/70">
+        <div className={`text-[10px] uppercase tracking-[0.18em] ${subColor}`}>
           Trusted Export Partner
         </div>
       </div>
@@ -128,17 +130,17 @@ const NAV = [
 function Header() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="absolute inset-x-0 top-0 z-30 text-shadow-sm">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8">
+    <header className="absolute inset-x-0 top-0 z-30 bg-gradient-to-b from-white via-white/95 to-white/85 shadow-sm backdrop-blur">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
         <a href="#top">
-          <Logo />
+          <Logo dark />
         </a>
         <nav className="hidden items-center gap-7 lg:flex">
           {NAV.map((n) => (
             <a
               key={n.href}
               href={n.href}
-              className="text-sm font-medium text-white/85 transition hover:text-[var(--brand-green)]"
+              className="text-sm font-semibold text-navy-deep transition hover:text-[var(--brand-green-dark)]"
             >
               {n.label}
             </a>
@@ -147,7 +149,7 @@ function Header() {
         <div className="hidden lg:block">
           <a
             href="#rfq"
-            className="inline-flex items-center gap-2 rounded-full bg-[var(--brand-green)] px-5 py-2.5 text-sm font-semibold text-navy-deep transition hover:brightness-110"
+            className="inline-flex items-center gap-2 rounded-full bg-navy-deep px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-navy-soft"
           >
             Request Quotation <ArrowRight className="h-4 w-4" />
           </a>
@@ -155,19 +157,19 @@ function Header() {
         <button
           onClick={() => setOpen(true)}
           aria-label="Open menu"
-          className="grid h-10 w-10 place-items-center rounded-full bg-white/10 text-white ring-1 ring-white/30 lg:hidden"
+          className="grid h-10 w-10 place-items-center rounded-full bg-navy-deep/10 text-navy-deep ring-1 ring-navy-deep/20 lg:hidden"
         >
           <Menu className="h-5 w-5" />
         </button>
       </div>
       {open && (
-        <div className="fixed inset-0 z-50 bg-navy-deep/95 backdrop-blur-md lg:hidden">
-          <div className="flex items-center justify-between px-5 py-5">
-            <Logo />
+        <div className="fixed inset-0 z-50 bg-white/98 backdrop-blur-md lg:hidden">
+          <div className="flex items-center justify-between border-b border-navy-deep/10 px-5 py-4">
+            <Logo dark />
             <button
               onClick={() => setOpen(false)}
               aria-label="Close menu"
-              className="grid h-10 w-10 place-items-center rounded-full bg-white/10 text-white ring-1 ring-white/20"
+              className="grid h-10 w-10 place-items-center rounded-full bg-navy-deep/10 text-navy-deep ring-1 ring-navy-deep/20"
             >
               <X className="h-5 w-5" />
             </button>
@@ -178,7 +180,7 @@ function Header() {
                 key={n.href}
                 href={n.href}
                 onClick={() => setOpen(false)}
-                className="rounded-xl px-4 py-4 text-lg font-semibold text-white hover:bg-white/5"
+                className="rounded-xl px-4 py-4 text-lg font-semibold text-navy-deep hover:bg-navy-deep/5"
               >
                 {n.label}
               </a>
@@ -186,7 +188,7 @@ function Header() {
             <a
               href="#rfq"
               onClick={() => setOpen(false)}
-              className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-[var(--brand-green)] px-5 py-3 text-sm font-semibold text-navy-deep"
+              className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-navy-deep px-5 py-3 text-sm font-semibold text-white"
             >
               Request Quotation <ArrowRight className="h-4 w-4" />
             </a>
