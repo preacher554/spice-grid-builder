@@ -233,8 +233,6 @@ function Hero() {
             }}
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 via-navy-deep/70 to-navy-deep/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/30 to-transparent" />
       </div>
 
       <Header />
