@@ -239,10 +239,10 @@ function Hero() {
 
       <div className="mx-auto grid min-h-[min(820px,100svh)] max-w-7xl items-end px-5 pb-16 pt-36 sm:px-8 lg:pt-44">
         <div className="max-w-3xl">
-          <p className="text-sm font-medium uppercase tracking-[0.25em] text-white/80">
+          <p className="text-sm font-medium uppercase tracking-[0.25em] text-white/80 text-shadow-sm">
             Indonesia&apos;s Trusted Exporter of
           </p>
-          <h1 className="mt-3 text-4xl font-extrabold leading-[1.02] text-white text-balance sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="mt-3 text-4xl font-extrabold leading-[1.02] text-white text-balance text-shadow sm:text-5xl md:text-6xl lg:text-7xl">
             Coconut Products &amp;
             <br />
             <span className="bg-gradient-to-r from-white to-[var(--brand-green)] bg-clip-text text-transparent">
