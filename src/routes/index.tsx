@@ -293,15 +293,15 @@ function Hero() {
       </div>
 
       {/* Stats strip */}
-      <div className="relative z-10 mx-auto -mt-2 max-w-7xl px-5 pb-8 sm:px-8">
-        <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/15 bg-white/5 backdrop-blur-md md:grid-cols-4">
+      <div className="relative z-10 mx-auto -mt-2 max-w-7xl px-5 pb-8 sm:px-8 text-shadow-sm">
+        <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/15 bg-white/10 backdrop-blur-md md:grid-cols-4">
           {[
             { icon: Globe2, top: "Exporting to", bottom: "50+ Countries" },
             { icon: Boxes, top: "1000+", bottom: "Containers Shipped" },
             { icon: Award, top: "10+ Years", bottom: "Of Experience" },
             { icon: Headphones, top: "24/7", bottom: "Customer Support" },
           ].map((s) => (
-            <div key={s.bottom} className="flex items-center gap-3 bg-navy-deep/40 px-5 py-4">
+            <div key={s.bottom} className="flex items-center gap-3 bg-white/5 px-5 py-4">
               <s.icon className="h-6 w-6 shrink-0 text-[var(--brand-green)]" strokeWidth={1.8} />
               <div className="min-w-0 leading-tight">
                 <div className="text-[11px] font-medium uppercase tracking-wider text-white/70">
