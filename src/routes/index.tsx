@@ -128,7 +128,7 @@ const NAV = [
 function Header() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="absolute inset-x-0 top-0 z-30">
+    <header className="absolute inset-x-0 top-0 z-30 text-shadow-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8">
         <a href="#top">
           <Logo />
@@ -233,18 +233,16 @@ function Hero() {
             }}
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 via-navy-deep/70 to-navy-deep/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/30 to-transparent" />
       </div>
 
       <Header />
 
       <div className="mx-auto grid min-h-[min(820px,100svh)] max-w-7xl items-end px-5 pb-16 pt-36 sm:px-8 lg:pt-44">
         <div className="max-w-3xl">
-          <p className="text-sm font-medium uppercase tracking-[0.25em] text-white/80">
+          <p className="text-sm font-medium uppercase tracking-[0.25em] text-white/80 text-shadow-sm">
             Indonesia&apos;s Trusted Exporter of
           </p>
-          <h1 className="mt-3 text-4xl font-extrabold leading-[1.02] text-white text-balance sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="mt-3 text-4xl font-extrabold leading-[1.02] text-white text-balance text-shadow sm:text-5xl md:text-6xl lg:text-7xl">
             Coconut Products &amp;
             <br />
             <span className="bg-gradient-to-r from-white to-[var(--brand-green)] bg-clip-text text-transparent">
@@ -253,7 +251,7 @@ function Hero() {
           </h1>
           <div className="mt-6 flex items-center gap-3">
             <span className="h-px w-10 bg-[var(--brand-green)]" />
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/80 sm:text-sm">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/80 text-shadow-sm sm:text-sm">
               Supplying consistent quality to buyers worldwide
             </p>
           </div>
@@ -282,7 +280,7 @@ function Hero() {
                 <div className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-white/10 ring-1 ring-white/20 backdrop-blur">
                   <b.icon className="h-5 w-5 text-[var(--brand-green)]" strokeWidth={2} />
                 </div>
-                <div className="min-w-0">
+                <div className="min-w-0 text-shadow-sm">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-white">
                     {b.title}
                   </div>
@@ -295,15 +293,15 @@ function Hero() {
       </div>
 
       {/* Stats strip */}
-      <div className="relative z-10 mx-auto -mt-2 max-w-7xl px-5 pb-8 sm:px-8">
-        <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/15 bg-white/5 backdrop-blur-md md:grid-cols-4">
+      <div className="relative z-10 mx-auto -mt-2 max-w-7xl px-5 pb-8 sm:px-8 text-shadow-sm">
+        <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/15 bg-white/10 backdrop-blur-md md:grid-cols-4">
           {[
             { icon: Globe2, top: "Exporting to", bottom: "50+ Countries" },
             { icon: Boxes, top: "1000+", bottom: "Containers Shipped" },
             { icon: Award, top: "10+ Years", bottom: "Of Experience" },
             { icon: Headphones, top: "24/7", bottom: "Customer Support" },
           ].map((s) => (
-            <div key={s.bottom} className="flex items-center gap-3 bg-navy-deep/40 px-5 py-4">
+            <div key={s.bottom} className="flex items-center gap-3 bg-white/5 px-5 py-4">
               <s.icon className="h-6 w-6 shrink-0 text-[var(--brand-green)]" strokeWidth={1.8} />
               <div className="min-w-0 leading-tight">
                 <div className="text-[11px] font-medium uppercase tracking-wider text-white/70">
