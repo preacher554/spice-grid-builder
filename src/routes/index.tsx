@@ -251,7 +251,7 @@ function Hero() {
           </h1>
           <div className="mt-6 flex items-center gap-3">
             <span className="h-px w-10 bg-[var(--brand-green)]" />
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/80 sm:text-sm">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/80 text-shadow-sm sm:text-sm">
               Supplying consistent quality to buyers worldwide
             </p>
           </div>
