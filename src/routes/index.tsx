@@ -58,11 +58,13 @@ export const Route = createFileRoute("/")({
 
 /* ───────────── Reusable bits ───────────── */
 
-function Logo({ className = "" }: { className?: string }) {
+function Logo({ className = "", dark = false }: { className?: string; dark?: boolean }) {
+  const textColor = dark ? "text-navy-deep" : "text-white";
+  const subColor = dark ? "text-navy-soft" : "text-white/70";
   return (
     <div className={`flex items-center gap-3 ${className}`}>
-      <div className="relative grid h-11 w-11 shrink-0 place-items-center rounded-full bg-white/10 ring-1 ring-white/30 backdrop-blur">
-        <Globe2 className="h-6 w-6 text-white" strokeWidth={1.5} />
+      <div className={`relative grid h-11 w-11 shrink-0 place-items-center rounded-full ${dark ? "bg-navy-deep/10 ring-navy-deep/20" : "bg-white/10 ring-white/30"} ring-1 backdrop-blur`}>
+        <Globe2 className={`h-6 w-6 ${textColor}`} strokeWidth={1.5} />
         <Leaf
           className="absolute -bottom-1 -right-1 h-5 w-5 text-[var(--brand-green)] drop-shadow"
           strokeWidth={2.5}
@@ -70,11 +72,11 @@ function Logo({ className = "" }: { className?: string }) {
         />
       </div>
       <div className="leading-tight">
-        <div className="text-[15px] font-extrabold tracking-wide text-white">PT ARTHA</div>
+        <div className={`text-[15px] font-extrabold tracking-wide ${textColor}`}>PT ARTHA</div>
         <div className="text-[15px] font-extrabold tracking-wide text-[var(--brand-green)]">
           PRIMA GLOBAL
         </div>
-        <div className="text-[10px] uppercase tracking-[0.18em] text-white/70">
+        <div className={`text-[10px] uppercase tracking-[0.18em] ${subColor}`}>
           Trusted Export Partner
         </div>
       </div>
