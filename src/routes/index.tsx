@@ -128,7 +128,7 @@ const NAV = [
 function Header() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="absolute inset-x-0 top-0 z-30">
+    <header className="absolute inset-x-0 top-0 z-30 text-shadow-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8">
         <a href="#top">
           <Logo />
