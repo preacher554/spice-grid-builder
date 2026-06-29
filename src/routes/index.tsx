@@ -280,7 +280,7 @@ function Hero() {
                 <div className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-white/10 ring-1 ring-white/20 backdrop-blur">
                   <b.icon className="h-5 w-5 text-[var(--brand-green)]" strokeWidth={2} />
                 </div>
-                <div className="min-w-0">
+                <div className="min-w-0 text-shadow-sm">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-white">
                     {b.title}
                   </div>
