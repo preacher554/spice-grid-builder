@@ -207,20 +207,34 @@ const HERO_BADGES = [
 ];
 
 function Hero() {
+  const slides = [
+    { src: imgCocoPeat, alt: "Coco peat" },
+    { src: imgCocoFiber, alt: "Coco fiber" },
+    { src: imgCocoBristle, alt: "Coco bristle" },
+    { src: imgWoodPellet, alt: "Wood pellet" },
+    { src: imgCinnamon, alt: "Cinnamon" },
+    { src: imgCharcoal, alt: "Charcoal briquette" },
+  ];
   return (
     <section id="top" className="relative isolate overflow-hidden">
-      {/* Background media: drone-style port image as fallback for video */}
-      <div className="absolute inset-0 -z-10">
-        <img
-          src={heroPort}
-          alt="Indonesian export port at golden hour"
-          width={1920}
-          height={1080}
-          className="h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 hero-gradient opacity-80" />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 via-navy-deep/70 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-transparent to-transparent" />
+      {/* Background media: fading product slideshow */}
+      <div className="absolute inset-0 -z-10 bg-navy-deep">
+        {slides.map((s, i) => (
+          <img
+            key={s.alt}
+            src={s.src}
+            alt={s.alt}
+            width={1920}
+            height={1080}
+            className="absolute inset-0 h-full w-full object-cover animate-hero-fade"
+            style={{
+              animationDelay: `${i * 5}s`,
+              animationDuration: `${slides.length * 5}s`,
+            }}
+          />
+        ))}
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 via-navy-deep/70 to-navy-deep/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/30 to-transparent" />
       </div>
 
       <Header />
