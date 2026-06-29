@@ -70,10 +70,10 @@
 
 :root {
   --radius: 0.625rem;
-  --navy-950: oklch(0.18 0.06 255);
-  --navy-900: oklch(0.24 0.08 255);
-  --navy-800: oklch(0.32 0.11 255);
-  --navy-700: oklch(0.42 0.13 255);
+  --navy-950: oklch(0.370 0.072 249.7);
+  --navy-900: oklch(0.418 0.079 250.3);
+  --navy-800: oklch(0.480 0.086 249.0);
+  --navy-700: oklch(0.545 0.083 248.0);
   --brand-green: oklch(0.78 0.20 145);
   --brand-green-dark: oklch(0.62 0.18 145);
   --background: oklch(1 0 0);
@@ -108,7 +108,7 @@
   --sidebar-accent-foreground: var(--navy-900);
   --sidebar-border: oklch(0.92 0.015 255);
   --sidebar-ring: var(--brand-green);
-  --gradient-hero: linear-gradient(135deg, oklch(0.22 0.08 255) 0%, oklch(0.32 0.12 258) 60%, oklch(0.42 0.14 260) 100%);
+  --gradient-hero: linear-gradient(135deg, oklch(0.370 0.072 249.7) 0%, oklch(0.418 0.079 250.3) 58%, oklch(0.480 0.086 249.0) 100%);
   --shadow-elevated: 0 24px 60px -20px color-mix(in oklab, var(--navy-950) 45%, transparent);
   --shadow-soft: 0 10px 30px -16px color-mix(in oklab, var(--navy-900) 35%, transparent);
   --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
@@ -172,6 +172,20 @@
 @utility text-shadow-sm { text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); }
 @utility text-shadow { text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45); }
 @utility text-shadow-lg { text-shadow: 0 4px 16px rgba(0, 0, 0, 0.55); }
+@utility text-shadow-hero { text-shadow: 0 4px 18px rgba(0, 0, 0, 0.72), 0 1px 2px rgba(0, 0, 0, 0.8); }
+@utility lift-panel {
+  transform: translateY(0) scale(1);
+  transition:
+    transform 240ms ease,
+    box-shadow 240ms ease,
+    border-color 240ms ease,
+    background-color 240ms ease,
+    filter 240ms ease;
+}
+@utility lift-panel-hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 26px 60px -30px color-mix(in oklab, var(--navy-950) 55%, transparent);
+}
 
 @keyframes float-slow {
   0%, 100% { transform: translateY(0); }

@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 .output
+.codex-temp/
 .vinxi
 .tanstack/**
 .nitro
