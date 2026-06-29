@@ -528,11 +528,11 @@ function Hero({ lang, setLang }: { lang: Lang; setLang: (lang: Lang) => void }) 
 
       <Header lang={lang} setLang={setLang} />
 
-      <div className="absolute left-[max(1.25rem,calc((100vw-80rem)/2+2rem))] top-[7rem] z-20 hidden lg:block">
-        <div className="font-display text-4xl font-extrabold uppercase leading-none tracking-[-0.045em] text-white text-shadow-hero xl:text-5xl">
+      <div className="absolute left-[max(1.25rem,calc((100vw-80rem)/2+2rem))] top-[12.6rem] z-20 hidden lg:block">
+        <div className="font-display bg-gradient-to-r from-[#b9f35d] via-[var(--brand-green)] to-[#eefbd2] bg-clip-text text-5xl font-extrabold uppercase leading-none tracking-[-0.055em] text-transparent drop-shadow-[0_5px_16px_rgba(0,0,0,0.62)] xl:text-6xl">
           ARTHA GLOBAL PRIMA
         </div>
-        <div className="mt-4 h-px w-72 bg-gradient-to-r from-[#d2a53a] via-white/65 to-transparent" />
+        <div className="mt-3 h-px w-80 bg-gradient-to-r from-[#d2a53a] via-[#b9f35d]/75 to-transparent" />
       </div>
 
       <div className="mx-auto grid min-h-[min(820px,100svh)] max-w-7xl items-end px-5 pb-16 pt-36 sm:px-8 lg:pt-44">
