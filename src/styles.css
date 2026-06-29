@@ -166,7 +166,6 @@
 }
 
 @utility hero-gradient { background: var(--gradient-hero); }
-@utility navy-overlay { background: var(--gradient-navy-fade); }
 @utility shadow-elevated { box-shadow: var(--shadow-elevated); }
 @utility shadow-soft { box-shadow: var(--shadow-soft); }
 @utility text-balance { text-wrap: balance; }
