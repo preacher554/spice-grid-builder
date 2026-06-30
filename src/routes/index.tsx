@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { createPortal } from "react-dom";
 import {
   Anchor,
   ArrowRight,
@@ -344,10 +345,98 @@ function Header({
   setLang: (lang: Lang) => void;
 }) {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const t = COPY[lang];
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mounted, open]);
+
+  const mobileMenu =
+    mounted && open
+      ? createPortal(
+          <div
+            className="fixed inset-0 z-[999] bg-navy-deep/45 p-3 backdrop-blur-sm lg:hidden"
+            onClick={() => setOpen(false)}
+          >
+            <div
+              className="mx-auto flex h-full max-w-md flex-col overflow-hidden rounded-[1.75rem] border border-white/55 bg-[linear-gradient(145deg,rgba(255,255,255,0.98),rgba(235,244,237,0.96))] shadow-[0_28px_80px_-28px_rgba(8,23,46,0.75)]"
+              onClick={(event) => event.stopPropagation()}
+            >
+              <div className="flex items-center justify-between border-b border-navy-deep/10 px-4 py-3">
+                <Logo dark className="h-[50px] w-[160px]" />
+                <button
+                  type="button"
+                  onClick={() => setOpen(false)}
+                  aria-label="Close menu"
+                  className="grid h-11 w-11 place-items-center rounded-full bg-navy-deep text-white shadow-soft"
+                >
+                  <X className="h-5 w-5" />
+                </button>
+              </div>
+              <nav className="flex-1 overflow-y-auto px-4 py-4">
+                <div className="grid gap-2">
+                  {NAV_ITEMS.map((n) => (
+                    <a
+                      key={n.href}
+                      href={n.href}
+                      onClick={() => setOpen(false)}
+                      className="group flex items-center justify-between rounded-2xl border border-navy-deep/8 bg-white/72 px-4 py-3.5 text-[15px] font-bold text-navy-deep shadow-[0_12px_30px_-26px_rgba(8,23,46,0.85)] transition active:scale-[0.99]"
+                    >
+                      {t.nav[n.key]}
+                      <ArrowRight className="h-4 w-4 opacity-45 transition group-hover:translate-x-0.5 group-hover:opacity-100" />
+                    </a>
+                  ))}
+                </div>
+                <div className="mt-5 rounded-3xl border border-navy-deep/10 bg-white/70 p-3">
+                  <div className="mb-3 flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.18em] text-navy-deep/60">
+                    <Languages className="h-4 w-4" />
+                    Language
+                  </div>
+                  <div className="grid grid-cols-4 gap-2">
+                    {LANGUAGES.map((item) => (
+                      <button
+                        type="button"
+                        key={item.code}
+                        onClick={() => setLang(item.code)}
+                        className={`rounded-full border px-2 py-2 text-sm font-black transition ${
+                          lang === item.code
+                            ? "border-navy-deep bg-navy-deep text-white shadow-soft"
+                            : "border-navy-deep/10 bg-white text-navy-deep"
+                        }`}
+                      >
+                        {item.short}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </nav>
+              <div className="border-t border-navy-deep/10 p-4">
+                <a
+                  href="#rfq"
+                  onClick={() => setOpen(false)}
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-navy-deep px-5 py-4 text-sm font-black text-white shadow-elevated"
+                >
+                  {t.cta} <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
+          </div>,
+          document.body,
+        )
+      : null;
+
   return (
     <header className="absolute inset-x-0 top-0 z-30 border-b border-white/70 bg-[linear-gradient(135deg,rgba(255,255,255,0.97)_0%,rgba(246,250,246,0.94)_48%,rgba(229,240,231,0.9)_100%)] shadow-[0_12px_34px_-24px_rgba(8,23,46,0.5)] backdrop-blur">
-      <div className="mx-auto flex max-w-[1440px] items-center justify-between px-5 py-2 sm:px-8">
+      <div className="mx-auto flex max-w-[1440px] items-center justify-between px-4 py-2 sm:px-8">
         <a href="#top" className="shrink-0 transition-transform duration-300 hover:-translate-y-0.5 lg:hidden">
           <Logo dark />
         </a>
@@ -391,61 +480,16 @@ function Header({
           </a>
         </div>
         <button
+          type="button"
           onClick={() => setOpen(true)}
+          aria-expanded={open}
           aria-label="Open menu"
-          className="grid h-10 w-10 place-items-center rounded-full bg-navy-deep/10 text-navy-deep ring-1 ring-navy-deep/20 lg:hidden"
+          className="grid h-12 w-12 place-items-center rounded-full bg-navy-deep/10 text-navy-deep shadow-[0_12px_28px_-18px_rgba(8,23,46,0.85)] ring-1 ring-navy-deep/14 transition active:scale-95 lg:hidden"
         >
-          <Menu className="h-5 w-5" />
+          <Menu className="h-6 w-6" />
         </button>
       </div>
-      {open && (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-white/98 pb-8 backdrop-blur-md lg:hidden">
-          <div className="flex items-center justify-between border-b border-navy-deep/10 px-5 py-4">
-            <Logo dark />
-            <button
-              onClick={() => setOpen(false)}
-              aria-label="Close menu"
-              className="grid h-10 w-10 place-items-center rounded-full bg-navy-deep/10 text-navy-deep ring-1 ring-navy-deep/20"
-            >
-              <X className="h-5 w-5" />
-            </button>
-          </div>
-          <nav className="flex flex-col gap-1 px-5 pt-4">
-            {NAV_ITEMS.map((n) => (
-              <a
-                key={n.href}
-                href={n.href}
-                onClick={() => setOpen(false)}
-                className="rounded-2xl px-4 py-3 text-base font-semibold text-navy-deep transition hover:bg-navy-deep hover:text-white"
-              >
-                {t.nav[n.key]}
-              </a>
-            ))}
-            <div className="mt-4 grid grid-cols-4 gap-2">
-              {LANGUAGES.map((item) => (
-                <button
-                  key={item.code}
-                  onClick={() => setLang(item.code)}
-                  className={`rounded-full border px-3 py-2 text-sm font-bold ${
-                    lang === item.code
-                      ? "border-navy-deep bg-navy-deep text-white"
-                      : "border-navy-deep/10 text-navy-deep"
-                  }`}
-                >
-                  {item.short}
-                </button>
-              ))}
-            </div>
-            <a
-              href="#rfq"
-              onClick={() => setOpen(false)}
-              className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-navy-deep px-5 py-3 text-sm font-semibold text-white"
-            >
-              {t.cta} <ArrowRight className="h-4 w-4" />
-            </a>
-          </nav>
-        </div>
-      )}
+      {mobileMenu}
     </header>
   );
 }
@@ -578,20 +622,20 @@ function Hero({ lang, setLang }: { lang: Lang; setLang: (lang: Lang) => void }) 
           </div>
 
           {/* Feature badges */}
-          <div className="mt-8 grid w-full grid-cols-1 gap-3 sm:mt-10 sm:w-[min(860px,calc(100vw-4rem))] sm:grid-cols-2 sm:gap-4 md:grid-cols-4">
+          <div className="mt-8 grid w-full grid-cols-2 gap-2.5 sm:mt-10 sm:w-[min(860px,calc(100vw-4rem))] sm:gap-4 md:grid-cols-4">
             {HERO_BADGES.map((b) => (
               <div
                 key={b.title}
-                className="lift-panel flex min-h-[78px] items-center gap-4 rounded-2xl border border-white/15 bg-white/10 px-4 py-3 shadow-[0_18px_40px_-30px_rgba(0,0,0,0.85)] ring-1 ring-white/5 backdrop-blur-md hover:lift-panel-hover sm:min-h-[92px] sm:py-4"
+                className="lift-panel flex min-h-[96px] flex-col items-start gap-2 rounded-2xl border border-white/15 bg-white/10 px-3 py-3 shadow-[0_18px_40px_-30px_rgba(0,0,0,0.85)] ring-1 ring-white/5 backdrop-blur-md hover:lift-panel-hover sm:min-h-[92px] sm:flex-row sm:items-center sm:gap-4 sm:px-4 sm:py-4"
               >
-                <div className="grid h-13 w-13 shrink-0 place-items-center rounded-2xl bg-[var(--brand-green)]/12 text-[var(--brand-green)] ring-1 ring-[var(--brand-green)]/35">
+                <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-[var(--brand-green)]/12 text-[var(--brand-green)] ring-1 ring-[var(--brand-green)]/35 sm:h-13 sm:w-13 sm:rounded-2xl">
                   <HeroBadgeIcon type={b.icon} />
                 </div>
                 <div className="min-w-0 text-shadow-sm">
-                  <div className="text-[12px] font-extrabold uppercase tracking-[0.08em] text-white">
+                  <div className="text-[10px] font-extrabold uppercase tracking-[0.08em] text-white sm:text-[12px]">
                     {b.title}
                   </div>
-                  <div className="mt-1 text-[13px] leading-snug text-white/76">{b.desc}</div>
+                  <div className="mt-1 text-[11px] leading-snug text-white/76 sm:text-[13px]">{b.desc}</div>
                 </div>
               </div>
             ))}
