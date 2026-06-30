@@ -472,12 +472,6 @@ function Header({
               ))}
             </select>
           </label>
-          <a
-            href="#rfq"
-            className="inline-flex items-center gap-2 rounded-full bg-navy-deep px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-navy-soft"
-          >
-            {t.cta} <ArrowRight className="h-4 w-4" />
-          </a>
         </div>
         <button
           type="button"
