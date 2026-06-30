@@ -718,6 +718,63 @@ const MISSIONS = [
   },
 ];
 
+const MISSION_ICONS = ["quality", "partnership", "control", "export", "sustainability", "success"] as const;
+type MissionIconType = (typeof MISSION_ICONS)[number];
+
+function MissionIcon({ type }: { type: MissionIconType }) {
+  const common = "h-6 w-6";
+  if (type === "quality") {
+    return (
+      <svg viewBox="0 0 32 32" className={common} fill="none" aria-hidden="true">
+        <path d="M16 4.2 24.2 7.5v6.4c0 5.2-3.3 9.9-8.2 12.8-4.9-2.9-8.2-7.6-8.2-12.8V7.5L16 4.2Z" stroke="currentColor" strokeWidth="2.1" strokeLinejoin="round" />
+        <path d="m11.7 15.9 3 3 6-6.5" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    );
+  }
+  if (type === "partnership") {
+    return (
+      <svg viewBox="0 0 32 32" className={common} fill="none" aria-hidden="true">
+        <path d="M11.7 17.3 8.9 20a3 3 0 0 1-4.3 0 3.1 3.1 0 0 1 0-4.4l4.1-4.1a5.2 5.2 0 0 1 6.2-.8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="m20.3 14.7 2.8-2.7a3 3 0 0 1 4.3 0 3.1 3.1 0 0 1 0 4.4l-4.1 4.1a5.2 5.2 0 0 1-6.2.8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="m12.2 20 7.6-8" stroke="currentColor" strokeWidth="2.3" strokeLinecap="round" />
+      </svg>
+    );
+  }
+  if (type === "control") {
+    return (
+      <svg viewBox="0 0 32 32" className={common} fill="none" aria-hidden="true">
+        <path d="M8 8.5h16M8 16h16M8 23.5h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" opacity=".45" />
+        <path d="M11.5 8.5a2.8 2.8 0 1 0 5.6 0 2.8 2.8 0 0 0-5.6 0ZM17.6 16a2.8 2.8 0 1 0 5.6 0 2.8 2.8 0 0 0-5.6 0ZM8.8 23.5a2.8 2.8 0 1 0 5.6 0 2.8 2.8 0 0 0-5.6 0Z" fill="currentColor" />
+      </svg>
+    );
+  }
+  if (type === "export") {
+    return (
+      <svg viewBox="0 0 32 32" className={common} fill="none" aria-hidden="true">
+        <path d="M7 23.8V8.2A2.2 2.2 0 0 1 9.2 6h9.6L25 12.2v11.6a2.2 2.2 0 0 1-2.2 2.2H9.2A2.2 2.2 0 0 1 7 23.8Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+        <path d="M18.5 6v6.5H25M11.5 17h9M11.5 21h6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M23.8 21.5h3.4l-1.8-2.1M27.2 21.5l-1.8 2.1" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    );
+  }
+  if (type === "sustainability") {
+    return (
+      <svg viewBox="0 0 32 32" className={common} fill="none" aria-hidden="true">
+        <path d="M8.2 20.5C8 13.6 13.4 8.1 24.5 7.2 24 18.2 18.2 24.3 11.6 23.8" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M21.8 10.3C17 13 12.8 17 9.3 24.8M7.5 17.8c-2.2 1.8-3.1 4.1-2.7 7.1 2.7.3 5-.5 6.8-2.4" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    );
+  }
+  return (
+    <svg viewBox="0 0 32 32" className={common} fill="none" aria-hidden="true">
+      <path d="M8.5 17v-1a7.5 7.5 0 0 1 15 0v1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path d="M8.5 17H7a2.5 2.5 0 0 0-2.5 2.5V22A2.5 2.5 0 0 0 7 24.5h1.5V17ZM23.5 17H25a2.5 2.5 0 0 1 2.5 2.5V22a2.5 2.5 0 0 1-2.5 2.5h-1.5V17Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+      <path d="M23.5 24.5c-.8 2.3-2.8 3.5-6 3.5H16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path d="M13 13.7c1.6-1.4 4.4-1.4 6 0" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" opacity=".7" />
+    </svg>
+  );
+}
+
 const CORE_VALUES = ["Integrity", "Quality", "Commitment", "Innovation", "Sustainability", "Customer Focus"];
 
 const ABOUT_STAT_MEDIA = [
@@ -794,18 +851,20 @@ function AboutSection({ lang }: { lang: Lang }) {
           </div>
         </div>
 
-        <div className="lift-panel hover:lift-panel-hover relative mt-12 overflow-hidden rounded-[1.5rem] bg-navy-deep text-white shadow-elevated sm:mt-16 sm:rounded-[2.25rem]">
+        <div className="relative left-1/2 mt-14 w-screen -translate-x-1/2 overflow-hidden bg-navy-deep py-16 text-white shadow-[0_36px_90px_-46px_rgba(8,23,46,0.78)] sm:mt-20 sm:py-24">
           <img
             src={visionMissionBg}
             alt="Indonesian natural products prepared for global export"
             className="absolute inset-0 h-full w-full object-cover"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(31,66,100,0.96)_0%,rgba(31,66,100,0.88)_34%,rgba(31,66,100,0.58)_58%,rgba(31,66,100,0.22)_100%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_16%,rgba(185,243,93,0.18),transparent_28%),linear-gradient(180deg,rgba(0,0,0,0.08),rgba(0,0,0,0.45))]" />
-          <div className="relative grid gap-5 p-4 sm:gap-8 sm:p-9 lg:grid-cols-[0.82fr_1.18fr] lg:p-11">
-            <div className="flex min-h-[360px] flex-col justify-between rounded-[1.35rem] border border-white/12 bg-white/8 p-5 backdrop-blur-[2px] sm:min-h-[560px] sm:rounded-[1.75rem] sm:p-8">
-              <div>
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(31,66,100,0.98)_0%,rgba(31,66,100,0.90)_34%,rgba(31,66,100,0.60)_62%,rgba(31,66,100,0.16)_100%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_16%_18%,rgba(185,243,93,0.18),transparent_28%),linear-gradient(180deg,rgba(0,0,0,0.10),rgba(0,0,0,0.48))]" />
+          <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white/18 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/34 to-transparent" />
+          <div className="relative mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
+            <div className="flex flex-col justify-center">
+              <div className="max-w-xl">
                 <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--brand-green)] text-navy-deep shadow-[0_18px_40px_-22px_rgba(74,222,128,0.75)]">
                   <Award className="h-7 w-7" />
                 </div>
@@ -819,18 +878,18 @@ function AboutSection({ lang }: { lang: Lang }) {
                   {t.vision.desc}
                 </p>
               </div>
-              <div className="mt-8 grid grid-cols-1 gap-3 text-xs font-bold uppercase tracking-[0.13em] text-white/80 sm:mt-10 sm:grid-cols-2">
-                <div className="rounded-2xl border border-white/12 bg-white/10 p-4 backdrop-blur">
+              <div className="mt-8 grid max-w-xl grid-cols-1 gap-3 text-xs font-bold uppercase tracking-[0.13em] text-white/80 sm:mt-10 sm:grid-cols-2">
+                <div className="rounded-2xl border border-white/12 bg-white/10 p-4 shadow-[0_16px_40px_-30px_rgba(0,0,0,0.85)] backdrop-blur">
                   <span className="block text-[var(--brand-green)]">Global</span>
                   Trusted Export
                 </div>
-                <div className="rounded-2xl border border-white/12 bg-white/10 p-4 backdrop-blur">
+                <div className="rounded-2xl border border-white/12 bg-white/10 p-4 shadow-[0_16px_40px_-30px_rgba(0,0,0,0.85)] backdrop-blur">
                   <span className="block text-[var(--brand-green)]">Sustainable</span>
                   Local Sourcing
                 </div>
               </div>
             </div>
-            <div className="rounded-[1.35rem] border border-white/12 bg-white/10 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] backdrop-blur-md sm:rounded-[1.75rem] sm:p-7">
+            <div>
               <div className="flex items-center justify-between gap-4">
                 <div className="text-[11px] font-bold uppercase tracking-[0.24em] text-[var(--brand-green)]">
                   {t.vision.mission}
@@ -841,11 +900,11 @@ function AboutSection({ lang }: { lang: Lang }) {
                 {MISSIONS.map((mission, index) => (
                   <div
                     key={mission.title}
-                    className="lift-panel hover:lift-panel-hover group rounded-2xl border border-white/12 bg-white/9 p-4 shadow-[0_18px_45px_-35px_rgba(0,0,0,0.8)] backdrop-blur transition hover:border-[var(--brand-green)]/55 hover:bg-white/14 sm:rounded-3xl sm:p-5"
+                    className="lift-panel hover:lift-panel-hover group rounded-2xl border border-white/14 bg-white/10 p-4 shadow-[0_18px_45px_-35px_rgba(0,0,0,0.8)] backdrop-blur-md transition hover:border-[var(--brand-green)]/55 hover:bg-white/15 sm:rounded-3xl sm:p-5"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[var(--brand-green)] text-xs font-black text-navy-deep">
-                        {String(index + 1).padStart(2, "0")}
+                      <div className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-[var(--brand-green)] text-navy-deep shadow-[0_14px_34px_-20px_rgba(74,222,128,0.9)]">
+                        <MissionIcon type={MISSION_ICONS[index] ?? "quality"} />
                       </div>
                       <h4 className="text-sm font-extrabold leading-tight text-white">{mission.title}</h4>
                     </div>
