@@ -74,8 +74,8 @@ function Logo({ className = "", dark = false }: { className?: string; dark?: boo
     <div
       className={`flex items-center ${
         dark
-          ? "h-[58px] w-[178px] sm:h-[64px] sm:w-[198px]"
-          : "h-16 w-[206px] rounded-2xl bg-white/95 px-3 py-2 shadow-soft ring-1 ring-white/20"
+          ? "h-[46px] w-[146px] sm:h-[58px] sm:w-[178px] lg:h-[64px] lg:w-[198px]"
+          : "h-14 w-[180px] rounded-2xl bg-white/95 px-3 py-2 shadow-soft ring-1 ring-white/20 sm:h-16 sm:w-[206px]"
       } ${className}`}
     >
       <img
@@ -348,6 +348,9 @@ function Header({
   return (
     <header className="absolute inset-x-0 top-0 z-30 border-b border-white/70 bg-[linear-gradient(135deg,rgba(255,255,255,0.97)_0%,rgba(246,250,246,0.94)_48%,rgba(229,240,231,0.9)_100%)] shadow-[0_12px_34px_-24px_rgba(8,23,46,0.5)] backdrop-blur">
       <div className="mx-auto flex max-w-[1440px] items-center justify-between px-5 py-2 sm:px-8">
+        <a href="#top" className="shrink-0 transition-transform duration-300 hover:-translate-y-0.5 lg:hidden">
+          <Logo dark />
+        </a>
         <div className="hidden items-center gap-7 lg:flex">
           <a href="#top" className="shrink-0 transition-transform duration-300 hover:-translate-y-0.5">
             <Logo dark />
@@ -396,7 +399,7 @@ function Header({
         </button>
       </div>
       {open && (
-        <div className="fixed inset-0 z-50 bg-white/98 backdrop-blur-md lg:hidden">
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-white/98 pb-8 backdrop-blur-md lg:hidden">
           <div className="flex items-center justify-between border-b border-navy-deep/10 px-5 py-4">
             <Logo dark />
             <button
@@ -413,7 +416,7 @@ function Header({
                 key={n.href}
                 href={n.href}
                 onClick={() => setOpen(false)}
-                className="rounded-2xl px-4 py-4 text-lg font-semibold text-navy-deep transition hover:bg-navy-deep hover:text-white"
+                className="rounded-2xl px-4 py-3 text-base font-semibold text-navy-deep transition hover:bg-navy-deep hover:text-white"
               >
                 {t.nav[n.key]}
               </a>
@@ -540,9 +543,9 @@ function Hero({ lang, setLang }: { lang: Lang; setLang: (lang: Lang) => void }) 
         <div className="mt-3 h-px w-80 bg-gradient-to-r from-[#d2a53a] via-[#b9f35d]/75 to-transparent" />
       </div>
 
-      <div className="mx-auto grid min-h-[min(820px,100svh)] max-w-7xl items-end px-5 pb-16 pt-36 sm:px-8 lg:pt-44">
-        <div className="max-w-3xl rounded-[2rem] bg-black/10 p-5 backdrop-blur-[1px] sm:p-7 lg:bg-transparent lg:p-0 lg:backdrop-blur-0">
-          <p className="text-sm font-bold uppercase tracking-[0.25em] text-white text-shadow-lg">
+      <div className="mx-auto grid min-h-[760px] max-w-7xl items-end px-5 pb-12 pt-32 sm:min-h-[min(820px,100svh)] sm:px-8 sm:pb-16 lg:pt-44">
+        <div className="max-w-3xl rounded-[1.5rem] bg-black/18 p-5 backdrop-blur-[2px] sm:rounded-[2rem] sm:bg-black/10 sm:p-7 sm:backdrop-blur-[1px] lg:bg-transparent lg:p-0 lg:backdrop-blur-0">
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-white text-shadow-lg sm:text-sm sm:tracking-[0.25em]">
             {t.hero.kicker}
           </p>
           <h1 className="mt-3 bg-[linear-gradient(90deg,#ffffff_0%,#ffffff_70%,#b9f35d_100%)] bg-clip-text text-4xl font-extrabold leading-[1.02] text-transparent text-balance drop-shadow-[0_5px_18px_rgba(0,0,0,0.72)] sm:text-5xl md:text-6xl lg:text-7xl">
@@ -552,7 +555,7 @@ function Hero({ lang, setLang }: { lang: Lang; setLang: (lang: Lang) => void }) 
           </h1>
           <div className="mt-6 flex items-center gap-3">
             <span className="h-px w-10 bg-white" />
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-white text-shadow-lg sm:text-sm">
+            <p className="text-xs font-bold uppercase tracking-[0.12em] text-white text-shadow-lg sm:text-sm sm:tracking-[0.22em]">
               {t.hero.tagline}
             </p>
           </div>
@@ -560,14 +563,14 @@ function Hero({ lang, setLang }: { lang: Lang; setLang: (lang: Lang) => void }) 
           <div className="mt-9 flex flex-wrap gap-3">
             <a
               href="#rfq"
-              className="group inline-flex items-center gap-2 rounded-full bg-navy-deep px-6 py-3.5 text-sm font-bold text-white shadow-elevated transition hover:-translate-y-0.5 hover:bg-navy-soft"
+              className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-navy-deep px-6 py-3.5 text-sm font-bold text-white shadow-elevated transition hover:-translate-y-0.5 hover:bg-navy-soft sm:w-auto"
             >
               {t.cta}
               <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/30 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10 sm:w-auto"
             >
               <Download className="h-4 w-4" />
               {t.hero.profile}
@@ -575,11 +578,11 @@ function Hero({ lang, setLang }: { lang: Lang; setLang: (lang: Lang) => void }) 
           </div>
 
           {/* Feature badges */}
-          <div className="mt-10 grid w-[min(860px,calc(100vw-4rem))] grid-cols-2 gap-4 sm:grid-cols-4">
+          <div className="mt-8 grid w-full grid-cols-1 gap-3 sm:mt-10 sm:w-[min(860px,calc(100vw-4rem))] sm:grid-cols-2 sm:gap-4 md:grid-cols-4">
             {HERO_BADGES.map((b) => (
               <div
                 key={b.title}
-                className="lift-panel flex min-h-[92px] items-center gap-4 rounded-2xl border border-white/15 bg-white/10 px-4 py-4 shadow-[0_18px_40px_-30px_rgba(0,0,0,0.85)] ring-1 ring-white/5 backdrop-blur-md hover:lift-panel-hover"
+                className="lift-panel flex min-h-[78px] items-center gap-4 rounded-2xl border border-white/15 bg-white/10 px-4 py-3 shadow-[0_18px_40px_-30px_rgba(0,0,0,0.85)] ring-1 ring-white/5 backdrop-blur-md hover:lift-panel-hover sm:min-h-[92px] sm:py-4"
               >
                 <div className="grid h-13 w-13 shrink-0 place-items-center rounded-2xl bg-[var(--brand-green)]/12 text-[var(--brand-green)] ring-1 ring-[var(--brand-green)]/35">
                   <HeroBadgeIcon type={b.icon} />
@@ -691,7 +694,7 @@ const RFQ_PRODUCT_OPTIONS = PORTFOLIO_GROUPS.flatMap((group) => group.items);
 function AboutSection({ lang }: { lang: Lang }) {
   const t = COPY[lang];
   return (
-    <section id="about" className="relative overflow-hidden bg-background py-20 sm:py-28">
+    <section id="about" className="relative overflow-hidden bg-background py-16 sm:py-28">
       <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-navy-deep/5 to-transparent" />
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <div className="mx-auto max-w-5xl">
@@ -699,10 +702,10 @@ function AboutSection({ lang }: { lang: Lang }) {
             <div className="inline-flex items-center gap-2 rounded-full border border-[var(--brand-green)]/40 bg-[var(--brand-green)]/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--brand-green-dark)]">
               <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-green)]" /> {t.about.eyebrow}
             </div>
-            <h2 className="mx-auto mt-5 max-w-4xl text-3xl font-extrabold text-navy-deep text-balance sm:text-4xl md:text-6xl">
+            <h2 className="mx-auto mt-5 max-w-4xl text-2xl font-extrabold text-navy-deep text-balance sm:text-4xl md:text-6xl">
               {t.about.title}
             </h2>
-            <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-muted-foreground">
+            <p className="mx-auto mt-5 max-w-3xl text-base leading-7 text-muted-foreground sm:mt-6 sm:text-lg sm:leading-8">
               {t.about.lead}
             </p>
             <p className="mx-auto mt-4 max-w-3xl leading-7 text-muted-foreground">
@@ -710,17 +713,17 @@ function AboutSection({ lang }: { lang: Lang }) {
             </p>
           </div>
 
-          <div className="mt-12 overflow-hidden rounded-[2rem] border border-border bg-white shadow-soft">
+          <div className="mt-10 overflow-hidden rounded-[1.5rem] border border-border bg-white shadow-soft sm:mt-12 sm:rounded-[2rem]">
             <div className="group relative">
-              <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-white to-transparent" />
-              <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-white to-transparent" />
-              <div className="flex w-max animate-trust-carousel gap-4 px-4 py-4 group-hover:[animation-play-state:paused]">
+              <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-white to-transparent sm:w-24" />
+              <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-white to-transparent sm:w-24" />
+              <div className="flex w-max animate-trust-carousel gap-3 px-3 py-3 group-hover:[animation-play-state:paused] sm:gap-4 sm:px-4 sm:py-4">
                 {[...t.about.stats, ...t.about.stats].map((item, index) => {
                   const media = ABOUT_STAT_MEDIA[index % ABOUT_STAT_MEDIA.length];
                   return (
                     <article
                       key={`${item}-${index}`}
-                      className="lift-panel hover:lift-panel-hover relative h-56 w-[300px] overflow-hidden rounded-[1.5rem] bg-navy-deep text-white shadow-[0_20px_50px_-30px_rgba(8,23,46,0.75)] sm:w-[360px]"
+                      className="lift-panel hover:lift-panel-hover relative h-48 w-[260px] overflow-hidden rounded-[1.25rem] bg-navy-deep text-white shadow-[0_20px_50px_-30px_rgba(8,23,46,0.75)] sm:h-56 sm:w-[360px] sm:rounded-[1.5rem]"
                     >
                       <img
                         src={media.img}
@@ -730,9 +733,9 @@ function AboutSection({ lang }: { lang: Lang }) {
                       />
                       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(31,66,100,0.92)_0%,rgba(31,66,100,0.66)_52%,rgba(31,66,100,0.18)_100%)]" />
                       <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/65 to-transparent" />
-                      <div className="relative flex h-full flex-col justify-end p-6">
+                      <div className="relative flex h-full flex-col justify-end p-5 sm:p-6">
                         <div className="mb-4 h-px w-16 bg-gradient-to-r from-[var(--brand-green)] to-transparent" />
-                        <h3 className="max-w-[15rem] text-xl font-extrabold uppercase leading-tight tracking-[0.08em] text-white text-shadow">
+                        <h3 className="max-w-[14rem] text-lg font-extrabold uppercase leading-tight tracking-[0.08em] text-white text-shadow sm:max-w-[15rem] sm:text-xl">
                           {item}
                         </h3>
                       </div>
@@ -753,7 +756,7 @@ function AboutSection({ lang }: { lang: Lang }) {
           </div>
         </div>
 
-        <div className="lift-panel hover:lift-panel-hover relative mt-16 overflow-hidden rounded-[2.25rem] bg-navy-deep text-white shadow-elevated">
+        <div className="lift-panel hover:lift-panel-hover relative mt-12 overflow-hidden rounded-[1.5rem] bg-navy-deep text-white shadow-elevated sm:mt-16 sm:rounded-[2.25rem]">
           <img
             src={visionMissionBg}
             alt="Indonesian natural products prepared for global export"
@@ -762,8 +765,8 @@ function AboutSection({ lang }: { lang: Lang }) {
           />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(31,66,100,0.96)_0%,rgba(31,66,100,0.88)_34%,rgba(31,66,100,0.58)_58%,rgba(31,66,100,0.22)_100%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_16%,rgba(185,243,93,0.18),transparent_28%),linear-gradient(180deg,rgba(0,0,0,0.08),rgba(0,0,0,0.45))]" />
-          <div className="relative grid gap-8 p-6 sm:p-9 lg:grid-cols-[0.82fr_1.18fr] lg:p-11">
-            <div className="flex min-h-[560px] flex-col justify-between rounded-[1.75rem] border border-white/12 bg-white/8 p-6 backdrop-blur-[2px] sm:p-8">
+          <div className="relative grid gap-5 p-4 sm:gap-8 sm:p-9 lg:grid-cols-[0.82fr_1.18fr] lg:p-11">
+            <div className="flex min-h-[360px] flex-col justify-between rounded-[1.35rem] border border-white/12 bg-white/8 p-5 backdrop-blur-[2px] sm:min-h-[560px] sm:rounded-[1.75rem] sm:p-8">
               <div>
                 <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--brand-green)] text-navy-deep shadow-[0_18px_40px_-22px_rgba(74,222,128,0.75)]">
                   <Award className="h-7 w-7" />
@@ -771,14 +774,14 @@ function AboutSection({ lang }: { lang: Lang }) {
                 <div className="mt-8 text-[11px] font-bold uppercase tracking-[0.24em] text-[var(--brand-green)]">
                   {t.vision.eyebrow}
                 </div>
-                <h3 className="mt-4 max-w-xl bg-[linear-gradient(90deg,#ffffff_0%,#ffffff_78%,#b9f35d_100%)] bg-clip-text text-3xl font-extrabold leading-tight text-transparent text-balance drop-shadow-[0_4px_14px_rgba(0,0,0,0.55)] sm:text-4xl">
+                <h3 className="mt-4 max-w-xl bg-[linear-gradient(90deg,#ffffff_0%,#ffffff_78%,#b9f35d_100%)] bg-clip-text text-2xl font-extrabold leading-tight text-transparent text-balance drop-shadow-[0_4px_14px_rgba(0,0,0,0.55)] sm:text-4xl">
                   {t.vision.title}
                 </h3>
-                <p className="mt-6 max-w-lg text-base leading-8 text-white/76">
+                <p className="mt-5 max-w-lg text-sm leading-7 text-white/76 sm:mt-6 sm:text-base sm:leading-8">
                   {t.vision.desc}
                 </p>
               </div>
-              <div className="mt-10 grid grid-cols-2 gap-3 text-xs font-bold uppercase tracking-[0.13em] text-white/80">
+              <div className="mt-8 grid grid-cols-1 gap-3 text-xs font-bold uppercase tracking-[0.13em] text-white/80 sm:mt-10 sm:grid-cols-2">
                 <div className="rounded-2xl border border-white/12 bg-white/10 p-4 backdrop-blur">
                   <span className="block text-[var(--brand-green)]">Global</span>
                   Trusted Export
@@ -789,7 +792,7 @@ function AboutSection({ lang }: { lang: Lang }) {
                 </div>
               </div>
             </div>
-            <div className="rounded-[1.75rem] border border-white/12 bg-white/10 p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] backdrop-blur-md sm:p-7">
+            <div className="rounded-[1.35rem] border border-white/12 bg-white/10 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] backdrop-blur-md sm:rounded-[1.75rem] sm:p-7">
               <div className="flex items-center justify-between gap-4">
                 <div className="text-[11px] font-bold uppercase tracking-[0.24em] text-[var(--brand-green)]">
                   {t.vision.mission}
@@ -800,7 +803,7 @@ function AboutSection({ lang }: { lang: Lang }) {
                 {MISSIONS.map((mission, index) => (
                   <div
                     key={mission.title}
-                    className="lift-panel hover:lift-panel-hover group rounded-3xl border border-white/12 bg-white/9 p-5 shadow-[0_18px_45px_-35px_rgba(0,0,0,0.8)] backdrop-blur transition hover:border-[var(--brand-green)]/55 hover:bg-white/14"
+                    className="lift-panel hover:lift-panel-hover group rounded-2xl border border-white/12 bg-white/9 p-4 shadow-[0_18px_45px_-35px_rgba(0,0,0,0.8)] backdrop-blur transition hover:border-[var(--brand-green)]/55 hover:bg-white/14 sm:rounded-3xl sm:p-5"
                   >
                     <div className="flex items-center gap-3">
                       <div className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[var(--brand-green)] text-xs font-black text-navy-deep">
