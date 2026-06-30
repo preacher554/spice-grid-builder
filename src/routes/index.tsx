@@ -29,12 +29,14 @@ import {
 } from "lucide-react";
 
 import heroPort from "@/assets/hero-port.jpg";
-import imgCocoPeat from "@/assets/coco-peat.jpg";
-import imgCocoFiber from "@/assets/coco-fiber.jpg";
-import imgCocoBristle from "@/assets/coco-bristle.jpg";
-import imgWoodPellet from "@/assets/wood-pellet.jpg";
+import imgCocoPeat from "@/assets/product-coco-peat.jpeg";
+import imgCocoFiber from "@/assets/product-coco-fiber.jpeg";
+import imgCocoBristle from "@/assets/product-coco-bristle.jpeg";
+import imgWoodPellet from "@/assets/product-wood-pellets.jpeg";
 import imgCinnamon from "@/assets/cinnamon.jpg";
-import imgCharcoal from "@/assets/charcoal-briquette.jpg";
+import imgCharcoal from "@/assets/product-charcoal.jpeg";
+import imgCharcoalBriquette from "@/assets/product-bricket.jpeg";
+import imgCoconutStickBroom from "@/assets/product-coconut-stick-broom.jpeg";
 import arthaPrimaLogo from "@/assets/artha-global-prima-wide-transparent.png";
 import trustDocumentation from "@/assets/trust-documentation.png";
 import trustPackaging from "@/assets/trust-packaging.png";
@@ -96,7 +98,7 @@ function SectionHeading({
   description,
   align = "center",
 }: {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   description?: string;
   align?: "center" | "left";
@@ -105,13 +107,15 @@ function SectionHeading({
     <div
       className={`max-w-2xl ${align === "center" ? "mx-auto text-center" : "text-left"}`}
     >
-      <div
-        className={`inline-flex items-center gap-2 rounded-full border border-[var(--brand-green)]/40 bg-[var(--brand-green)]/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--brand-green-dark)]`}
-      >
-        <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-green)]" />
-        {eyebrow}
-      </div>
-      <h2 className="mt-4 text-3xl font-extrabold text-navy-deep text-balance sm:text-4xl md:text-5xl">
+      {eyebrow && (
+        <div
+          className={`inline-flex items-center gap-2 rounded-full border border-[var(--brand-green)]/40 bg-[var(--brand-green)]/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--brand-green-dark)]`}
+        >
+          <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-green)]" />
+          {eyebrow}
+        </div>
+      )}
+      <h2 className={`${eyebrow ? "mt-4" : ""} text-3xl font-extrabold text-navy-deep text-balance sm:text-4xl md:text-5xl`}>
         {title}
       </h2>
       {description && (
@@ -545,9 +549,10 @@ function Hero({ lang, setLang }: { lang: Lang; setLang: (lang: Lang) => void }) 
     { src: imgCocoPeat, alt: "Coco peat" },
     { src: imgCocoFiber, alt: "Coco fiber" },
     { src: imgCocoBristle, alt: "Coco bristle" },
-    { src: imgWoodPellet, alt: "Wood pellet" },
-    { src: imgCinnamon, alt: "Cinnamon" },
-    { src: imgCharcoal, alt: "Charcoal briquette" },
+    { src: imgCoconutStickBroom, alt: "Coconut stick broom" },
+    { src: imgWoodPellet, alt: "Wood pellets" },
+    { src: imgCharcoal, alt: "Coconut charcoal" },
+    { src: imgCharcoalBriquette, alt: "Coconut charcoal briquette" },
   ];
   return (
     <section id="top" className="relative isolate overflow-hidden">
@@ -775,8 +780,6 @@ function MissionIcon({ type }: { type: MissionIconType }) {
   );
 }
 
-const CORE_VALUES = ["Integrity", "Quality", "Commitment", "Innovation", "Sustainability", "Customer Focus"];
-
 const ABOUT_STAT_MEDIA = [
   { img: trustPremiumQuality, alt: "Quality inspection for Indonesian export products" },
   { img: trustDocumentation, alt: "Professional export documentation desk" },
@@ -916,19 +919,6 @@ function AboutSection({ lang }: { lang: Lang }) {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-          <span className="w-full text-center text-[11px] font-bold uppercase tracking-[0.2em] text-[var(--brand-green-dark)]">
-            {t.vision.values}
-          </span>
-          {CORE_VALUES.map((value) => (
-            <span
-              key={value}
-              className="rounded-full border border-[var(--brand-green)]/30 bg-[var(--brand-green)]/10 px-4 py-2 text-sm font-bold text-navy-deep"
-            >
-              {value}
-            </span>
-          ))}
-        </div>
       </div>
     </section>
   );
@@ -996,6 +986,22 @@ const PRODUCTS: Product[] = [
     ],
   },
   {
+    id: "coconut-stick-broom",
+    icon: "🌴",
+    name: "Coconut Stick Broom",
+    img: imgCoconutStickBroom,
+    tag: "Natural household goods",
+    blurb:
+      "Durable coconut stick brooms produced from selected coconut leaf ribs for household, garden, and commercial cleaning.",
+    spec: [
+      { label: "Packing", value: "Bundles / export carton" },
+      { label: "MOQ", value: "1 x 20 ft" },
+      { label: "Capacity", value: "50,000 pcs / month" },
+      { label: "Lead time", value: "14–25 days" },
+      { label: "Loading", value: "Custom by packing" },
+    ],
+  },
+  {
     id: "wood-pellet",
     icon: "🌴",
     name: "Wood Pellet",
@@ -1028,10 +1034,26 @@ const PRODUCTS: Product[] = [
     ],
   },
   {
+    id: "coconut-charcoal",
+    icon: "🌴",
+    name: "Coconut Charcoal",
+    img: imgCharcoal,
+    tag: "Coconut shell charcoal",
+    blurb:
+      "Natural coconut shell charcoal for industrial, filtration, and further processing needs with stable carbon content.",
+    spec: [
+      { label: "Packing", value: "PP bags / jumbo bags" },
+      { label: "MOQ", value: "1 x 40 HQ" },
+      { label: "Capacity", value: "200 MT / month" },
+      { label: "Lead time", value: "14–30 days" },
+      { label: "Loading", value: "~20 MT per 40 HQ" },
+    ],
+  },
+  {
     id: "charcoal",
     icon: "🌴",
     name: "Coconut Charcoal Briquette",
-    img: imgCharcoal,
+    img: imgCharcoalBriquette,
     tag: "Shisha / BBQ grade",
     blurb:
       "Pure coconut shell briquettes — long burn time, low ash, no chemicals. Customizable sizes for shisha & BBQ.",
@@ -1052,21 +1074,24 @@ function ProductsSection({ lang }: { lang: Lang }) {
     <section id="products" className="relative bg-secondary py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
-          eyebrow={t.products.eyebrow}
           title={t.products.title}
           description={t.products.desc}
         />
 
         <div className={`mt-12 grid gap-10 transition-all duration-500 ${active ? "lg:grid-cols-[0.92fr_1.08fr]" : ""}`}>
           {/* Product grid */}
-          <div className={`grid gap-4 transition-all duration-500 ${active ? "sm:grid-cols-2" : "mx-auto w-full max-w-6xl sm:grid-cols-2 lg:grid-cols-3"}`}>
-            {PRODUCTS.map((p) => {
+          <div className={`grid gap-4 transition-all duration-500 ${active ? "sm:grid-cols-2" : "mx-auto w-full max-w-6xl sm:grid-cols-2 lg:grid-cols-6"}`}>
+            {PRODUCTS.map((p, index) => {
               const isActive = p.id === active?.id;
+              const shouldCenterLastRow =
+                !active && PRODUCTS.length % 3 === 2 && index === PRODUCTS.length - 2;
               return (
                 <button
                   key={p.id}
                   onClick={() => setActive(p)}
                   className={`lift-panel hover:lift-panel-hover group relative overflow-hidden rounded-2xl border bg-card text-left shadow-soft ${
+                    !active ? "lg:col-span-2" : ""
+                  } ${shouldCenterLastRow ? "lg:col-start-2" : ""} ${
                     isActive
                       ? "border-[var(--brand-green)] ring-2 ring-[var(--brand-green)]/40"
                       : "border-border hover:border-navy-soft/35"
@@ -1257,8 +1282,10 @@ const PRODUCT_DENSITY: Record<string, { weight: number; volume: number; label: s
   "coco-peat": { weight: 5, volume: 0.008, label: "5 kg block" },
   "coco-fiber": { weight: 120, volume: 0.5, label: "bale" },
   "coco-bristle": { weight: 25, volume: 0.12, label: "bundle" },
+  "coconut-stick-broom": { weight: 1.5, volume: 0.012, label: "bundle" },
   "wood-pellet": { weight: 15, volume: 0.022, label: "15 kg bag" },
   cinnamon: { weight: 12.5, volume: 0.06, label: "carton" },
+  "coconut-charcoal": { weight: 25, volume: 0.04, label: "bag" },
   charcoal: { weight: 10, volume: 0.018, label: "master box" },
 };
 
