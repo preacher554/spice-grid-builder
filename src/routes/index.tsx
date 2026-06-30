@@ -1046,7 +1046,7 @@ const PRODUCTS: Product[] = [
 ];
 
 function ProductsSection({ lang }: { lang: Lang }) {
-  const [active, setActive] = useState<Product>(PRODUCTS[0]);
+  const [active, setActive] = useState<Product | null>(null);
   const t = COPY[lang];
   return (
     <section id="products" className="relative bg-secondary py-20 sm:py-28">
@@ -1057,11 +1057,11 @@ function ProductsSection({ lang }: { lang: Lang }) {
           description={t.products.desc}
         />
 
-        <div className="mt-12 grid gap-10 lg:grid-cols-[1.05fr_1fr]">
+        <div className={`mt-12 grid gap-10 transition-all duration-500 ${active ? "lg:grid-cols-[0.92fr_1.08fr]" : ""}`}>
           {/* Product grid */}
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+          <div className={`grid gap-4 transition-all duration-500 ${active ? "sm:grid-cols-2" : "mx-auto w-full max-w-6xl sm:grid-cols-2 lg:grid-cols-3"}`}>
             {PRODUCTS.map((p) => {
-              const isActive = p.id === active.id;
+              const isActive = p.id === active?.id;
               return (
                 <button
                   key={p.id}
@@ -1069,24 +1069,24 @@ function ProductsSection({ lang }: { lang: Lang }) {
                   className={`lift-panel hover:lift-panel-hover group relative overflow-hidden rounded-2xl border bg-card text-left shadow-soft ${
                     isActive
                       ? "border-[var(--brand-green)] ring-2 ring-[var(--brand-green)]/40"
-                      : "border-border"
+                      : "border-border hover:border-navy-soft/35"
                   }`}
                 >
-                  <div className="aspect-square overflow-hidden bg-navy-deep">
+                  <div className="aspect-[16/9] overflow-hidden bg-navy-deep">
                     <img
                       src={p.img}
                       alt={p.name}
                       loading="lazy"
                       width={800}
-                      height={800}
+                      height={450}
                       className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                     />
                   </div>
-                  <div className="p-3">
+                  <div className="flex min-h-[96px] flex-col justify-center p-4">
                     <div className="text-[11px] font-semibold uppercase tracking-wider text-[var(--brand-green-dark)]">
                       {p.tag}
                     </div>
-                    <div className="mt-0.5 text-sm font-bold text-navy-deep">
+                    <div className="mt-1 text-base font-bold text-navy-deep">
                       {p.icon} {p.name}
                     </div>
                   </div>
@@ -1096,46 +1096,56 @@ function ProductsSection({ lang }: { lang: Lang }) {
           </div>
 
           {/* Active product detail */}
-          <div className="lift-panel hover:lift-panel-hover overflow-hidden rounded-3xl bg-navy-deep text-white shadow-elevated">
-            <div className="relative aspect-[16/10] overflow-hidden">
-              <img
-                src={active.img}
-                alt={active.name}
-                loading="lazy"
-                width={1200}
-                height={750}
-                className="h-full w-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/30 to-transparent" />
-              <div className="absolute bottom-4 left-5 right-5">
-                <div className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white backdrop-blur">
-                  {active.tag}
+          {active && (
+            <div className="lift-panel hover:lift-panel-hover animate-in fade-in slide-in-from-right-5 duration-500 overflow-hidden rounded-3xl bg-navy-deep text-white shadow-elevated">
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <img
+                  src={active.img}
+                  alt={active.name}
+                  loading="lazy"
+                  width={1200}
+                  height={750}
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/30 to-transparent" />
+                <button
+                  type="button"
+                  onClick={() => setActive(null)}
+                  aria-label="Close product detail"
+                  className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full border border-white/25 bg-white/10 text-white backdrop-blur transition hover:bg-white/20"
+                >
+                  <X className="h-4 w-4" />
+                </button>
+                <div className="absolute bottom-4 left-5 right-5">
+                  <div className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white backdrop-blur">
+                    {active.tag}
+                  </div>
+                  <h3 className="mt-2 text-2xl font-extrabold sm:text-3xl">
+                    {active.icon} {active.name}
+                  </h3>
                 </div>
-                <h3 className="mt-2 text-2xl font-extrabold sm:text-3xl">
-                  {active.icon} {active.name}
-                </h3>
+              </div>
+              <div className="p-6 sm:p-7">
+                <p className="text-sm text-white/80">{active.blurb}</p>
+                <dl className="mt-6 divide-y divide-white/10 border-y border-white/10">
+                  {active.spec.map((s) => (
+                    <div key={s.label} className="flex items-center justify-between gap-4 py-2.5">
+                      <dt className="text-[12px] font-semibold uppercase tracking-wider text-white/60">
+                        {s.label}
+                      </dt>
+                      <dd className="text-right text-sm font-medium text-white">{s.value}</dd>
+                    </div>
+                  ))}
+                </dl>
+                <a
+                  href="#rfq"
+                  className="mt-6 inline-flex items-center gap-2 rounded-full bg-[var(--brand-green)] px-5 py-2.5 text-sm font-bold text-navy-deep transition hover:brightness-110"
+                >
+                  Request {active.name} Quote <ArrowRight className="h-4 w-4" />
+                </a>
               </div>
             </div>
-            <div className="p-6 sm:p-7">
-              <p className="text-sm text-white/80">{active.blurb}</p>
-              <dl className="mt-6 divide-y divide-white/10 border-y border-white/10">
-                {active.spec.map((s) => (
-                  <div key={s.label} className="flex items-center justify-between py-2.5">
-                    <dt className="text-[12px] font-semibold uppercase tracking-wider text-white/60">
-                      {s.label}
-                    </dt>
-                    <dd className="text-sm font-medium text-white">{s.value}</dd>
-                  </div>
-                ))}
-              </dl>
-              <a
-                href="#rfq"
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-[var(--brand-green)] px-5 py-2.5 text-sm font-bold text-navy-deep transition hover:brightness-110"
-              >
-                Request {active.name} Quote <ArrowRight className="h-4 w-4" />
-              </a>
-            </div>
-          </div>
+          )}
         </div>
       </div>
     </section>
