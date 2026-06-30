@@ -2146,7 +2146,7 @@ function RFQ({ lang }: { lang: Lang }) {
   const copy = UI_COPY[lang].rfq;
   const [submitted, setSubmitted] = useState(false);
   return (
-    <section id="rfq" className="bg-navy-deep py-20 text-white sm:py-28">
+    <section id="rfq" className="rfq-section bg-navy-deep py-20 text-white sm:py-28">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[1fr_1.05fr] lg:items-start">
         <div>
           <div className="inline-flex items-center gap-2 rounded-full border border-[var(--brand-green)]/40 bg-[var(--brand-green)]/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--brand-green)]">
@@ -2180,7 +2180,7 @@ function RFQ({ lang }: { lang: Lang }) {
             e.preventDefault();
             setSubmitted(true);
           }}
-          className="lift-panel hover:lift-panel-hover rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur sm:p-8"
+          className="rfq-panel lift-panel hover:lift-panel-hover rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur sm:p-8"
         >
           {submitted ? (
             <div className="flex h-full min-h-[420px] flex-col items-center justify-center text-center">
@@ -2242,7 +2242,7 @@ function ContactLine({
   value: string;
 }) {
   return (
-    <div className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/5 p-4">
+    <div className="rfq-contact-line flex items-start gap-4 rounded-2xl border border-white/10 bg-white/5 p-4">
       <div className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-[var(--brand-green)]/15 ring-1 ring-[var(--brand-green)]/30">
         <Icon className="h-5 w-5 text-[var(--brand-green)]" />
       </div>
@@ -2275,7 +2275,7 @@ function Field({
         type={type}
         placeholder={placeholder}
         required={required}
-        className="mt-1.5 w-full rounded-xl border border-white/15 bg-navy-deep/40 px-4 py-3 text-sm text-white placeholder:text-white/30 focus:border-[var(--brand-green)] focus:outline-none"
+        className="rfq-input mt-1.5 w-full rounded-xl border border-white/15 bg-navy-deep/40 px-4 py-3 text-sm text-white placeholder:text-white/30 focus:border-[var(--brand-green)] focus:outline-none"
       />
     </label>
   );
@@ -2297,7 +2297,7 @@ function TextareaField({
         name={name}
         rows={4}
         placeholder={placeholder}
-        className="mt-1.5 w-full rounded-xl border border-white/15 bg-navy-deep/40 px-4 py-3 text-sm text-white placeholder:text-white/30 focus:border-[var(--brand-green)] focus:outline-none"
+        className="rfq-input mt-1.5 w-full rounded-xl border border-white/15 bg-navy-deep/40 px-4 py-3 text-sm text-white placeholder:text-white/30 focus:border-[var(--brand-green)] focus:outline-none"
       />
     </label>
   );
@@ -2317,7 +2317,7 @@ function SelectField({
       <span className="text-[11px] font-bold uppercase tracking-wider text-white/60">{label}</span>
       <select
         name={name}
-        className="mt-1.5 w-full rounded-xl border border-white/15 bg-navy-deep/40 px-4 py-3 text-sm text-white focus:border-[var(--brand-green)] focus:outline-none"
+        className="rfq-input mt-1.5 w-full rounded-xl border border-white/15 bg-navy-deep/40 px-4 py-3 text-sm text-white focus:border-[var(--brand-green)] focus:outline-none"
       >
         {options.map((o) => (
           <option key={o} value={o} className="bg-navy-deep">

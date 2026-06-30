@@ -233,6 +233,47 @@
   }
 }
 
+.rfq-section {
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 18% 12%, color-mix(in oklab, var(--brand-green) 14%, transparent), transparent 26rem),
+    linear-gradient(180deg, var(--navy-900) 0%, var(--navy-950) 100%);
+}
+
+@media (max-width: 767px) {
+  .rfq-section,
+  .rfq-panel,
+  .rfq-contact-line,
+  .rfq-input {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+
+  .rfq-section {
+    background:
+      radial-gradient(circle at 20% 0%, rgba(74, 222, 128, 0.12), transparent 18rem),
+      linear-gradient(180deg, #1f4264 0%, #17334f 42%, #102943 100%) !important;
+    transform: translateZ(0);
+  }
+
+  .rfq-panel {
+    background: linear-gradient(180deg, rgba(31, 66, 100, 0.96), rgba(22, 51, 79, 0.98)) !important;
+    border-color: rgba(255, 255, 255, 0.16) !important;
+    box-shadow: 0 24px 60px -34px rgba(0, 0, 0, 0.72) !important;
+  }
+
+  .rfq-contact-line {
+    background: rgba(31, 66, 100, 0.92) !important;
+    border-color: rgba(255, 255, 255, 0.14) !important;
+  }
+
+  .rfq-input {
+    background: rgba(16, 41, 67, 0.96) !important;
+    border-color: rgba(255, 255, 255, 0.18) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+  }
+}
+
 @keyframes float-slow {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
