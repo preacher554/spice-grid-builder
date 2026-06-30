@@ -35,6 +35,11 @@ import imgWoodPellet from "@/assets/wood-pellet.jpg";
 import imgCinnamon from "@/assets/cinnamon.jpg";
 import imgCharcoal from "@/assets/charcoal-briquette.jpg";
 import arthaPrimaLogo from "@/assets/artha-global-prima-wide-transparent.png";
+import trustDocumentation from "@/assets/trust-documentation.png";
+import trustPackaging from "@/assets/trust-packaging.png";
+import trustPartnership from "@/assets/trust-partnership.png";
+import trustPremiumQuality from "@/assets/trust-premium-quality.png";
+import visionMissionBg from "@/assets/vision-mission-export-bg.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -540,7 +545,7 @@ function Hero({ lang, setLang }: { lang: Lang; setLang: (lang: Lang) => void }) 
           <p className="text-sm font-bold uppercase tracking-[0.25em] text-white text-shadow-lg">
             {t.hero.kicker}
           </p>
-          <h1 className="mt-3 bg-[linear-gradient(90deg,#ffffff_0%,#ffffff_70%,#b9f35d_100%)] bg-clip-text text-4xl font-extrabold leading-[1.02] text-transparent text-balance text-shadow-hero sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="mt-3 bg-[linear-gradient(90deg,#ffffff_0%,#ffffff_70%,#b9f35d_100%)] bg-clip-text text-4xl font-extrabold leading-[1.02] text-transparent text-balance drop-shadow-[0_5px_18px_rgba(0,0,0,0.72)] sm:text-5xl md:text-6xl lg:text-7xl">
             {t.hero.titleTop}
             <br />
             <span>{t.hero.titleAccent}</span>
@@ -674,6 +679,13 @@ const MISSIONS = [
 
 const CORE_VALUES = ["Integrity", "Quality", "Commitment", "Innovation", "Sustainability", "Customer Focus"];
 
+const ABOUT_STAT_MEDIA = [
+  { img: trustPremiumQuality, alt: "Quality inspection for Indonesian export products" },
+  { img: trustDocumentation, alt: "Professional export documentation desk" },
+  { img: trustPackaging, alt: "Flexible packaging for export products" },
+  { img: trustPartnership, alt: "Long-term global export partnership" },
+];
+
 const RFQ_PRODUCT_OPTIONS = PORTFOLIO_GROUPS.flatMap((group) => group.items);
 
 function AboutSection({ lang }: { lang: Lang }) {
@@ -698,15 +710,37 @@ function AboutSection({ lang }: { lang: Lang }) {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-px overflow-hidden rounded-3xl border border-border bg-border shadow-soft sm:grid-cols-2 lg:grid-cols-4">
-            {t.about.stats.map((item) => (
-              <div key={item} className="lift-panel hover:lift-panel-hover bg-card px-5 py-6 text-center">
-                <CheckCircle2 className="mx-auto h-5 w-5 text-[var(--brand-green-dark)]" />
-                <div className="mt-3 text-sm font-extrabold uppercase tracking-[0.12em] text-navy-deep">
-                  {item}
-                </div>
+          <div className="mt-12 overflow-hidden rounded-[2rem] border border-border bg-white shadow-soft">
+            <div className="group relative">
+              <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-white to-transparent" />
+              <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-white to-transparent" />
+              <div className="flex w-max animate-trust-carousel gap-4 px-4 py-4 group-hover:[animation-play-state:paused]">
+                {[...t.about.stats, ...t.about.stats].map((item, index) => {
+                  const media = ABOUT_STAT_MEDIA[index % ABOUT_STAT_MEDIA.length];
+                  return (
+                    <article
+                      key={`${item}-${index}`}
+                      className="lift-panel hover:lift-panel-hover relative h-56 w-[300px] overflow-hidden rounded-[1.5rem] bg-navy-deep text-white shadow-[0_20px_50px_-30px_rgba(8,23,46,0.75)] sm:w-[360px]"
+                    >
+                      <img
+                        src={media.img}
+                        alt={media.alt}
+                        className="absolute inset-0 h-full w-full object-cover"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(31,66,100,0.92)_0%,rgba(31,66,100,0.66)_52%,rgba(31,66,100,0.18)_100%)]" />
+                      <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/65 to-transparent" />
+                      <div className="relative flex h-full flex-col justify-end p-6">
+                        <div className="mb-4 h-px w-16 bg-gradient-to-r from-[var(--brand-green)] to-transparent" />
+                        <h3 className="max-w-[15rem] text-xl font-extrabold uppercase leading-tight tracking-[0.08em] text-white text-shadow">
+                          {item}
+                        </h3>
+                      </div>
+                    </article>
+                  );
+                })}
               </div>
-            ))}
+            </div>
           </div>
 
           <div className="lift-panel hover:lift-panel-hover mx-auto mt-10 max-w-3xl rounded-3xl bg-navy-deep p-7 text-center text-white shadow-elevated sm:p-9">
@@ -719,33 +753,65 @@ function AboutSection({ lang }: { lang: Lang }) {
           </div>
         </div>
 
-        <div className="lift-panel hover:lift-panel-hover mt-16 grid overflow-hidden rounded-3xl bg-navy-deep text-white shadow-elevated lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="border-b border-white/10 p-7 sm:p-9 lg:border-b-0 lg:border-r">
-            <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[var(--brand-green)] text-navy-deep">
-              <Award className="h-6 w-6" />
-            </div>
-            <div className="mt-6 text-[11px] font-bold uppercase tracking-[0.2em] text-[var(--brand-green)]">
-              {t.vision.eyebrow}
-            </div>
-            <h3 className="mt-3 text-2xl font-extrabold text-balance sm:text-3xl">
-              {t.vision.title}
-            </h3>
-            <p className="mt-4 text-sm leading-7 text-white/70">
-              {t.vision.desc}
-            </p>
-          </div>
-          <div className="p-7 sm:p-9">
-            <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-[var(--brand-green)]">
-              {t.vision.mission}
-            </div>
-            <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              {MISSIONS.map((mission) => (
-                <div key={mission.title} className="lift-panel hover:lift-panel-hover rounded-2xl border border-white/10 bg-white/5 p-4">
-                  <CheckCircle2 className="h-5 w-5 text-[var(--brand-green)]" />
-                  <h4 className="mt-3 text-sm font-bold">{mission.title}</h4>
-                  <p className="mt-2 text-[13px] leading-6 text-white/65">{mission.desc}</p>
+        <div className="lift-panel hover:lift-panel-hover relative mt-16 overflow-hidden rounded-[2.25rem] bg-navy-deep text-white shadow-elevated">
+          <img
+            src={visionMissionBg}
+            alt="Indonesian natural products prepared for global export"
+            className="absolute inset-0 h-full w-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(31,66,100,0.96)_0%,rgba(31,66,100,0.88)_34%,rgba(31,66,100,0.58)_58%,rgba(31,66,100,0.22)_100%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_16%,rgba(185,243,93,0.18),transparent_28%),linear-gradient(180deg,rgba(0,0,0,0.08),rgba(0,0,0,0.45))]" />
+          <div className="relative grid gap-8 p-6 sm:p-9 lg:grid-cols-[0.82fr_1.18fr] lg:p-11">
+            <div className="flex min-h-[560px] flex-col justify-between rounded-[1.75rem] border border-white/12 bg-white/8 p-6 backdrop-blur-[2px] sm:p-8">
+              <div>
+                <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--brand-green)] text-navy-deep shadow-[0_18px_40px_-22px_rgba(74,222,128,0.75)]">
+                  <Award className="h-7 w-7" />
                 </div>
-              ))}
+                <div className="mt-8 text-[11px] font-bold uppercase tracking-[0.24em] text-[var(--brand-green)]">
+                  {t.vision.eyebrow}
+                </div>
+                <h3 className="mt-4 max-w-xl bg-[linear-gradient(90deg,#ffffff_0%,#ffffff_78%,#b9f35d_100%)] bg-clip-text text-3xl font-extrabold leading-tight text-transparent text-balance drop-shadow-[0_4px_14px_rgba(0,0,0,0.55)] sm:text-4xl">
+                  {t.vision.title}
+                </h3>
+                <p className="mt-6 max-w-lg text-base leading-8 text-white/76">
+                  {t.vision.desc}
+                </p>
+              </div>
+              <div className="mt-10 grid grid-cols-2 gap-3 text-xs font-bold uppercase tracking-[0.13em] text-white/80">
+                <div className="rounded-2xl border border-white/12 bg-white/10 p-4 backdrop-blur">
+                  <span className="block text-[var(--brand-green)]">Global</span>
+                  Trusted Export
+                </div>
+                <div className="rounded-2xl border border-white/12 bg-white/10 p-4 backdrop-blur">
+                  <span className="block text-[var(--brand-green)]">Sustainable</span>
+                  Local Sourcing
+                </div>
+              </div>
+            </div>
+            <div className="rounded-[1.75rem] border border-white/12 bg-white/10 p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] backdrop-blur-md sm:p-7">
+              <div className="flex items-center justify-between gap-4">
+                <div className="text-[11px] font-bold uppercase tracking-[0.24em] text-[var(--brand-green)]">
+                  {t.vision.mission}
+                </div>
+                <div className="h-px flex-1 bg-gradient-to-r from-[var(--brand-green)]/55 to-transparent" />
+              </div>
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                {MISSIONS.map((mission, index) => (
+                  <div
+                    key={mission.title}
+                    className="lift-panel hover:lift-panel-hover group rounded-3xl border border-white/12 bg-white/9 p-5 shadow-[0_18px_45px_-35px_rgba(0,0,0,0.8)] backdrop-blur transition hover:border-[var(--brand-green)]/55 hover:bg-white/14"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[var(--brand-green)] text-xs font-black text-navy-deep">
+                        {String(index + 1).padStart(2, "0")}
+                      </div>
+                      <h4 className="text-sm font-extrabold leading-tight text-white">{mission.title}</h4>
+                    </div>
+                    <p className="mt-4 text-[13px] leading-6 text-white/68">{mission.desc}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

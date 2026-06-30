@@ -193,6 +193,14 @@
 }
 @utility animate-float { animation: float-slow 6s ease-in-out infinite; }
 
+@keyframes trust-carousel {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - 0.5rem)); }
+}
+@utility animate-trust-carousel {
+  animation: trust-carousel 28s linear infinite;
+}
+
 @keyframes hero-fade {
   0%, 14%   { opacity: 1; }
   20%, 94%  { opacity: 0; }
