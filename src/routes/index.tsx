@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { createPortal } from "react-dom";
 import {
   Anchor,
@@ -1426,8 +1426,21 @@ function getProductText(product: Product, lang: Lang) {
   return PRODUCT_TEXT[lang]?.[product.id] ?? { tag: product.tag, blurb: product.blurb };
 }
 
+const PRODUCT_ENTRY_VECTORS = [
+  { x: "-34vw", y: "-18vh", rotate: "-10deg" },
+  { x: "0vw", y: "-28vh", rotate: "7deg" },
+  { x: "34vw", y: "-16vh", rotate: "11deg" },
+  { x: "-30vw", y: "20vh", rotate: "8deg" },
+  { x: "0vw", y: "30vh", rotate: "-6deg" },
+  { x: "30vw", y: "18vh", rotate: "-10deg" },
+  { x: "-22vw", y: "34vh", rotate: "-7deg" },
+  { x: "22vw", y: "34vh", rotate: "8deg" },
+] as const;
+
 function ProductsSection({ lang }: { lang: Lang }) {
   const [active, setActive] = useState<Product | null>(null);
+  const [productGridEntered, setProductGridEntered] = useState(false);
+  const productSectionRef = useRef<HTMLElement | null>(null);
   const t = COPY[lang];
   const quoteLabel = (name: string) => {
     if (lang === "id") return `Minta Penawaran ${name}`;
@@ -1435,8 +1448,30 @@ function ProductsSection({ lang }: { lang: Lang }) {
     if (lang === "ar") return `طلب عرض سعر لـ ${name}`;
     return `Request ${name} Quote`;
   };
+
+  useEffect(() => {
+    const node = productSectionRef.current;
+    if (!node) return;
+
+    if (!("IntersectionObserver" in window)) {
+      setProductGridEntered(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const isReadingProductSection = Boolean(entry?.isIntersecting && entry.intersectionRatio >= 0.14);
+        setProductGridEntered(isReadingProductSection);
+      },
+      { threshold: [0, 0.14, 0.28], rootMargin: "-6% 0px -24% 0px" },
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section id="products" className="relative bg-secondary py-20 sm:py-28">
+    <section id="products" ref={productSectionRef} className="relative bg-secondary py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           title={t.products.title}
@@ -1449,13 +1484,21 @@ function ProductsSection({ lang }: { lang: Lang }) {
             {PRODUCTS.map((p, index) => {
               const isActive = p.id === active?.id;
               const productText = getProductText(p, lang);
+              const entryVector = PRODUCT_ENTRY_VECTORS[index % PRODUCT_ENTRY_VECTORS.length];
               const shouldCenterLastRow =
                 !active && PRODUCTS.length % 3 === 2 && index === PRODUCTS.length - 2;
               return (
                 <button
                   key={p.id}
                   onClick={() => setActive(p)}
-                  className={`lift-panel hover:lift-panel-hover group relative overflow-hidden rounded-2xl border bg-card text-left shadow-soft ${
+                  data-entered={productGridEntered}
+                  style={{
+                    "--fly-x": entryVector.x,
+                    "--fly-y": entryVector.y,
+                    "--fly-rotate": entryVector.rotate,
+                    "--reveal-delay": `${index * 180}ms`,
+                  } as CSSProperties}
+                  className={`product-card-reveal group relative overflow-hidden rounded-2xl border bg-card text-left shadow-soft ${
                     !active ? "lg:col-span-2" : ""
                   } ${shouldCenterLastRow ? "lg:col-start-2" : ""} ${
                     isActive
@@ -1661,6 +1704,10 @@ const CONTAINERS = {
 
 function Calculator({ lang }: { lang: Lang }) {
   const copy = UI_COPY[lang].calculator;
+  const numberFormat = useMemo(() => {
+    const locale = lang === "id" ? "id-ID" : lang === "zh" ? "zh-CN" : lang === "ar" ? "ar-EG" : "en-US";
+    return new Intl.NumberFormat(locale);
+  }, [lang]);
   const [product, setProduct] = useState<keyof typeof PRODUCT_DENSITY>("coco-peat");
   const [container, setContainer] = useState<keyof typeof CONTAINERS>("40ft");
   const [qty, setQty] = useState(1000);
@@ -1737,7 +1784,7 @@ function Calculator({ lang }: { lang: Lang }) {
                   >
                     <div className="text-sm font-bold text-navy-deep">{c.label}</div>
                     <div className="text-[11px] text-muted-foreground">
-                      {c.volume} m³ · {c.payload.toLocaleString()} kg
+                      {c.volume} m³ · {numberFormat.format(c.payload)} kg
                     </div>
                   </button>
                 ))}
@@ -1749,7 +1796,7 @@ function Calculator({ lang }: { lang: Lang }) {
                 <label className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
                   {copy.quantity} ({PRODUCT_DENSITY[product].label}s)
                 </label>
-                <span className="text-sm font-bold text-navy-deep">{qty.toLocaleString()}</span>
+                <span className="text-sm font-bold text-navy-deep">{numberFormat.format(qty)}</span>
               </div>
               <input
                 type="range"
@@ -1777,13 +1824,13 @@ function Calculator({ lang }: { lang: Lang }) {
               />
               <Stat
                 label={copy.maxUnits}
-                value={result.unitsPerContainer.toLocaleString()}
+                value={numberFormat.format(result.unitsPerContainer)}
                 hint={copy.maxHint}
               />
               <Stat
                 label={copy.totalWeight}
                 value={`${(result.totalWeight / 1000).toFixed(2)} MT`}
-                hint={`${result.totalWeight.toLocaleString()} kg`}
+                hint={`${numberFormat.format(result.totalWeight)} kg`}
               />
               <Stat
                 label={copy.totalVolume}
