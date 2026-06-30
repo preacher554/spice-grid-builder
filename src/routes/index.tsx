@@ -341,6 +341,323 @@ const COPY = {
   vision: { eyebrow: string; title: string; desc: string; mission: string; values: string };
 }>;
 
+const UI_COPY = {
+  en: {
+    missions: [
+      {
+        title: "Deliver Premium Quality Products",
+        desc: "Supply high-quality coconut products, palm sugar, biomass, and Indonesian spices that consistently meet international standards.",
+      },
+      {
+        title: "Build Long-Term Partnerships",
+        desc: "Establish lasting relationships with customers through trust, integrity, transparency, and professional service.",
+      },
+      {
+        title: "Ensure Consistent Quality",
+        desc: "Implement strict quality control from raw material selection, production, packaging, to export shipment.",
+      },
+      {
+        title: "Provide Reliable Export Solutions",
+        desc: "Offer competitive pricing, flexible packaging, complete export documentation, and on-time worldwide delivery.",
+      },
+      {
+        title: "Promote Sustainable Business",
+        desc: "Support environmentally responsible sourcing while empowering local farmers, producers, and communities across Indonesia.",
+      },
+      {
+        title: "Drive Customer Success",
+        desc: "Understand customer needs and provide tailored solutions that help their businesses grow successfully.",
+      },
+    ],
+    why: {
+      eyebrow: "Why Choose Us",
+      title: "Built for buyers who need certainty, not just supply.",
+      desc: "Trust, quality, integrity, and long-term partnership guide every shipment we prepare.",
+      items: [
+        ["Premium Export Quality", "Selected products prepared to meet international buyer expectations."],
+        ["Competitive Factory Pricing", "Commercial pricing for importers, wholesalers, distributors, and manufacturers."],
+        ["Strict Quality Control", "QC from raw material selection, processing, packaging, to export shipment."],
+        ["Reliable Worldwide Shipping", "Coordinated shipment planning from Indonesia to global destination ports."],
+        ["Professional Documentation", "Export paperwork prepared carefully for smoother international trade."],
+        ["Flexible Packaging & OEM", "Bulk, retail, private label, and custom packaging options by request."],
+        ["Fast Customer Support", "Responsive communication for quotations, specifications, and shipment updates."],
+        ["Sustainable Sourcing", "Responsible supplier networks that support local producers and communities."],
+      ],
+    },
+    certs: {
+      eyebrow: "Certifications",
+      title: "Documented, audited, and ready to ship.",
+      desc: "Every shipment leaves with the right paperwork. We provide standard export documents and product-specific certificates on request.",
+      label: "Official Document",
+    },
+    calculator: {
+      eyebrow: "Container Calculator",
+      title: "Plan your shipment in seconds.",
+      desc: "Estimate units per container, total weight, and total volume for a 20 ft or 40 ft load.",
+      product: "Product",
+      container: "Container",
+      quantity: "Quantity",
+      containersNeeded: "Containers Needed",
+      maxUnits: "Max Units / Container",
+      totalWeight: "Total Weight",
+      totalVolume: "Total Volume",
+      maxHint: "Whichever limit hits first",
+      volumeHint: "Per unit",
+      note: "Estimates are indicative based on typical packing density. Final loading depends on packing format and consolidation. Ask our team for an exact loading plan.",
+      cta: "Send these numbers to sales",
+    },
+    markets: {
+      eyebrow: "Global Footprint",
+      title: "Shipping to 50+ countries across 4 continents.",
+      desc: "From Tanjung Priok and Surabaya, our containers reach buyers worldwide with documented chain of custody and on-time delivery.",
+      active: "Active export destinations",
+    },
+    gallery: {
+      eyebrow: "Inside the Operation",
+      title: "From farm and warehouse to the deck of the ship.",
+      labels: ["Warehouse", "Production Floor", "QC Inspection", "Container Loading", "Port Operations", "Our Team"],
+    },
+    testimonials: {
+      eyebrow: "Testimonials",
+      title: "Buyers from 4 continents, repeating orders.",
+    },
+    blog: {
+      eyebrow: "Insights",
+      title: "Field notes from Indonesia's export floor.",
+      desc: "Buyer-friendly explainers on products, grades, and the procedure of importing from us.",
+      read: "Read article",
+      posts: [
+        ["Product Guide", "How to evaluate coco peat blocks before importing", "A practical primer on EC, moisture, expansion ratio, and loading notes for professional growers."],
+        ["Quality Control", "What buyers should ask before ordering briquettes", "Ash content, fixed carbon, burn time, packaging, and documentation checkpoints."],
+        ["Logistics", "Export procedure from Indonesia in 7 steps", "Documents, fumigation, COO, and the standard timeline from PO to bill of lading."],
+      ],
+    },
+    rfq: {
+      eyebrow: "Request for Quotation",
+      title: "Tell us what you need. We'll quote within 24h.",
+      desc: "Share product, quantity, destination port, and any special requirements. Our sales team will reply with pricing, lead time, and packaging options.",
+      office: "Office",
+      loadingPorts: "Loading ports",
+      thanksTitle: "Thank you!",
+      thanksDesc: "Your inquiry has been received. A member of our export team will reach out within one business day.",
+      fullName: "Full name",
+      namePlaceholder: "Your name",
+      company: "Company",
+      companyPlaceholder: "Company name",
+      email: "Email",
+      emailPlaceholder: "you@company.com",
+      country: "Country",
+      countryPlaceholder: "Destination country",
+      product: "Product",
+      quantity: "Quantity / FCL",
+      qtyPlaceholder: "e.g. 2 x 40 HQ",
+      message: "Message",
+      messagePlaceholder: "Specifications, packing, destination port, timing...",
+      submit: "Submit RFQ",
+      privacy: "By submitting you agree to be contacted by our sales team about your inquiry.",
+    },
+    footer: {
+      desc: "PT Artha Global Prima is a trusted Indonesian export company for coconut products, palm sugar, biomass, and selected Indonesian spices.",
+      products: "Products",
+      company: "Company",
+      connect: "Connect",
+      companyItems: ["About", "Vision & Mission", "Certifications", "Gallery", "Insights", "Contact"],
+      copyright: "All rights reserved.",
+      tagline: "Delivering Indonesia's Finest Natural Products to the World.",
+    },
+  },
+  id: {
+    missions: [
+      {
+        title: "Menghadirkan Produk Berkualitas Premium",
+        desc: "Menyuplai produk kelapa, gula aren, biomassa, dan rempah Indonesia berkualitas tinggi yang konsisten memenuhi standar internasional.",
+      },
+      {
+        title: "Membangun Kemitraan Jangka Panjang",
+        desc: "Membangun hubungan yang kuat dengan pelanggan melalui kepercayaan, integritas, transparansi, dan layanan profesional.",
+      },
+      {
+        title: "Menjaga Kualitas yang Konsisten",
+        desc: "Menerapkan kontrol kualitas ketat dari pemilihan bahan baku, produksi, pengemasan, hingga pengiriman ekspor.",
+      },
+      {
+        title: "Menyediakan Solusi Ekspor Andal",
+        desc: "Menawarkan harga kompetitif, kemasan fleksibel, dokumen ekspor lengkap, dan pengiriman tepat waktu ke berbagai negara.",
+      },
+      {
+        title: "Mendorong Bisnis Berkelanjutan",
+        desc: "Mendukung sumber pasok yang bertanggung jawab terhadap lingkungan sekaligus memberdayakan petani, produsen, dan komunitas lokal Indonesia.",
+      },
+      {
+        title: "Mendukung Kesuksesan Pelanggan",
+        desc: "Memahami kebutuhan pelanggan dan memberikan solusi yang disesuaikan agar bisnis mereka tumbuh dengan baik.",
+      },
+    ],
+    why: {
+      eyebrow: "Mengapa Memilih Kami",
+      title: "Dibangun untuk buyer yang membutuhkan kepastian, bukan sekadar suplai.",
+      desc: "Kepercayaan, kualitas, integritas, dan kemitraan jangka panjang menjadi dasar setiap pengiriman yang kami siapkan.",
+      items: [
+        ["Kualitas Ekspor Premium", "Produk terpilih yang disiapkan untuk memenuhi ekspektasi buyer internasional."],
+        ["Harga Pabrik Kompetitif", "Harga komersial untuk importir, grosir, distributor, dan manufaktur."],
+        ["Kontrol Kualitas Ketat", "QC dari pemilihan bahan baku, proses, pengemasan, hingga pengiriman ekspor."],
+        ["Pengiriman Global Andal", "Perencanaan pengiriman dari Indonesia ke pelabuhan tujuan dunia."],
+        ["Dokumentasi Profesional", "Dokumen ekspor disiapkan dengan rapi untuk perdagangan internasional yang lebih lancar."],
+        ["Kemasan Fleksibel & OEM", "Pilihan kemasan bulk, retail, private label, dan custom sesuai permintaan."],
+        ["Respons Cepat", "Komunikasi responsif untuk penawaran, spesifikasi, dan update pengiriman."],
+        ["Sumber Pasok Berkelanjutan", "Jaringan pemasok bertanggung jawab yang mendukung produsen dan komunitas lokal."],
+      ],
+    },
+    certs: {
+      eyebrow: "Dokumen",
+      title: "Terdokumentasi, terverifikasi, dan siap kirim.",
+      desc: "Setiap pengiriman dilengkapi dokumen yang tepat. Kami menyediakan dokumen ekspor standar dan sertifikat khusus produk sesuai permintaan.",
+      label: "Dokumen Resmi",
+    },
+    calculator: {
+      eyebrow: "Kalkulator Kontainer",
+      title: "Rencanakan pengiriman dalam hitungan detik.",
+      desc: "Estimasi unit per kontainer, total berat, dan total volume untuk muatan 20 ft atau 40 ft.",
+      product: "Produk",
+      container: "Kontainer",
+      quantity: "Jumlah",
+      containersNeeded: "Kontainer Dibutuhkan",
+      maxUnits: "Maks. Unit / Kontainer",
+      totalWeight: "Total Berat",
+      totalVolume: "Total Volume",
+      maxHint: "Batas berat atau volume yang tercapai lebih dulu",
+      volumeHint: "Per unit",
+      note: "Estimasi bersifat indikatif berdasarkan densitas kemasan umum. Loading final bergantung pada format kemasan dan konsolidasi. Hubungi tim kami untuk rencana loading yang tepat.",
+      cta: "Kirim angka ini ke sales",
+    },
+    markets: {
+      eyebrow: "Jangkauan Global",
+      title: "Pengiriman ke 50+ negara di 4 benua.",
+      desc: "Dari Tanjung Priok dan Surabaya, kontainer kami menjangkau buyer global dengan dokumentasi rantai pengiriman dan ketepatan waktu.",
+      active: "Tujuan ekspor aktif",
+    },
+    gallery: {
+      eyebrow: "Operasional Kami",
+      title: "Dari kebun dan gudang hingga dek kapal.",
+      labels: ["Gudang", "Lantai Produksi", "Inspeksi QC", "Loading Kontainer", "Operasi Pelabuhan", "Tim Kami"],
+    },
+    testimonials: {
+      eyebrow: "Testimoni",
+      title: "Buyer dari 4 benua, dengan repeat order.",
+    },
+    blog: {
+      eyebrow: "Insight",
+      title: "Catatan lapangan dari aktivitas ekspor Indonesia.",
+      desc: "Penjelasan ramah buyer tentang produk, grade, dan prosedur impor dari kami.",
+      read: "Baca artikel",
+      posts: [
+        ["Panduan Produk", "Cara mengevaluasi coco peat block sebelum impor", "Panduan praktis tentang EC, kelembapan, rasio ekspansi, dan catatan loading untuk grower profesional."],
+        ["Kontrol Kualitas", "Hal yang perlu ditanyakan sebelum memesan briquette", "Ash content, fixed carbon, burn time, kemasan, dan checklist dokumen."],
+        ["Logistik", "Prosedur ekspor dari Indonesia dalam 7 langkah", "Dokumen, fumigasi, COO, dan timeline standar dari PO hingga bill of lading."],
+      ],
+    },
+    rfq: {
+      eyebrow: "Permintaan Penawaran",
+      title: "Ceritakan kebutuhan Anda. Kami kirim penawaran dalam 24 jam.",
+      desc: "Bagikan produk, jumlah, pelabuhan tujuan, dan kebutuhan khusus. Tim sales kami akan membalas dengan harga, lead time, dan opsi kemasan.",
+      office: "Kantor",
+      loadingPorts: "Pelabuhan loading",
+      thanksTitle: "Terima kasih!",
+      thanksDesc: "Inquiry Anda sudah kami terima. Tim ekspor kami akan menghubungi Anda dalam satu hari kerja.",
+      fullName: "Nama lengkap",
+      namePlaceholder: "Nama Anda",
+      company: "Perusahaan",
+      companyPlaceholder: "Nama perusahaan",
+      email: "Email",
+      emailPlaceholder: "anda@perusahaan.com",
+      country: "Negara",
+      countryPlaceholder: "Negara tujuan",
+      product: "Produk",
+      quantity: "Jumlah / FCL",
+      qtyPlaceholder: "contoh: 2 x 40 HQ",
+      message: "Pesan",
+      messagePlaceholder: "Spesifikasi, kemasan, pelabuhan tujuan, waktu...",
+      submit: "Kirim RFQ",
+      privacy: "Dengan mengirim form ini, Anda setuju dihubungi oleh tim sales kami terkait inquiry Anda.",
+    },
+    footer: {
+      desc: "PT Artha Global Prima adalah perusahaan ekspor Indonesia terpercaya untuk produk kelapa, gula aren, biomassa, dan rempah pilihan.",
+      products: "Produk",
+      company: "Perusahaan",
+      connect: "Kontak",
+      companyItems: ["Tentang", "Visi & Misi", "Dokumen", "Galeri", "Insight", "Kontak"],
+      copyright: "Seluruh hak cipta dilindungi.",
+      tagline: "Menghadirkan produk alami terbaik Indonesia ke dunia.",
+    },
+  },
+  zh: {
+    missions: [
+      { title: "提供优质产品", desc: "供应高品质椰子产品、棕榈糖、生物质和印尼香料，稳定符合国际标准。" },
+      { title: "建立长期伙伴关系", desc: "通过信任、诚信、透明和专业服务，与客户建立持久合作。" },
+      { title: "确保稳定质量", desc: "从原料选择、生产、包装到出口运输，执行严格质量控制。" },
+      { title: "提供可靠出口方案", desc: "提供有竞争力的价格、灵活包装、完整出口文件和准时全球交付。" },
+      { title: "推动可持续业务", desc: "支持环保负责任采购，同时赋能印尼当地农民、生产商和社区。" },
+      { title: "助力客户成功", desc: "理解客户需求并提供定制方案，帮助客户业务成功增长。" },
+    ],
+    why: {
+      eyebrow: "选择我们的理由",
+      title: "为需要确定性的买家而建，而不只是供应。",
+      desc: "信任、品质、诚信和长期合作指导我们准备每一次出货。",
+      items: [
+        ["优质出口品质", "精选产品，满足国际买家期望。"],
+        ["有竞争力的工厂价格", "面向进口商、批发商、分销商和制造商的商业价格。"],
+        ["严格质量控制", "从原料、加工、包装到出口运输全流程 QC。"],
+        ["可靠全球运输", "协调从印尼到全球目的港的运输计划。"],
+        ["专业出口文件", "认真准备出口文件，促进国际贸易顺畅。"],
+        ["灵活包装与 OEM", "可按需提供散装、零售、自有品牌和定制包装。"],
+        ["快速客户支持", "对报价、规格和运输更新保持快速响应。"],
+        ["可持续采购", "负责任的供应网络支持当地生产商和社区。"],
+      ],
+    },
+    certs: { eyebrow: "文件", title: "文件齐全、可审查、可发货。", desc: "每批货物均配备相应文件。我们可按需提供标准出口文件和产品专属证书。", label: "官方文件" },
+    calculator: { eyebrow: "集装箱计算器", title: "几秒内规划您的出货。", desc: "估算 20 尺或 40 尺装载的每箱单位、总重量和总体积。", product: "产品", container: "集装箱", quantity: "数量", containersNeeded: "所需集装箱", maxUnits: "每箱最大单位", totalWeight: "总重量", totalVolume: "总体积", maxHint: "以先达到的限制为准", volumeHint: "每单位", note: "估算基于常见包装密度，仅供参考。最终装载取决于包装形式和拼箱情况。请联系团队获取准确装载方案。", cta: "将这些数据发送给销售" },
+    markets: { eyebrow: "全球覆盖", title: "发往 4 大洲 50 多个国家。", desc: "我们的集装箱从丹戎不碌和泗水港出发，凭借完整文件和准时交付服务全球买家。", active: "活跃出口目的地" },
+    gallery: { eyebrow: "运营现场", title: "从农场和仓库到船舶甲板。", labels: ["仓库", "生产车间", "质检", "集装箱装载", "港口作业", "我们的团队"] },
+    testimonials: { eyebrow: "客户评价", title: "来自 4 大洲的买家持续复购。" },
+    blog: { eyebrow: "资讯", title: "来自印尼出口一线的记录。", desc: "面向买家的产品、等级和进口流程说明。", read: "阅读文章", posts: [["产品指南", "进口前如何评估 coco peat block", "关于 EC、湿度、膨胀率和装载要点的实用指南。"], ["质量控制", "订购炭块前买家应询问什么", "灰分、固定碳、燃烧时间、包装和文件检查点。"], ["物流", "印尼出口流程 7 步", "文件、熏蒸、COO，以及从 PO 到提单的标准时间线。"]] },
+    rfq: { eyebrow: "获取报价", title: "告诉我们您的需求。我们将在 24 小时内报价。", desc: "请提供产品、数量、目的港和特殊要求。销售团队将回复价格、交期和包装选项。", office: "办公室", loadingPorts: "装货港", thanksTitle: "谢谢！", thanksDesc: "您的询盘已收到。我们的出口团队将在一个工作日内联系您。", fullName: "姓名", namePlaceholder: "您的姓名", company: "公司", companyPlaceholder: "公司名称", email: "邮箱", emailPlaceholder: "you@company.com", country: "国家", countryPlaceholder: "目的国家", product: "产品", quantity: "数量 / FCL", qtyPlaceholder: "例如：2 x 40 HQ", message: "留言", messagePlaceholder: "规格、包装、目的港、时间...", submit: "提交询盘", privacy: "提交即表示您同意我们的销售团队就询盘联系您。" },
+    footer: { desc: "PT Artha Global Prima 是可信赖的印尼出口公司，供应椰子产品、棕榈糖、生物质和精选印尼香料。", products: "产品", company: "公司", connect: "联系", companyItems: ["关于", "愿景与使命", "文件", "图库", "资讯", "联系"], copyright: "版权所有。", tagline: "将印尼优质天然产品带向世界。" },
+  },
+  ar: {
+    missions: [
+      { title: "تقديم منتجات عالية الجودة", desc: "توريد منتجات جوز الهند وسكر النخيل والكتلة الحيوية والتوابل الإندونيسية بجودة تلبي المعايير الدولية باستمرار." },
+      { title: "بناء شراكات طويلة الأمد", desc: "إقامة علاقات قوية مع العملاء عبر الثقة والنزاهة والشفافية والخدمة المهنية." },
+      { title: "ضمان جودة ثابتة", desc: "تطبيق رقابة جودة صارمة من اختيار المواد الخام والإنتاج والتعبئة حتى الشحن التصديري." },
+      { title: "توفير حلول تصدير موثوقة", desc: "تقديم أسعار تنافسية وتغليف مرن ووثائق تصدير كاملة وتسليم عالمي في الوقت المحدد." },
+      { title: "تعزيز الأعمال المستدامة", desc: "دعم التوريد المسؤول بيئيا مع تمكين المزارعين والمنتجين والمجتمعات المحلية في إندونيسيا." },
+      { title: "دعم نجاح العملاء", desc: "فهم احتياجات العملاء وتقديم حلول مخصصة تساعد أعمالهم على النمو بنجاح." },
+    ],
+    why: {
+      eyebrow: "لماذا تختارنا",
+      title: "مصممون للمشترين الذين يحتاجون إلى اليقين، لا مجرد التوريد.",
+      desc: "الثقة والجودة والنزاهة والشراكة طويلة الأمد تقود كل شحنة نعدها.",
+      items: [
+        ["جودة تصدير ممتازة", "منتجات مختارة لتلبية توقعات المشترين الدوليين."],
+        ["أسعار مصنع تنافسية", "أسعار تجارية للمستوردين وتجار الجملة والموزعين والمصنعين."],
+        ["رقابة جودة صارمة", "فحص جودة من المواد الخام والمعالجة والتعبئة حتى الشحن."],
+        ["شحن عالمي موثوق", "تنسيق خطط الشحن من إندونيسيا إلى الموانئ العالمية."],
+        ["وثائق احترافية", "إعداد أوراق التصدير بعناية لتسهيل التجارة الدولية."],
+        ["تغليف مرن و OEM", "خيارات تغليف بالجملة والتجزئة والعلامة الخاصة حسب الطلب."],
+        ["دعم سريع للعملاء", "استجابة سريعة لعروض الأسعار والمواصفات وتحديثات الشحن."],
+        ["توريد مستدام", "شبكات موردين مسؤولة تدعم المنتجين والمجتمعات المحلية."],
+      ],
+    },
+    certs: { eyebrow: "المستندات", title: "موثق ومراجع وجاهز للشحن.", desc: "تخرج كل شحنة مع الوثائق المناسبة. نوفر مستندات التصدير القياسية وشهادات خاصة بالمنتج عند الطلب.", label: "مستند رسمي" },
+    calculator: { eyebrow: "حاسبة الحاويات", title: "خطط شحنتك خلال ثوان.", desc: "قدّر عدد الوحدات لكل حاوية والوزن والحجم الإجمالي لشحنة 20 قدم أو 40 قدم.", product: "المنتج", container: "الحاوية", quantity: "الكمية", containersNeeded: "الحاويات المطلوبة", maxUnits: "أقصى وحدات / حاوية", totalWeight: "الوزن الإجمالي", totalVolume: "الحجم الإجمالي", maxHint: "حسب الحد الذي يتم بلوغه أولا", volumeHint: "لكل وحدة", note: "التقديرات إرشادية بناء على كثافة التعبئة المعتادة. يعتمد التحميل النهائي على شكل التعبئة والتجميع. اطلب من فريقنا خطة تحميل دقيقة.", cta: "إرسال هذه الأرقام إلى المبيعات" },
+    markets: { eyebrow: "الحضور العالمي", title: "الشحن إلى أكثر من 50 دولة عبر 4 قارات.", desc: "من تانجونغ بريوك وسورابايا، تصل حاوياتنا إلى المشترين حول العالم مع توثيق واضح وتسليم في الوقت المحدد.", active: "وجهات تصدير نشطة" },
+    gallery: { eyebrow: "داخل العمليات", title: "من المزرعة والمستودع إلى سطح السفينة.", labels: ["المستودع", "خط الإنتاج", "فحص الجودة", "تحميل الحاوية", "عمليات الميناء", "فريقنا"] },
+    testimonials: { eyebrow: "آراء العملاء", title: "مشترون من 4 قارات يكررون الطلب." },
+    blog: { eyebrow: "رؤى", title: "ملاحظات ميدانية من أرض التصدير الإندونيسية.", desc: "شروحات مناسبة للمشترين حول المنتجات والدرجات وإجراءات الاستيراد منا.", read: "اقرأ المقال", posts: [["دليل المنتج", "كيفية تقييم كتل coco peat قبل الاستيراد", "دليل عملي حول EC والرطوبة ونسبة التمدد وملاحظات التحميل."], ["رقابة الجودة", "ما الذي يجب سؤاله قبل طلب briquettes", "نقاط فحص الرماد والكربون الثابت ومدة الاحتراق والتعبئة والوثائق."], ["اللوجستيات", "إجراءات التصدير من إندونيسيا في 7 خطوات", "المستندات والتبخير وشهادة المنشأ والجدول الزمني من أمر الشراء إلى بوليصة الشحن."]] },
+    rfq: { eyebrow: "طلب عرض سعر", title: "أخبرنا بما تحتاجه. سنرسل عرضا خلال 24 ساعة.", desc: "شارك المنتج والكمية وميناء الوجهة وأي متطلبات خاصة. سيرد فريق المبيعات بالسعر ومدة التوريد وخيارات التعبئة.", office: "المكتب", loadingPorts: "موانئ التحميل", thanksTitle: "شكرا لك!", thanksDesc: "تم استلام طلبك. سيتواصل معك أحد أعضاء فريق التصدير خلال يوم عمل واحد.", fullName: "الاسم الكامل", namePlaceholder: "اسمك", company: "الشركة", companyPlaceholder: "اسم الشركة", email: "البريد الإلكتروني", emailPlaceholder: "you@company.com", country: "الدولة", countryPlaceholder: "دولة الوجهة", product: "المنتج", quantity: "الكمية / FCL", qtyPlaceholder: "مثال: 2 x 40 HQ", message: "الرسالة", messagePlaceholder: "المواصفات، التعبئة، ميناء الوجهة، التوقيت...", submit: "إرسال RFQ", privacy: "بإرسالك النموذج فإنك توافق على تواصل فريق المبيعات معك بخصوص طلبك." },
+    footer: { desc: "PT Artha Global Prima شركة تصدير إندونيسية موثوقة لمنتجات جوز الهند وسكر النخيل والكتلة الحيوية والتوابل المختارة.", products: "المنتجات", company: "الشركة", connect: "تواصل", companyItems: ["من نحن", "الرؤية والمهمة", "المستندات", "المعرض", "رؤى", "اتصال"], copyright: "جميع الحقوق محفوظة.", tagline: "نقدم أفضل المنتجات الطبيعية الإندونيسية إلى العالم." },
+  },
+} as const;
+
 function Header({
   lang,
   setLang,
@@ -696,33 +1013,6 @@ const PORTFOLIO_GROUPS = [
   },
 ];
 
-const MISSIONS = [
-  {
-    title: "Deliver Premium Quality Products",
-    desc: "Supply high-quality coconut products, palm sugar, biomass, and Indonesian spices that consistently meet international standards.",
-  },
-  {
-    title: "Build Long-Term Partnerships",
-    desc: "Establish lasting relationships with customers through trust, integrity, transparency, and professional service.",
-  },
-  {
-    title: "Ensure Consistent Quality",
-    desc: "Implement strict quality control from raw material selection, production, packaging, to export shipment.",
-  },
-  {
-    title: "Provide Reliable Export Solutions",
-    desc: "Offer competitive pricing, flexible packaging, complete export documentation, and on-time worldwide delivery.",
-  },
-  {
-    title: "Promote Sustainable Business",
-    desc: "Support environmentally responsible sourcing while empowering local farmers, producers, and communities across Indonesia.",
-  },
-  {
-    title: "Drive Customer Success",
-    desc: "Understand customer needs and provide tailored solutions that help their businesses grow successfully.",
-  },
-];
-
 const MISSION_ICONS = ["quality", "partnership", "control", "export", "sustainability", "success"] as const;
 type MissionIconType = (typeof MISSION_ICONS)[number];
 
@@ -791,6 +1081,7 @@ const RFQ_PRODUCT_OPTIONS = PORTFOLIO_GROUPS.flatMap((group) => group.items);
 
 function AboutSection({ lang }: { lang: Lang }) {
   const t = COPY[lang];
+  const ui = UI_COPY[lang];
   return (
     <section id="about" className="relative overflow-hidden bg-background py-16 sm:py-28">
       <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-navy-deep/5 to-transparent" />
@@ -900,7 +1191,7 @@ function AboutSection({ lang }: { lang: Lang }) {
                 <div className="h-px flex-1 bg-gradient-to-r from-[var(--brand-green)]/55 to-transparent" />
               </div>
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                {MISSIONS.map((mission, index) => (
+                {ui.missions.map((mission, index) => (
                   <div
                     key={mission.title}
                     className="lift-panel hover:lift-panel-hover group rounded-2xl border border-white/14 bg-white/10 p-4 shadow-[0_18px_45px_-35px_rgba(0,0,0,0.8)] backdrop-blur-md transition hover:border-[var(--brand-green)]/55 hover:bg-white/15 sm:rounded-3xl sm:p-5"
@@ -1067,9 +1358,83 @@ const PRODUCTS: Product[] = [
   },
 ];
 
+const PRODUCT_SPEC_LABELS: Record<Lang, Record<string, string>> = {
+  en: { Packing: "Packing", MOQ: "MOQ", Capacity: "Capacity", "Lead time": "Lead time", Loading: "Loading" },
+  id: { Packing: "Kemasan", MOQ: "MOQ", Capacity: "Kapasitas", "Lead time": "Waktu produksi", Loading: "Loading" },
+  zh: { Packing: "包装", MOQ: "起订量", Capacity: "产能", "Lead time": "交期", Loading: "装载" },
+  ar: { Packing: "التعبئة", MOQ: "الحد الأدنى", Capacity: "الطاقة", "Lead time": "مدة التجهيز", Loading: "التحميل" },
+};
+
+const PRODUCT_TEXT: Partial<Record<Lang, Record<string, { tag: string; blurb: string }>>> = {
+  id: {
+    "coco-peat": {
+      tag: "Grade hortikultura",
+      blurb: "Coco peat block rendah EC dengan retensi air tinggi untuk greenhouse, hidroponik, dan nursery growers.",
+    },
+    "coco-fiber": {
+      tag: "Serat coir panjang",
+      blurb: "Serat kelapa bersih dan kering matahari untuk matras, tali, geotekstil, dan produk pengendali erosi.",
+    },
+    "coco-bristle": {
+      tag: "Serat sikat kaku",
+      blurb: "Serat bristle premium untuk kebutuhan manufaktur brush, sapu, dan brush roller di pasar ekspor.",
+    },
+    "coconut-stick-broom": {
+      tag: "Produk rumah tangga alami",
+      blurb: "Sapu lidi kelapa tahan lama dari tulang daun kelapa pilihan untuk kebutuhan rumah tangga, taman, dan komersial.",
+    },
+    "wood-pellet": {
+      tag: "Bahan bakar biomassa",
+      blurb: "Wood pellet berkualitas dari sumber berkelanjutan dengan nilai kalori tinggi, abu rendah, dan suplai stabil.",
+    },
+    cinnamon: {
+      tag: "Korintje / Cassia",
+      blurb: "Kayu manis Indonesia grade ekspor dalam bentuk stick dan broken dengan dokumen phytosanitary lengkap.",
+    },
+    "coconut-charcoal": {
+      tag: "Arang batok kelapa",
+      blurb: "Arang batok kelapa natural untuk kebutuhan industri, filtrasi, dan proses lanjutan dengan kandungan karbon stabil.",
+    },
+    charcoal: {
+      tag: "Grade shisha / BBQ",
+      blurb: "Briquette batok kelapa murni dengan durasi bakar panjang, abu rendah, tanpa bahan kimia, dan ukuran custom.",
+    },
+  },
+  zh: {
+    "coco-peat": { tag: "园艺级", blurb: "低 EC、高保水 coco peat block，适用于温室、水培和育苗。" },
+    "coco-fiber": { tag: "长纤维椰壳丝", blurb: "清洁日晒椰纤维，适用于床垫、绳索、土工布和防蚀产品。" },
+    "coco-bristle": { tag: "硬刷纤维", blurb: "优质长 bristle 纤维，适用于刷子、扫帚和刷辊制造。" },
+    "coconut-stick-broom": { tag: "天然家居用品", blurb: "精选椰叶筋制成的耐用椰子扫帚，适用于家庭、园艺和商业清洁。" },
+    "wood-pellet": { tag: "生物质燃料", blurb: "来自可持续来源的 wood pellets，热值高、灰分低、供应稳定。" },
+    cinnamon: { tag: "Korintje / Cassia", blurb: "印尼 Korintje 肉桂棒和碎片，可按等级供应并提供植物检疫文件。" },
+    "coconut-charcoal": { tag: "椰壳炭", blurb: "天然椰壳炭，适用于工业、过滤和进一步加工，碳含量稳定。" },
+    charcoal: { tag: "水烟 / BBQ 级", blurb: "纯椰壳炭块，燃烧时间长、灰分低、无化学添加，可定制尺寸。" },
+  },
+  ar: {
+    "coco-peat": { tag: "درجة زراعية", blurb: "كتل coco peat منخفضة EC وعالية الاحتفاظ بالماء للبيوت المحمية والزراعة المائية والمشاتل." },
+    "coco-fiber": { tag: "ألياف كوير طويلة", blurb: "ألياف جوز هند نظيفة ومجففة بالشمس للمراتب والحبال والمنسوجات الجغرافية ومنتجات مكافحة التعرية." },
+    "coco-bristle": { tag: "ألياف فرش صلبة", blurb: "ألياف bristle ممتازة لصناعة الفرش والمكانس وبكرات التنظيف في أسواق التصدير." },
+    "coconut-stick-broom": { tag: "منتجات منزلية طبيعية", blurb: "مكنسة عيدان جوز هند متينة من عروق أوراق مختارة للاستخدام المنزلي والحدائق والتنظيف التجاري." },
+    "wood-pellet": { tag: "وقود كتلة حيوية", blurb: "حبيبات خشب من مصادر مستدامة بقيمة حرارية عالية ورماد منخفض وإمداد مستقر." },
+    cinnamon: { tag: "Korintje / Cassia", blurb: "قرفة إندونيسية sticks و broken بدرجات تصدير مع وثائق صحية نباتية كاملة." },
+    "coconut-charcoal": { tag: "فحم قشرة جوز الهند", blurb: "فحم طبيعي من قشرة جوز الهند للاستخدام الصناعي والترشيح والمعالجة اللاحقة بمحتوى كربون مستقر." },
+    charcoal: { tag: "درجة شيشة / BBQ", blurb: "قوالب فحم جوز هند نقية بمدة احتراق طويلة ورماد منخفض وبدون مواد كيميائية وبأحجام قابلة للتخصيص." },
+  },
+};
+
+function getProductText(product: Product, lang: Lang) {
+  return PRODUCT_TEXT[lang]?.[product.id] ?? { tag: product.tag, blurb: product.blurb };
+}
+
 function ProductsSection({ lang }: { lang: Lang }) {
   const [active, setActive] = useState<Product | null>(null);
   const t = COPY[lang];
+  const quoteLabel = (name: string) => {
+    if (lang === "id") return `Minta Penawaran ${name}`;
+    if (lang === "zh") return `获取 ${name} 报价`;
+    if (lang === "ar") return `طلب عرض سعر لـ ${name}`;
+    return `Request ${name} Quote`;
+  };
   return (
     <section id="products" className="relative bg-secondary py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
@@ -1083,6 +1448,7 @@ function ProductsSection({ lang }: { lang: Lang }) {
           <div className={`grid gap-4 transition-all duration-500 ${active ? "sm:grid-cols-2" : "mx-auto w-full max-w-6xl sm:grid-cols-2 lg:grid-cols-6"}`}>
             {PRODUCTS.map((p, index) => {
               const isActive = p.id === active?.id;
+              const productText = getProductText(p, lang);
               const shouldCenterLastRow =
                 !active && PRODUCTS.length % 3 === 2 && index === PRODUCTS.length - 2;
               return (
@@ -1109,7 +1475,7 @@ function ProductsSection({ lang }: { lang: Lang }) {
                   </div>
                   <div className="flex min-h-[96px] flex-col justify-center p-4">
                     <div className="text-[11px] font-semibold uppercase tracking-wider text-[var(--brand-green-dark)]">
-                      {p.tag}
+                      {productText.tag}
                     </div>
                     <div className="mt-1 text-base font-bold text-navy-deep">
                       {p.icon} {p.name}
@@ -1121,7 +1487,9 @@ function ProductsSection({ lang }: { lang: Lang }) {
           </div>
 
           {/* Active product detail */}
-          {active && (
+          {active && (() => {
+            const activeText = getProductText(active, lang);
+            return (
             <div className="lift-panel hover:lift-panel-hover animate-in fade-in slide-in-from-right-5 duration-500 overflow-hidden rounded-3xl bg-navy-deep text-white shadow-elevated">
               <div className="relative aspect-[16/10] overflow-hidden">
                 <img
@@ -1143,7 +1511,7 @@ function ProductsSection({ lang }: { lang: Lang }) {
                 </button>
                 <div className="absolute bottom-4 left-5 right-5">
                   <div className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white backdrop-blur">
-                    {active.tag}
+                    {activeText.tag}
                   </div>
                   <h3 className="mt-2 text-2xl font-extrabold sm:text-3xl">
                     {active.icon} {active.name}
@@ -1151,12 +1519,12 @@ function ProductsSection({ lang }: { lang: Lang }) {
                 </div>
               </div>
               <div className="p-6 sm:p-7">
-                <p className="text-sm text-white/80">{active.blurb}</p>
+                <p className="text-sm text-white/80">{activeText.blurb}</p>
                 <dl className="mt-6 divide-y divide-white/10 border-y border-white/10">
                   {active.spec.map((s) => (
                     <div key={s.label} className="flex items-center justify-between gap-4 py-2.5">
                       <dt className="text-[12px] font-semibold uppercase tracking-wider text-white/60">
-                        {s.label}
+                        {PRODUCT_SPEC_LABELS[lang][s.label] ?? s.label}
                       </dt>
                       <dd className="text-right text-sm font-medium text-white">{s.value}</dd>
                     </div>
@@ -1166,11 +1534,12 @@ function ProductsSection({ lang }: { lang: Lang }) {
                   href="#rfq"
                   className="mt-6 inline-flex items-center gap-2 rounded-full bg-[var(--brand-green)] px-5 py-2.5 text-sm font-bold text-navy-deep transition hover:brightness-110"
                 >
-                  Request {active.name} Quote <ArrowRight className="h-4 w-4" />
+                  {quoteLabel(active.name)} <ArrowRight className="h-4 w-4" />
                 </a>
               </div>
             </div>
-          )}
+            );
+          })()}
         </div>
       </div>
     </section>
@@ -1179,18 +1548,10 @@ function ProductsSection({ lang }: { lang: Lang }) {
 
 /* ───────────── Why us ───────────── */
 
-const WHY = [
-  { icon: Award, title: "Premium Export Quality", desc: "Selected products prepared to meet international buyer expectations." },
-  { icon: Sparkles, title: "Competitive Factory Pricing", desc: "Commercial pricing for importers, wholesalers, distributors, and manufacturers." },
-  { icon: ShieldCheck, title: "Strict Quality Control", desc: "QC from raw material selection, processing, packaging, to export shipment." },
-  { icon: Globe2, title: "Reliable Worldwide Shipping", desc: "Coordinated shipment planning from Indonesia to global destination ports." },
-  { icon: FileText, title: "Professional Documentation", desc: "Export paperwork prepared carefully for smoother international trade." },
-  { icon: Package, title: "Flexible Packaging & OEM", desc: "Bulk, retail, private label, and custom packaging options by request." },
-  { icon: MessageCircle, title: "Fast Customer Support", desc: "Responsive communication for quotations, specifications, and shipment updates." },
-  { icon: Truck, title: "Sustainable Sourcing", desc: "Responsible supplier networks that support local producers and communities." },
-];
+const WHY_ICONS = [Award, Sparkles, ShieldCheck, Globe2, FileText, Package, MessageCircle, Truck] as const;
 
-function WhyUs() {
+function WhyUs({ lang }: { lang: Lang }) {
+  const copy = UI_COPY[lang].why;
   return (
     <section id="why" className="relative overflow-hidden bg-navy-deep py-20 text-white sm:py-28">
       <div
@@ -1205,26 +1566,29 @@ function WhyUs() {
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-[var(--brand-green)]/40 bg-[var(--brand-green)]/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--brand-green)]">
-            <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-green)]" /> Why Choose Us
+            <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-green)]" /> {copy.eyebrow}
           </div>
           <h2 className="mt-4 text-3xl font-extrabold text-balance sm:text-4xl md:text-5xl">
-            Built for buyers who need certainty, not just supply.
+            {copy.title}
           </h2>
           <p className="mt-4 text-white/70">
-            Trust, quality, integrity, and long-term partnership guide every shipment we prepare.
+            {copy.desc}
           </p>
         </div>
 
         <div className="mt-14 grid gap-px overflow-hidden rounded-3xl bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
-          {WHY.map((w) => (
-            <div key={w.title} className="lift-panel hover:lift-panel-hover group relative bg-navy-deep p-6 hover:bg-navy-soft">
+          {copy.items.map(([title, desc], index) => {
+            const Icon = WHY_ICONS[index] ?? Award;
+            return (
+            <div key={title} className="lift-panel hover:lift-panel-hover group relative bg-navy-deep p-6 hover:bg-navy-soft">
               <div className="grid h-11 w-11 place-items-center rounded-xl bg-[var(--brand-green)]/15 ring-1 ring-[var(--brand-green)]/30">
-                <w.icon className="h-5 w-5 text-[var(--brand-green)]" strokeWidth={2} />
+                <Icon className="h-5 w-5 text-[var(--brand-green)]" strokeWidth={2} />
               </div>
-              <h3 className="mt-5 text-base font-bold">{w.title}</h3>
-              <p className="mt-2 text-sm text-white/65">{w.desc}</p>
+              <h3 className="mt-5 text-base font-bold">{title}</h3>
+              <p className="mt-2 text-sm text-white/65">{desc}</p>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
@@ -1242,14 +1606,15 @@ const CERTS = [
   { code: "MSDS", name: "Material Safety Data Sheet" },
 ];
 
-function Certifications() {
+function Certifications({ lang }: { lang: Lang }) {
+  const copy = UI_COPY[lang].certs;
   return (
     <section id="certifications" className="bg-background py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
-          eyebrow="Certifications"
-          title="Documented, audited, and ready to ship."
-          description="Every shipment leaves with the right paperwork. We provide standard export documents and product-specific certificates on request."
+          eyebrow={copy.eyebrow}
+          title={copy.title}
+          description={copy.desc}
         />
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {CERTS.map((c) => (
@@ -1262,7 +1627,7 @@ function Certifications() {
               </div>
               <div className="min-w-0">
                 <div className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                  Official Document
+                  {copy.label}
                 </div>
                 <div className="truncate text-base font-bold text-navy-deep">{c.name}</div>
               </div>
@@ -1294,7 +1659,8 @@ const CONTAINERS = {
   "40ft": { volume: 67, payload: 26000, label: "40 ft High Cube" },
 };
 
-function Calculator() {
+function Calculator({ lang }: { lang: Lang }) {
+  const copy = UI_COPY[lang].calculator;
   const [product, setProduct] = useState<keyof typeof PRODUCT_DENSITY>("coco-peat");
   const [container, setContainer] = useState<keyof typeof CONTAINERS>("40ft");
   const [qty, setQty] = useState(1000);
@@ -1322,9 +1688,9 @@ function Calculator() {
     <section id="calculator" className="bg-secondary py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
-          eyebrow="Container Calculator"
-          title="Plan your shipment in seconds."
-          description="Estimate units per container, total weight, and total volume for a 20 ft or 40 ft load."
+          eyebrow={copy.eyebrow}
+          title={copy.title}
+          description={copy.desc}
         />
 
         <div className="lift-panel hover:lift-panel-hover mt-12 grid gap-6 overflow-hidden rounded-3xl bg-card shadow-elevated lg:grid-cols-[1fr_1.1fr]">
@@ -1332,7 +1698,7 @@ function Calculator() {
           <div className="space-y-6 border-b border-border p-6 sm:p-8 lg:border-b-0 lg:border-r">
             <div>
               <label className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
-                Product
+                {copy.product}
               </label>
               <div className="mt-2 grid grid-cols-2 gap-2 sm:grid-cols-3">
                 {Object.entries(PRODUCT_DENSITY).map(([id]) => {
@@ -1356,7 +1722,7 @@ function Calculator() {
 
             <div>
               <label className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
-                Container
+                {copy.container}
               </label>
               <div className="mt-2 grid grid-cols-2 gap-2">
                 {Object.entries(CONTAINERS).map(([id, c]) => (
@@ -1381,7 +1747,7 @@ function Calculator() {
             <div>
               <div className="flex items-center justify-between">
                 <label className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
-                  Quantity ({PRODUCT_DENSITY[product].label}s)
+                  {copy.quantity} ({PRODUCT_DENSITY[product].label}s)
                 </label>
                 <span className="text-sm font-bold text-navy-deep">{qty.toLocaleString()}</span>
               </div>
@@ -1405,35 +1771,34 @@ function Calculator() {
           <div className="bg-navy-deep p-6 text-white sm:p-8">
             <div className="grid grid-cols-2 gap-4">
               <Stat
-                label="Containers Needed"
+                label={copy.containersNeeded}
                 value={result.containersNeeded < 1 ? "< 1" : result.containersNeeded.toFixed(2)}
                 hint={`${CONTAINERS[container].label}`}
               />
               <Stat
-                label="Max Units / Container"
+                label={copy.maxUnits}
                 value={result.unitsPerContainer.toLocaleString()}
-                hint="Whichever limit hits first"
+                hint={copy.maxHint}
               />
               <Stat
-                label="Total Weight"
+                label={copy.totalWeight}
                 value={`${(result.totalWeight / 1000).toFixed(2)} MT`}
                 hint={`${result.totalWeight.toLocaleString()} kg`}
               />
               <Stat
-                label="Total Volume"
+                label={copy.totalVolume}
                 value={`${result.totalVolume.toFixed(2)} m³`}
-                hint={`Per unit ${result.density.volume} m³`}
+                hint={`${copy.volumeHint} ${result.density.volume} m³`}
               />
             </div>
             <p className="mt-6 text-xs text-white/60">
-              Estimates are indicative based on typical packing density. Final loading depends on
-              packing format and consolidation. Ask our team for an exact loading plan.
+              {copy.note}
             </p>
             <a
               href="#rfq"
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-[var(--brand-green)] px-5 py-2.5 text-sm font-bold text-navy-deep"
             >
-              Send these numbers to sales <Send className="h-4 w-4" />
+              {copy.cta} <Send className="h-4 w-4" />
             </a>
           </div>
         </div>
@@ -1461,21 +1826,21 @@ const MARKETS = [
   "China", "South Korea", "Japan", "Vietnam", "Australia", "New Zealand",
 ];
 
-function Markets() {
+function Markets({ lang }: { lang: Lang }) {
+  const copy = UI_COPY[lang].markets;
   return (
     <section id="markets" className="relative overflow-hidden bg-navy-deep py-20 text-white sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:items-center">
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-[var(--brand-green)]/40 bg-[var(--brand-green)]/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--brand-green)]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-green)]" /> Global Footprint
+              <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-green)]" /> {copy.eyebrow}
             </div>
             <h2 className="mt-4 text-3xl font-extrabold text-balance sm:text-4xl md:text-5xl">
-              Shipping to 50+ countries across 4 continents.
+              {copy.title}
             </h2>
             <p className="mt-4 text-white/70">
-              From Tanjung Priok and Surabaya, our containers reach buyers worldwide — with documented
-              chain of custody and on-time delivery.
+              {copy.desc}
             </p>
             <div className="mt-8 flex flex-wrap gap-2">
               {MARKETS.map((m) => (
@@ -1494,7 +1859,7 @@ function Markets() {
             <WorldMap />
             <div className="absolute bottom-4 right-4 rounded-full border border-white/15 bg-navy-deep/70 px-3 py-1.5 text-[11px] text-white/80 backdrop-blur">
               <span className="mr-1.5 inline-block h-2 w-2 rounded-full bg-[var(--brand-green)] align-middle" />
-              Active export destinations
+              {copy.active}
             </div>
           </div>
         </div>
@@ -1581,16 +1946,19 @@ const GALLERY = [
   { label: "Our Team", img: imgCocoFiber },
 ];
 
-function Gallery() {
+function Gallery({ lang }: { lang: Lang }) {
+  const copy = UI_COPY[lang].gallery;
   return (
     <section id="gallery" className="bg-background py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
-          eyebrow="Inside the Operation"
-          title="From farm and warehouse to the deck of the ship."
+          eyebrow={copy.eyebrow}
+          title={copy.title}
         />
         <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
-          {GALLERY.map((g, i) => (
+          {GALLERY.map((g, i) => {
+            const label = copy.labels[i] ?? g.label;
+            return (
             <div
               key={g.label}
               className={`lift-panel hover:lift-panel-hover group relative overflow-hidden rounded-2xl shadow-soft ${
@@ -1599,16 +1967,17 @@ function Gallery() {
             >
               <img
                 src={g.img}
-                alt={g.label}
+                alt={label}
                 loading="lazy"
                 className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/90 via-navy-deep/20 to-transparent" />
               <div className="absolute bottom-3 left-3 right-3 text-[11px] font-bold uppercase tracking-wider text-white">
-                {g.label}
+                {label}
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
@@ -1641,11 +2010,12 @@ const TESTIMONIALS = [
   },
 ];
 
-function Testimonials() {
+function Testimonials({ lang }: { lang: Lang }) {
+  const copy = UI_COPY[lang].testimonials;
   return (
     <section className="bg-secondary py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <SectionHeading eyebrow="Testimonials" title="Buyers from 4 continents, repeating orders." />
+        <SectionHeading eyebrow={copy.eyebrow} title={copy.title} />
         <div className="mt-12 grid gap-5 md:grid-cols-3">
           {TESTIMONIALS.map((t) => (
             <figure
@@ -1673,64 +2043,50 @@ function Testimonials() {
 /* ───────────── Blog ───────────── */
 
 const POSTS = [
-  {
-    tag: "Spices",
-    title: "Indonesian Cinnamon Export: Korintje grading explained",
-    excerpt:
-      "From AA to KB — what each grade means, oil content ranges, and how to spec your purchase.",
-    img: imgCinnamon,
-  },
-  {
-    tag: "Coconut",
-    title: "Coco Peat for Agriculture: EC, pH, and rehydration",
-    excerpt:
-      "A practical primer on what professional growers should look for when sourcing coco peat at scale.",
-    img: imgCocoPeat,
-  },
-  {
-    tag: "Logistics",
-    title: "Export procedure from Indonesia in 7 steps",
-    excerpt:
-      "Documents, fumigation, COO, and the standard timeline from PO to bill of lading.",
-    img: heroPort,
-  },
+  { img: imgCinnamon },
+  { img: imgCocoPeat },
+  { img: heroPort },
 ];
 
-function Blog() {
+function Blog({ lang }: { lang: Lang }) {
+  const copy = UI_COPY[lang].blog;
   return (
     <section id="blog" className="bg-background py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
-          eyebrow="Insights"
-          title="Field notes from Indonesia's export floor."
-          description="Buyer-friendly explainers on products, grades, and the procedure of importing from us."
+          eyebrow={copy.eyebrow}
+          title={copy.title}
+          description={copy.desc}
         />
         <div className="mt-12 grid gap-5 md:grid-cols-3">
-          {POSTS.map((p) => (
+          {POSTS.map((p, index) => {
+            const [tag, title, excerpt] = copy.posts[index] ?? copy.posts[0];
+            return (
             <article
-              key={p.title}
+              key={title}
               className="lift-panel hover:lift-panel-hover group overflow-hidden rounded-3xl border border-border bg-card shadow-soft"
             >
               <div className="aspect-[16/10] overflow-hidden">
                 <img
                   src={p.img}
-                  alt={p.title}
+                  alt={title}
                   loading="lazy"
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                 />
               </div>
               <div className="p-6">
                 <div className="inline-flex items-center rounded-full bg-[var(--brand-green)]/15 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[var(--brand-green-dark)]">
-                  {p.tag}
+                  {tag}
                 </div>
-                <h3 className="mt-3 text-lg font-bold text-navy-deep">{p.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{p.excerpt}</p>
+                <h3 className="mt-3 text-lg font-bold text-navy-deep">{title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{excerpt}</p>
                 <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-navy">
-                  Read article <ArrowRight className="h-4 w-4" />
+                  {copy.read} <ArrowRight className="h-4 w-4" />
                 </div>
               </div>
             </article>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
@@ -1739,21 +2095,21 @@ function Blog() {
 
 /* ───────────── RFQ + Contact / Footer ───────────── */
 
-function RFQ() {
+function RFQ({ lang }: { lang: Lang }) {
+  const copy = UI_COPY[lang].rfq;
   const [submitted, setSubmitted] = useState(false);
   return (
     <section id="rfq" className="bg-navy-deep py-20 text-white sm:py-28">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[1fr_1.05fr] lg:items-start">
         <div>
           <div className="inline-flex items-center gap-2 rounded-full border border-[var(--brand-green)]/40 bg-[var(--brand-green)]/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--brand-green)]">
-            <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-green)]" /> Request for Quotation
+            <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-green)]" /> {copy.eyebrow}
           </div>
           <h2 className="mt-4 text-3xl font-extrabold text-balance sm:text-4xl md:text-5xl">
-            Tell us what you need. We&apos;ll quote within 24h.
+            {copy.title}
           </h2>
           <p className="mt-4 max-w-lg text-white/70">
-            Share product, quantity, destination port, and any special requirements. Our sales team
-            will reply with pricing, lead time, and packaging options.
+            {copy.desc}
           </p>
           <div id="contact" className="mt-10 grid gap-4">
             <ContactLine icon={MessageCircle} title="WhatsApp" value="+62 812-3456-7890" />
@@ -1761,12 +2117,12 @@ function RFQ() {
             <ContactLine icon={Phone} title="Phone" value="+62 21 5550 1234" />
             <ContactLine
               icon={MapPin}
-              title="Office"
+              title={copy.office}
               value="Jakarta, Indonesia · Mon–Sat · 08:00–17:00 WIB"
             />
             <ContactLine
               icon={Anchor}
-              title="Loading ports"
+              title={copy.loadingPorts}
               value="Tanjung Priok, Tanjung Perak, Belawan"
             />
           </div>
@@ -1784,43 +2140,42 @@ function RFQ() {
               <div className="grid h-14 w-14 place-items-center rounded-full bg-[var(--brand-green)]">
                 <CheckCircle2 className="h-7 w-7 text-navy-deep" />
               </div>
-              <h3 className="mt-5 text-2xl font-extrabold">Thank you!</h3>
+              <h3 className="mt-5 text-2xl font-extrabold">{copy.thanksTitle}</h3>
               <p className="mt-2 max-w-sm text-sm text-white/70">
-                Your inquiry has been received. A member of our export team will reach out within
-                one business day.
+                {copy.thanksDesc}
               </p>
             </div>
           ) : (
             <div className="grid gap-4">
               <div className="grid gap-4 sm:grid-cols-2">
-                <Field label="Full name" name="name" placeholder="Your name" required />
-                <Field label="Company" name="company" placeholder="Company name" />
+                <Field label={copy.fullName} name="name" placeholder={copy.namePlaceholder} required />
+                <Field label={copy.company} name="company" placeholder={copy.companyPlaceholder} />
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
-                <Field label="Email" name="email" type="email" placeholder="you@company.com" required />
-                <Field label="Country" name="country" placeholder="Destination country" />
+                <Field label={copy.email} name="email" type="email" placeholder={copy.emailPlaceholder} required />
+                <Field label={copy.country} name="country" placeholder={copy.countryPlaceholder} />
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
                 <SelectField
-                  label="Product"
+                  label={copy.product}
                   name="product"
                   options={RFQ_PRODUCT_OPTIONS}
                 />
-                <Field label="Quantity / FCL" name="qty" placeholder="e.g. 2 x 40 HQ" />
+                <Field label={copy.quantity} name="qty" placeholder={copy.qtyPlaceholder} />
               </div>
               <TextareaField
-                label="Message"
+                label={copy.message}
                 name="message"
-                placeholder="Specifications, packing, destination port, timing…"
+                placeholder={copy.messagePlaceholder}
               />
               <button
                 type="submit"
                 className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[var(--brand-green)] px-6 py-3.5 text-sm font-bold text-navy-deep transition hover:brightness-110"
               >
-                Submit RFQ <Send className="h-4 w-4" />
+                {copy.submit} <Send className="h-4 w-4" />
               </button>
               <p className="text-[11px] text-white/50">
-                By submitting you agree to be contacted by our sales team about your inquiry.
+                {copy.privacy}
               </p>
             </div>
           )}
@@ -1927,7 +2282,8 @@ function SelectField({
   );
 }
 
-function Footer() {
+function Footer({ lang }: { lang: Lang }) {
+  const copy = UI_COPY[lang].footer;
   return (
     <footer className="bg-navy-deep pb-10 pt-16 text-white/70">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
@@ -1935,26 +2291,25 @@ function Footer() {
           <div>
             <Logo />
             <p className="mt-5 max-w-sm text-sm text-white/60">
-              PT Artha Global Prima is a trusted Indonesian export company for coconut products,
-              palm sugar, biomass, and selected Indonesian spices.
+              {copy.desc}
             </p>
           </div>
           <FooterCol
-            title="Products"
+            title={copy.products}
             items={PRODUCTS.map((p) => p.name)}
           />
           <FooterCol
-            title="Company"
-            items={["About", "Vision & Mission", "Certifications", "Gallery", "Insights", "Contact"]}
+            title={copy.company}
+            items={[...copy.companyItems]}
           />
           <FooterCol
-            title="Connect"
+            title={copy.connect}
             items={["WhatsApp", "Email", "LinkedIn", "Google Maps", "RFQ Form"]}
           />
         </div>
         <div className="flex flex-col items-start justify-between gap-3 pt-6 text-xs text-white/50 sm:flex-row sm:items-center">
-          <div>© {new Date().getFullYear()} PT Artha Global Prima. All rights reserved.</div>
-          <div>Delivering Indonesia&apos;s Finest Natural Products to the World.</div>
+          <div>© {new Date().getFullYear()} PT Artha Global Prima. {copy.copyright}</div>
+          <div>{copy.tagline}</div>
         </div>
       </div>
     </footer>
@@ -1987,15 +2342,15 @@ function Index() {
       <Hero lang={lang} setLang={setLang} />
       <AboutSection lang={lang} />
       <ProductsSection lang={lang} />
-      <WhyUs />
-      <Certifications />
-      <Calculator />
-      <Markets />
-      <Gallery />
-      <Testimonials />
-      <Blog />
-      <RFQ />
-      <Footer />
+      <WhyUs lang={lang} />
+      <Certifications lang={lang} />
+      <Calculator lang={lang} />
+      <Markets lang={lang} />
+      <Gallery lang={lang} />
+      <Testimonials lang={lang} />
+      <Blog lang={lang} />
+      <RFQ lang={lang} />
+      <Footer lang={lang} />
     </main>
   );
 }
