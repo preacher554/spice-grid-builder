@@ -1916,81 +1916,83 @@ function Markets({ lang }: { lang: Lang }) {
 }
 
 function WorldMap() {
-  // Simple dotted continents using SVG circles
-  const dots: { cx: number; cy: number }[] = [];
-  for (let y = 8; y < 92; y += 4) {
-    for (let x = 4; x < 196; x += 4) {
-      const lat = ((50 - y) / 50) * 90;
-      const lng = ((x - 100) / 100) * 180;
-      if (inLandMask(lat, lng)) dots.push({ cx: x, cy: y });
-    }
-  }
   const ports = [
-    { name: "Jakarta", x: 142, y: 60 },
-    { name: "Rotterdam", x: 96, y: 30 },
-    { name: "New York", x: 50, y: 36 },
-    { name: "Los Angeles", x: 28, y: 40 },
-    { name: "Dubai", x: 116, y: 44 },
-    { name: "Shanghai", x: 156, y: 38 },
-    { name: "Sydney", x: 168, y: 76 },
-    { name: "Lagos", x: 96, y: 56 },
+    { name: "Indonesia", x: 725, y: 322, home: true },
+    { name: "Los Angeles", x: 160, y: 210 },
+    { name: "New York", x: 255, y: 188 },
+    { name: "Rotterdam", x: 485, y: 160 },
+    { name: "Dubai", x: 595, y: 245 },
+    { name: "Shanghai", x: 780, y: 210 },
+    { name: "Sydney", x: 825, y: 405 },
+    { name: "Cape Town", x: 520, y: 385 },
+  ];
+  const routes = [
+    { id: "route-us-west", d: "M725 322 C610 250 410 210 160 210", delay: "0s" },
+    { id: "route-us-east", d: "M725 322 C610 200 420 145 255 188", delay: "0.7s" },
+    { id: "route-europe", d: "M725 322 C670 190 555 125 485 160", delay: "1.4s" },
+    { id: "route-middle-east", d: "M725 322 C685 292 640 258 595 245", delay: "2.1s" },
+    { id: "route-china", d: "M725 322 C750 270 770 235 780 210", delay: "2.8s" },
+    { id: "route-australia", d: "M725 322 C770 350 805 380 825 405", delay: "3.5s" },
+    { id: "route-africa", d: "M725 322 C650 390 575 420 520 385", delay: "4.2s" },
   ];
 
   return (
-    <svg viewBox="0 0 200 100" className="h-full w-full">
-      {dots.map((d, i) => (
-        <circle key={i} cx={d.cx} cy={d.cy} r={0.7} fill="white" opacity={0.18} />
-      ))}
-      {/* arcs from Jakarta */}
-      {ports.slice(1).map((p, i) => (
-        <path
-          key={i}
-          d={`M142 60 Q ${(142 + p.x) / 2} ${Math.min(142, 60, p.y) - 20} ${p.x} ${p.y}`}
-          stroke="oklch(0.78 0.20 145)"
-          strokeWidth={0.4}
-          fill="none"
-          strokeDasharray="1 1.5"
-          opacity={0.7}
-        />
-      ))}
+    <svg viewBox="0 0 1000 520" className="h-full w-full" role="img" aria-label="Animated export routes from Indonesia to global markets">
+      <defs>
+        <radialGradient id="mapGlow" cx="50%" cy="50%" r="60%">
+          <stop offset="0%" stopColor="#4ade80" stopOpacity="0.16" />
+          <stop offset="100%" stopColor="#4ade80" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+      <rect width="1000" height="520" fill="url(#mapGlow)" opacity="0.9" />
+      <g className="world-land">
+        <path d="M72 154 L104 118 L160 96 L230 105 L285 132 L328 174 L350 218 L314 238 L280 222 L248 236 L225 270 L195 286 L162 270 L138 294 L112 274 L118 228 L92 203 Z" />
+        <path d="M216 280 L250 308 L272 354 L268 405 L246 462 L220 420 L190 382 L180 330 Z" />
+        <path d="M365 88 L412 66 L466 78 L500 110 L485 145 L420 154 L370 132 Z" />
+        <path d="M415 154 L462 130 L532 136 L574 164 L556 194 L504 202 L454 192 L420 178 Z" />
+        <path d="M480 206 L540 202 L592 236 L622 296 L604 370 L550 445 L500 416 L468 342 L456 278 Z" />
+        <path d="M550 145 L632 112 L735 102 L842 125 L922 182 L918 232 L855 252 L792 226 L738 252 L666 238 L612 206 L562 194 Z" />
+        <path d="M650 254 L704 260 L742 296 L720 334 L670 320 Z" />
+        <path d="M724 310 L754 318 L780 342 L764 366 L730 350 Z" />
+        <path d="M802 370 L858 354 L918 374 L950 414 L902 444 L842 432 L790 400 Z" />
+        <path d="M910 112 L948 104 L978 128 L988 152 L950 158 L920 140 Z" />
+        <path d="M690 300 L712 306 L700 325 L676 318 Z" />
+        <path d="M732 322 L748 330 L738 344 L718 337 Z" />
+      </g>
+      <g className="world-routes">
+        {routes.map((route) => (
+          <path key={route.id} id={route.id} d={route.d} />
+        ))}
+      </g>
+      <g>
+        {routes.map((route) => (
+          <circle key={`${route.id}-pulse`} r="5" className="route-pulse">
+            <animateMotion dur="6s" begin={route.delay} repeatCount="indefinite">
+              <mpath href={`#${route.id}`} />
+            </animateMotion>
+          </circle>
+        ))}
+      </g>
       {ports.map((p) => (
         <g key={p.name}>
-          <circle cx={p.x} cy={p.y} r={1.6} fill="oklch(0.78 0.20 145)" />
-          <circle cx={p.x} cy={p.y} r={3} fill="oklch(0.78 0.20 145)" opacity={0.25} />
+          <circle cx={p.x} cy={p.y} r={p.home ? 12 : 8} fill="#4ade80" opacity={p.home ? 0.26 : 0.18} />
+          <circle cx={p.x} cy={p.y} r={p.home ? 5 : 3.5} fill="#4ade80" />
+          {p.home && <circle cx={p.x} cy={p.y} r="18" fill="none" stroke="#4ade80" strokeWidth="2" opacity="0.25" />}
         </g>
       ))}
     </svg>
   );
 }
 
-// Rough land mask so we don't bother with a real geo lib
-function inLandMask(lat: number, lng: number) {
-  // North America
-  if (lat > 15 && lat < 70 && lng > -130 && lng < -55) return true;
-  // South America
-  if (lat > -55 && lat < 12 && lng > -82 && lng < -34) return true;
-  // Europe
-  if (lat > 36 && lat < 70 && lng > -10 && lng < 40) return true;
-  // Africa
-  if (lat > -35 && lat < 36 && lng > -18 && lng < 50) return true;
-  // Asia
-  if (lat > 5 && lat < 70 && lng > 40 && lng < 145) return true;
-  // SE Asia / Indonesia
-  if (lat > -10 && lat < 8 && lng > 95 && lng < 140) return true;
-  // Australia
-  if (lat > -40 && lat < -10 && lng > 112 && lng < 154) return true;
-  return false;
-}
-
 /* ───────────── Gallery ───────────── */
 
 const GALLERY = [
   { label: "Warehouse", img: imgCocoPeat },
-  { label: "Production Floor", img: imgWoodPellet },
-  { label: "QC Inspection", img: imgCinnamon },
-  { label: "Container Loading", img: heroPort },
-  { label: "Port Operations", img: imgCharcoal },
-  { label: "Our Team", img: imgCocoFiber },
+  { label: "Production Floor", img: imgCocoFiber },
+  { label: "QC Inspection", img: trustPremiumQuality },
+  { label: "Container Loading", img: trustPackaging },
+  { label: "Port Operations", img: heroPort },
+  { label: "Our Team", img: trustDocumentation },
 ];
 
 function Gallery({ lang }: { lang: Lang }) {
@@ -2009,7 +2011,7 @@ function Gallery({ lang }: { lang: Lang }) {
             <div
               key={g.label}
               className={`lift-panel hover:lift-panel-hover group relative overflow-hidden rounded-2xl shadow-soft ${
-                i === 0 ? "col-span-2 row-span-2 aspect-square sm:aspect-auto" : "aspect-square"
+                i === 0 ? "col-span-2 row-span-2 aspect-[4/3] sm:aspect-auto" : "aspect-[4/3] sm:aspect-square"
               }`}
             >
               <img
@@ -2095,8 +2097,261 @@ const POSTS = [
   { img: heroPort },
 ];
 
+type BlogArticle = {
+  category: string;
+  title: string;
+  intro: string;
+  sections: { heading: string; body: string }[];
+  checklist: string[];
+  cta: string;
+};
+
+const BLOG_ARTICLES: Record<Lang, BlogArticle[]> = {
+  en: [
+    {
+      category: "Product Guide",
+      title: "How to evaluate coco peat blocks before importing",
+      intro:
+        "A good coco peat shipment is not judged by appearance alone. Serious buyers look at washing, EC, moisture, expansion, particle structure, packing strength, and loading discipline before confirming repeat orders.",
+      sections: [
+        {
+          heading: "Start with application fit",
+          body:
+            "For greenhouse, nursery, hydroponic, and potting-mix applications, buyers should ask whether the material is washed, buffered when required, and screened to the particle size they need. Low and consistent EC is important because excess soluble salts can disturb sensitive crops.",
+        },
+        {
+          heading: "Ask for measurable loading data",
+          body:
+            "Before confirming an FCL, request block weight, bale size, moisture range, expansion expectation, and palletizing plan. These details help estimate landed cost and reduce surprises when the container is unpacked.",
+        },
+        {
+          heading: "Use documentation as a trust signal",
+          body:
+            "Consistent photos, packing lists, QC notes, and loading records show that the supplier controls the shipment rather than simply trading a commodity. This is where PT Artha Global Prima focuses: product selection, packing clarity, and export-ready documentation.",
+        },
+      ],
+      checklist: ["EC and pH target range", "Moisture and expansion ratio", "Block size and net weight", "Packing and palletizing plan", "Loading photos and export documents"],
+      cta: "Need a coco peat loading plan? Send your target block size and destination port to our export team.",
+    },
+    {
+      category: "Quality Control",
+      title: "What buyers should ask before ordering briquettes",
+      intro:
+        "Coconut charcoal briquettes are bought for performance. The right pre-order questions help buyers avoid weak burning, excess ash, broken cartons, and inconsistent repeat shipments.",
+      sections: [
+        {
+          heading: "Clarify the use case first",
+          body:
+            "Shisha, BBQ, restaurant, and retail buyers often need different shapes, burn times, ash behavior, odor profile, and packaging. A supplier should understand the channel before recommending cube, hexagonal, or pillow formats.",
+        },
+        {
+          heading: "Discuss core quality indicators",
+          body:
+            "Ask about moisture, ash, volatile matter, fixed carbon, hardness, drop-test behavior, and burn-time expectations. These indicators are commonly used to compare charcoal and briquette consistency across lots.",
+        },
+        {
+          heading: "Do not separate quality from packaging",
+          body:
+            "Even strong briquettes can disappoint if inner plastic, master carton, palletization, and container stuffing are weak. A reliable exporter prepares QC, packaging, and documentation together so buyers receive sellable goods.",
+        },
+      ],
+      checklist: ["Shape and size tolerance", "Ash and fixed-carbon expectations", "Moisture and burn-time target", "Carton strength and private label needs", "Sample approval before FCL"],
+      cta: "Share your briquette shape, packing format, and target market so we can recommend the right specification.",
+    },
+    {
+      category: "Logistics",
+      title: "Export procedure from Indonesia in 7 steps",
+      intro:
+        "A professional export shipment is a controlled sequence: quotation, specification confirmation, packing, documentation, customs, loading, and post-shipment document release.",
+      sections: [
+        {
+          heading: "From PO to production readiness",
+          body:
+            "The process begins with a confirmed product specification, quantity, destination, Incoterms, packaging, and payment terms. Once approved, production and packing are scheduled around the target vessel window.",
+        },
+        {
+          heading: "Documents must match the shipment",
+          body:
+            "Common export documents include commercial invoice, packing list, bill of lading, certificate of origin when requested, and product-specific certificates such as fumigation or phytosanitary documents where applicable.",
+        },
+        {
+          heading: "The best exporters communicate before problems happen",
+          body:
+            "Buyers need proactive updates: packing status, container booking, stuffing photos, vessel details, and draft documents for checking. This reduces amendment delays and gives importers confidence before the cargo arrives.",
+        },
+      ],
+      checklist: ["Confirmed specification and PO", "Packing list and invoice", "Container booking and stuffing photos", "Fumigation or product certificate when needed", "Draft B/L check before release"],
+      cta: "Tell us your destination port and required documents; we will map the export steps before quotation.",
+    },
+  ],
+  id: [
+    {
+      category: "Panduan Produk",
+      title: "Cara mengevaluasi coco peat block sebelum impor",
+      intro:
+        "Coco peat yang baik tidak cukup dinilai dari tampilan. Buyer profesional melihat proses washing, EC, kadar air, rasio ekspansi, struktur partikel, kekuatan packing, dan disiplin loading sebelum repeat order.",
+      sections: [
+        {
+          heading: "Mulai dari kebutuhan aplikasi",
+          body:
+            "Untuk greenhouse, nursery, hidroponik, dan potting mix, buyer perlu memastikan material sudah washed, buffered bila dibutuhkan, dan disaring sesuai ukuran partikel. EC yang rendah dan konsisten penting agar tanaman sensitif tidak terganggu oleh garam terlarut.",
+        },
+        {
+          heading: "Minta data loading yang terukur",
+          body:
+            "Sebelum konfirmasi FCL, minta berat block, ukuran bale, rentang moisture, estimasi ekspansi, dan rencana palletizing. Detail ini membantu menghitung landed cost dan mengurangi kejutan saat container dibongkar.",
+        },
+        {
+          heading: "Dokumentasi adalah sinyal kepercayaan",
+          body:
+            "Foto barang, packing list, catatan QC, dan dokumentasi loading menunjukkan supplier benar-benar mengendalikan shipment. Di sinilah PT Artha Global Prima fokus: seleksi produk, kejelasan packing, dan dokumen ekspor yang siap.",
+        },
+      ],
+      checklist: ["Target EC dan pH", "Moisture dan rasio ekspansi", "Ukuran block dan net weight", "Rencana packing dan palletizing", "Foto loading dan dokumen ekspor"],
+      cta: "Butuh rencana loading coco peat? Kirim target ukuran block dan port tujuan ke tim ekspor kami.",
+    },
+    {
+      category: "Quality Control",
+      title: "Yang perlu ditanyakan buyer sebelum order briquettes",
+      intro:
+        "Coconut charcoal briquettes dibeli karena performa. Pertanyaan yang tepat sebelum order membantu buyer menghindari burn time lemah, ash berlebih, carton rusak, dan kualitas repeat shipment yang tidak konsisten.",
+      sections: [
+        {
+          heading: "Pastikan penggunaan akhirnya",
+          body:
+            "Buyer shisha, BBQ, restoran, dan retail sering membutuhkan bentuk, burn time, karakter ash, aroma, dan packing yang berbeda. Supplier yang baik memahami channel penjualan sebelum merekomendasikan cube, hexagonal, atau pillow.",
+        },
+        {
+          heading: "Bahas indikator kualitas utama",
+          body:
+            "Tanyakan moisture, ash, volatile matter, fixed carbon, hardness, drop-test, dan target burn time. Parameter ini umum dipakai untuk membandingkan konsistensi charcoal dan briquette antar lot.",
+        },
+        {
+          heading: "Kualitas dan packaging harus satu paket",
+          body:
+            "Briquette yang kuat tetap bisa mengecewakan jika inner plastic, master carton, palletizing, dan stuffing container lemah. Exporter yang rapi menyiapkan QC, packaging, dan dokumentasi sebagai satu alur.",
+        },
+      ],
+      checklist: ["Toleransi bentuk dan ukuran", "Target ash dan fixed carbon", "Moisture dan burn time", "Kekuatan carton dan private label", "Approval sample sebelum FCL"],
+      cta: "Kirim bentuk briquette, format packing, dan target market Anda agar kami rekomendasikan spesifikasi yang tepat.",
+    },
+    {
+      category: "Logistik",
+      title: "Prosedur ekspor dari Indonesia dalam 7 langkah",
+      intro:
+        "Shipment ekspor profesional adalah alur yang terkontrol: quotation, konfirmasi spesifikasi, packing, dokumentasi, customs, loading, hingga release dokumen post-shipment.",
+      sections: [
+        {
+          heading: "Dari PO ke kesiapan produksi",
+          body:
+            "Proses dimulai dari spesifikasi produk, quantity, destination, Incoterms, packaging, dan payment terms yang sudah jelas. Setelah approved, produksi dan packing dijadwalkan mengikuti target vessel.",
+        },
+        {
+          heading: "Dokumen harus sesuai shipment",
+          body:
+            "Dokumen ekspor umum meliputi commercial invoice, packing list, bill of lading, certificate of origin jika diminta, serta sertifikat khusus seperti fumigation atau phytosanitary bila dibutuhkan.",
+        },
+        {
+          heading: "Exporter terbaik memberi update sebelum ada masalah",
+          body:
+            "Buyer membutuhkan update proaktif: status packing, booking container, foto stuffing, detail vessel, dan draft dokumen untuk dicek. Ini mengurangi delay amendment dan memberi importer rasa aman sebelum cargo tiba.",
+        },
+      ],
+      checklist: ["Spesifikasi dan PO final", "Packing list dan invoice", "Booking container dan foto stuffing", "Fumigation atau sertifikat produk jika perlu", "Draft B/L dicek sebelum release"],
+      cta: "Beri tahu destination port dan dokumen yang diperlukan; kami akan susun alur ekspor sebelum quotation.",
+    },
+  ],
+  zh: [
+    {
+      category: "产品指南",
+      title: "进口前如何评估 coco peat block",
+      intro: "优质 coco peat 不能只看外观。专业买家会确认清洗、EC、含水率、膨胀率、粒径结构、包装强度和装柜记录。",
+      sections: [
+        { heading: "先确认用途", body: "温室、育苗、无土栽培和基质混配对 EC、pH、粒径和是否 buffered 有不同要求。稳定的低 EC 能降低作物风险。" },
+        { heading: "索取可量化装柜数据", body: "确认 block 重量、尺寸、含水率范围、膨胀预期和托盘方案，有助于计算到岸成本并减少卸柜风险。" },
+        { heading: "用文件判断供应商能力", body: "稳定的照片、packing list、QC 记录和装柜记录说明供应商在管理货物，而不只是转手贸易。" },
+      ],
+      checklist: ["EC 与 pH 目标", "含水率与膨胀率", "block 尺寸和净重", "包装与托盘方案", "装柜照片和出口文件"],
+      cta: "请发送目标 block 尺寸和目的港，我们将协助制定装柜方案。",
+    },
+    {
+      category: "质量控制",
+      title: "订购炭块前买家应询问什么",
+      intro: "椰壳炭块的核心是燃烧表现。正确的问题能帮助买家避免灰分高、燃烧不稳、纸箱破损和批次不一致。",
+      sections: [
+        { heading: "先明确使用场景", body: "水烟、烧烤、餐饮和零售渠道需要不同形状、燃烧时间、灰分表现、气味和包装。" },
+        { heading: "确认质量指标", body: "建议询问含水率、灰分、挥发物、固定碳、硬度、跌落测试和燃烧时间预期。" },
+        { heading: "包装也是质量的一部分", body: "即使炭块质量好，内袋、外箱、托盘和装柜不当也会影响到货销售状态。" },
+      ],
+      checklist: ["形状和尺寸公差", "灰分与固定碳目标", "含水率与燃烧时间", "纸箱强度和私标要求", "整柜前样品确认"],
+      cta: "请提供炭块形状、包装形式和目标市场，我们会建议合适规格。",
+    },
+    {
+      category: "物流",
+      title: "印尼出口流程 7 步",
+      intro: "专业出口是一套可控流程：报价、规格确认、包装、文件、报关、装柜和出运后文件释放。",
+      sections: [
+        { heading: "从 PO 到生产准备", body: "确认产品规格、数量、目的港、贸易条款、包装和付款条件后，生产与包装会按船期安排。" },
+        { heading: "文件必须与货物一致", body: "常见文件包括商业发票、装箱单、提单、原产地证，以及按产品或目的国要求的熏蒸/植物检疫文件。" },
+        { heading: "提前沟通减少风险", body: "包装进度、订舱、装柜照片、船名航次和草稿文件确认，都能帮助买家减少后续改单延迟。" },
+      ],
+      checklist: ["规格与 PO 确认", "发票和装箱单", "订舱和装柜照片", "必要证书", "提单草稿确认"],
+      cta: "告诉我们目的港和所需文件，我们会先说明完整出口流程。",
+    },
+  ],
+  ar: [
+    {
+      category: "دليل المنتج",
+      title: "كيفية تقييم كتل coco peat قبل الاستيراد",
+      intro: "لا يكفي تقييم coco peat من الشكل فقط. المشتري المحترف يراجع الغسل، EC، الرطوبة، التمدد، بنية الجزيئات، قوة التعبئة، وسجل التحميل.",
+      sections: [
+        { heading: "ابدأ من الاستخدام", body: "تختلف احتياجات البيوت المحمية والمشاتل والزراعة المائية من حيث EC و pH وحجم الجزيئات والمعالجة المطلوبة." },
+        { heading: "اطلب بيانات تحميل واضحة", body: "وزن الكتلة، الحجم، الرطوبة، نسبة التمدد، وخطة التحميل تساعد في حساب التكلفة وتجنب المفاجآت عند التفريغ." },
+        { heading: "الوثائق علامة ثقة", body: "الصور، قائمة التعبئة، ملاحظات QC، وسجل التحميل تظهر أن المورد يدير الشحنة باحترافية." },
+      ],
+      checklist: ["نطاق EC و pH", "الرطوبة ونسبة التمدد", "حجم ووزن الكتلة", "خطة التعبئة والتحميل", "صور التحميل والوثائق"],
+      cta: "أرسل حجم الكتلة وميناء الوصول لنقترح خطة تحميل مناسبة.",
+    },
+    {
+      category: "رقابة الجودة",
+      title: "ما الذي يجب سؤاله قبل طلب briquettes",
+      intro: "أداء قوالب فحم جوز الهند هو أساس الشراء. الأسئلة الصحيحة تقلل مخاطر الرماد العالي، الكسر، وعدم ثبات الجودة.",
+      sections: [
+        { heading: "حدد الاستخدام النهائي", body: "الشيشة، الشواء، المطاعم، والبيع بالتجزئة تحتاج أشكالا وزمن احتراق وتعبئة مختلفة." },
+        { heading: "ناقش مؤشرات الجودة", body: "اسأل عن الرطوبة، الرماد، المواد المتطايرة، الكربون الثابت، الصلابة، واختبار السقوط وزمن الاحتراق." },
+        { heading: "التعبئة جزء من الجودة", body: "حتى المنتج الجيد قد يتضرر إذا كانت الأكياس الداخلية أو الكراتين أو التحميل ضعيفة." },
+      ],
+      checklist: ["الشكل والحجم", "الرماد والكربون الثابت", "الرطوبة وزمن الاحتراق", "قوة الكرتون والملصق الخاص", "اعتماد العينة قبل الحاوية"],
+      cta: "شاركنا شكل القوالب والتعبئة والسوق المستهدف لنقترح المواصفة الأنسب.",
+    },
+    {
+      category: "اللوجستيات",
+      title: "إجراءات التصدير من إندونيسيا في 7 خطوات",
+      intro: "الشحنة الاحترافية تسير بتسلسل واضح: عرض سعر، تأكيد المواصفة، التعبئة، الوثائق، الجمارك، التحميل، ثم إصدار الوثائق.",
+      sections: [
+        { heading: "من أمر الشراء إلى الإنتاج", body: "بعد تأكيد المواصفة والكمية والميناء وشروط التجارة والتعبئة والدفع، يتم جدولة الإنتاج والتعبئة حسب موعد السفينة." },
+        { heading: "الوثائق يجب أن تطابق الشحنة", body: "تشمل الوثائق الشائعة الفاتورة التجارية، قائمة التعبئة، بوليصة الشحن، شهادة المنشأ، وشهادات التبخير أو الصحة النباتية عند الحاجة." },
+        { heading: "التواصل المبكر يقلل المخاطر", body: "تحديثات التعبئة والحجز وصور التحميل ومسودة الوثائق تساعد المستورد على تجنب التأخير." },
+      ],
+      checklist: ["تأكيد المواصفة و PO", "الفاتورة وقائمة التعبئة", "حجز الحاوية وصور التحميل", "الشهادات المطلوبة", "مراجعة مسودة B/L"],
+      cta: "أخبرنا بميناء الوصول والوثائق المطلوبة لنوضح خطوات التصدير قبل عرض السعر.",
+    },
+  ],
+};
+
+const ARTICLE_UI: Record<Lang, { checklist: string; close: string }> = {
+  en: { checklist: "Buyer checklist", close: "Close" },
+  id: { checklist: "Checklist buyer", close: "Tutup" },
+  zh: { checklist: "买家检查清单", close: "关闭" },
+  ar: { checklist: "قائمة فحص المشتري", close: "إغلاق" },
+};
+
 function Blog({ lang }: { lang: Lang }) {
   const copy = UI_COPY[lang].blog;
+  const articles = BLOG_ARTICLES[lang];
+  const articleUi = ARTICLE_UI[lang];
+  const [selectedPost, setSelectedPost] = useState<number | null>(null);
+  const selectedArticle = selectedPost === null ? null : articles[selectedPost];
   return (
     <section id="blog" className="bg-background py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
@@ -2127,16 +2382,94 @@ function Blog({ lang }: { lang: Lang }) {
                 </div>
                 <h3 className="mt-3 text-lg font-bold text-navy-deep">{title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{excerpt}</p>
-                <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-navy">
+                <button
+                  type="button"
+                  onClick={() => setSelectedPost(selectedPost === index ? null : index)}
+                  className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-navy transition hover:text-[var(--brand-green-dark)]"
+                >
                   {copy.read} <ArrowRight className="h-4 w-4" />
-                </div>
+                </button>
               </div>
             </article>
             );
           })}
         </div>
+        {selectedArticle && (
+          <ArticleLanding
+            article={selectedArticle}
+            labels={articleUi}
+            onClose={() => setSelectedPost(null)}
+          />
+        )}
       </div>
     </section>
+  );
+}
+
+function ArticleLanding({
+  article,
+  labels,
+  onClose,
+}: {
+  article: BlogArticle;
+  labels: { checklist: string; close: string };
+  onClose: () => void;
+}) {
+  return (
+    <article className="mt-10 overflow-hidden rounded-[2rem] border border-border bg-secondary shadow-elevated">
+      <div className="grid gap-0 lg:grid-cols-[0.92fr_1.08fr]">
+        <div className="hero-gradient p-6 text-white sm:p-8 lg:p-10">
+          <div className="inline-flex items-center rounded-full bg-[var(--brand-green)]/15 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-[var(--brand-green)]">
+            {article.category}
+          </div>
+          <h3 className="mt-5 text-3xl font-extrabold text-balance sm:text-4xl">
+            {article.title}
+          </h3>
+          <p className="mt-4 text-sm leading-7 text-white/76 sm:text-base">
+            {article.intro}
+          </p>
+          <div className="mt-8 rounded-3xl border border-white/12 bg-white/[0.08] p-5">
+            <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-[var(--brand-green)]">
+              {labels.checklist}
+            </div>
+            <ul className="mt-4 grid gap-3 text-sm text-white/82">
+              {article.checklist.map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[var(--brand-green)]" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div className="p-6 sm:p-8 lg:p-10">
+          <div className="flex justify-end">
+            <button
+              type="button"
+              onClick={onClose}
+              className="rounded-full border border-border bg-card px-4 py-2 text-xs font-bold uppercase tracking-wider text-navy transition hover:border-[var(--brand-green)] hover:text-[var(--brand-green-dark)]"
+            >
+              {labels.close}
+            </button>
+          </div>
+          <div className="mt-3 grid gap-6">
+            {article.sections.map((section) => (
+              <section key={section.heading}>
+                <h4 className="text-lg font-extrabold text-navy-deep">
+                  {section.heading}
+                </h4>
+                <p className="mt-2 text-sm leading-7 text-muted-foreground">
+                  {section.body}
+                </p>
+              </section>
+            ))}
+          </div>
+          <div className="mt-8 rounded-3xl border border-[var(--brand-green)]/25 bg-[var(--brand-green)]/10 p-5 text-sm font-semibold leading-7 text-navy-deep">
+            {article.cta}
+          </div>
+        </div>
+      </div>
+    </article>
   );
 }
 
