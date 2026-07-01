@@ -936,25 +936,25 @@ function Hero({ lang, setLang }: { lang: Lang; setLang: (lang: Lang) => void }) 
 
       <Header lang={lang} setLang={setLang} />
 
-      <div className="absolute left-[max(1.25rem,calc((100vw-80rem)/2+2rem))] top-[12.6rem] z-20 hidden lg:block">
-        <div className="font-display bg-[linear-gradient(90deg,#ffffff_0%,#ffffff_80%,#b9f35d_100%)] bg-clip-text text-5xl font-extrabold uppercase leading-none tracking-[-0.055em] text-transparent drop-shadow-[0_5px_16px_rgba(0,0,0,0.62)] xl:text-6xl">
+      <div className="hero-brand-lockup absolute left-[max(1.25rem,calc((100vw-80rem)/2+2rem))] top-[12.6rem] z-20 hidden lg:block">
+        <div className="hero-gradient-text font-display bg-[linear-gradient(90deg,#ffffff_0%,#ffffff_80%,#b9f35d_100%)] bg-clip-text text-5xl font-extrabold uppercase leading-none tracking-[-0.055em] text-transparent drop-shadow-[0_5px_16px_rgba(0,0,0,0.62)] xl:text-6xl">
           ARTHA GLOBAL PRIMA
         </div>
-        <div className="mt-3 h-px w-80 bg-gradient-to-r from-[#d2a53a] via-[#b9f35d]/75 to-transparent" />
+        <div className="hero-brand-rule mt-3 h-px w-80 bg-gradient-to-r from-[#d2a53a] via-[#b9f35d]/75 to-transparent" />
       </div>
 
       <div className="mx-auto grid min-h-[760px] max-w-7xl items-end px-5 pb-12 pt-32 sm:min-h-[min(820px,100svh)] sm:px-8 sm:pb-16 lg:pt-44">
         <div className="max-w-3xl rounded-[1.5rem] bg-black/18 p-5 backdrop-blur-[2px] sm:rounded-[2rem] sm:bg-black/10 sm:p-7 sm:backdrop-blur-[1px] lg:bg-transparent lg:p-0 lg:backdrop-blur-0">
-          <p className="text-xs font-bold uppercase tracking-[0.18em] text-white text-shadow-lg sm:text-sm sm:tracking-[0.25em]">
+          <p className="hero-text-reveal hero-delay-1 text-xs font-bold uppercase tracking-[0.18em] text-white text-shadow-lg sm:text-sm sm:tracking-[0.25em]">
             {t.hero.kicker}
           </p>
-          <h1 className="mt-3 bg-[linear-gradient(90deg,#ffffff_0%,#ffffff_70%,#b9f35d_100%)] bg-clip-text text-4xl font-extrabold leading-[1.02] text-transparent text-balance drop-shadow-[0_5px_18px_rgba(0,0,0,0.72)] sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="hero-text-reveal hero-delay-2 hero-gradient-text mt-3 bg-[linear-gradient(90deg,#ffffff_0%,#ffffff_70%,#b9f35d_100%)] bg-clip-text text-4xl font-extrabold leading-[1.02] text-transparent text-balance drop-shadow-[0_5px_18px_rgba(0,0,0,0.72)] sm:text-5xl md:text-6xl lg:text-7xl">
             {t.hero.titleTop}
             <br />
             <span>{t.hero.titleAccent}</span>
           </h1>
-          <div className="mt-6 flex items-center gap-3">
-            <span className="h-px w-10 bg-white" />
+          <div className="hero-text-reveal hero-delay-3 mt-6 flex items-center gap-3">
+            <span className="hero-tagline-rule h-px w-10 bg-white" />
             <p className="text-xs font-bold uppercase tracking-[0.12em] text-white text-shadow-lg sm:text-sm sm:tracking-[0.22em]">
               {t.hero.tagline}
             </p>
