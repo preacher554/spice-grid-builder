@@ -43,6 +43,13 @@ import trustPackaging from "@/assets/trust-packaging.png";
 import trustPartnership from "@/assets/trust-partnership.png";
 import trustPremiumQuality from "@/assets/trust-premium-quality.png";
 import visionMissionBg from "@/assets/vision-mission-export-bg.png";
+import operationWarehouse from "@/assets/operation-warehouse.png";
+import operationProductionFloor from "@/assets/operation-production-floor.png";
+import operationQcInspection from "@/assets/operation-qc-inspection.png";
+import operationContainerLoading from "@/assets/operation-container-loading.png";
+import operationPortOperations from "@/assets/operation-port-operations.png";
+import operationExportTeam from "@/assets/operation-export-team.png";
+import globalFootprintMap from "@/assets/global-footprint-map.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -146,6 +153,14 @@ const LANGUAGES: { code: Lang; label: string; short: string }[] = [
   { code: "zh", label: "中文", short: "中文" },
   { code: "ar", label: "العربية", short: "AR" },
 ];
+
+const WHATSAPP_NUMBER = "6281196984949";
+const WHATSAPP_DISPLAY = "+62 811-9698-4949";
+const SALES_EMAIL = "sales.arthaglobalprima@gmail.com";
+
+function createWhatsAppUrl(message = "Hello PT Artha Global Prima, I would like to request a quotation.") {
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+}
 
 const COPY = {
   en: {
@@ -742,7 +757,9 @@ function Header({
               </nav>
               <div className="border-t border-navy-deep/10 p-4">
                 <a
-                  href="#rfq"
+                  href={createWhatsAppUrl()}
+                  target="_blank"
+                  rel="noreferrer"
                   onClick={() => setOpen(false)}
                   className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-navy-deep px-5 py-4 text-sm font-black text-white shadow-elevated"
                 >
@@ -922,7 +939,9 @@ function Hero({ lang, setLang }: { lang: Lang; setLang: (lang: Lang) => void }) 
 
           <div className="mt-9 flex flex-wrap gap-3">
             <a
-              href="#rfq"
+              href={createWhatsAppUrl()}
+              target="_blank"
+              rel="noreferrer"
               className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-navy-deep px-6 py-3.5 text-sm font-bold text-white shadow-elevated transition hover:-translate-y-0.5 hover:bg-navy-soft sm:w-auto"
             >
               {t.cta}
@@ -1496,7 +1515,7 @@ function ProductsSection({ lang }: { lang: Lang }) {
                     "--fly-x": entryVector.x,
                     "--fly-y": entryVector.y,
                     "--fly-rotate": entryVector.rotate,
-                    "--reveal-delay": `${index * 180}ms`,
+                    "--reveal-delay": `${index * 320}ms`,
                   } as CSSProperties}
                   className={`product-card-reveal group relative overflow-hidden rounded-2xl border bg-card text-left shadow-soft ${
                     !active ? "lg:col-span-2" : ""
@@ -1574,7 +1593,9 @@ function ProductsSection({ lang }: { lang: Lang }) {
                   ))}
                 </dl>
                 <a
-                  href="#rfq"
+                  href={createWhatsAppUrl(`Hello PT Artha Global Prima, I would like to request a quotation for ${active.name}.`)}
+                  target="_blank"
+                  rel="noreferrer"
                   className="mt-6 inline-flex items-center gap-2 rounded-full bg-[var(--brand-green)] px-5 py-2.5 text-sm font-bold text-navy-deep transition hover:brightness-110"
                 >
                   {quoteLabel(active.name)} <ArrowRight className="h-4 w-4" />
@@ -1842,7 +1863,9 @@ function Calculator({ lang }: { lang: Lang }) {
               {copy.note}
             </p>
             <a
-              href="#rfq"
+              href={createWhatsAppUrl("Hello PT Artha Global Prima, I would like to discuss my container calculation and request a quotation.")}
+              target="_blank"
+              rel="noreferrer"
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-[var(--brand-green)] px-5 py-2.5 text-sm font-bold text-navy-deep"
             >
               {copy.cta} <Send className="h-4 w-4" />
@@ -1902,7 +1925,7 @@ function Markets({ lang }: { lang: Lang }) {
           </div>
 
           {/* Stylized world map */}
-          <div className="lift-panel hover:lift-panel-hover relative aspect-[16/10] overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-navy-soft to-navy-deep p-6">
+          <div className="lift-panel hover:lift-panel-hover relative aspect-[16/10] overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-navy-soft to-navy-deep">
             <WorldMap />
             <div className="absolute bottom-4 right-4 rounded-full border border-white/15 bg-navy-deep/70 px-3 py-1.5 text-[11px] text-white/80 backdrop-blur">
               <span className="mr-1.5 inline-block h-2 w-2 rounded-full bg-[var(--brand-green)] align-middle" />
@@ -1917,114 +1940,111 @@ function Markets({ lang }: { lang: Lang }) {
 
 function WorldMap() {
   const ports = [
-    { name: "Indonesia", x: 725, y: 322, home: true },
-    { name: "Los Angeles", x: 160, y: 210 },
-    { name: "New York", x: 255, y: 188 },
-    { name: "Rotterdam", x: 485, y: 160 },
-    { name: "Dubai", x: 595, y: 245 },
-    { name: "Shanghai", x: 780, y: 210 },
-    { name: "Sydney", x: 825, y: 405 },
-    { name: "Cape Town", x: 520, y: 385 },
+    { name: "Indonesia", x: 918, y: 538, home: true },
+    { name: "Los Angeles", x: 190, y: 344 },
+    { name: "New York", x: 330, y: 315 },
+    { name: "Rotterdam", x: 622, y: 270 },
+    { name: "Dubai", x: 748, y: 413 },
+    { name: "Shanghai", x: 940, y: 355 },
+    { name: "Sydney", x: 1012, y: 640 },
+    { name: "Cape Town", x: 670, y: 660 },
   ];
   const routes = [
-    { id: "route-us-west", d: "M725 322 C610 250 410 210 160 210", delay: "0s" },
-    { id: "route-us-east", d: "M725 322 C610 200 420 145 255 188", delay: "0.7s" },
-    { id: "route-europe", d: "M725 322 C670 190 555 125 485 160", delay: "1.4s" },
-    { id: "route-middle-east", d: "M725 322 C685 292 640 258 595 245", delay: "2.1s" },
-    { id: "route-china", d: "M725 322 C750 270 770 235 780 210", delay: "2.8s" },
-    { id: "route-australia", d: "M725 322 C770 350 805 380 825 405", delay: "3.5s" },
-    { id: "route-africa", d: "M725 322 C650 390 575 420 520 385", delay: "4.2s" },
+    { id: "route-us-west", d: "M918 538 C760 402 480 332 190 344", delay: "0s" },
+    { id: "route-us-east", d: "M918 538 C760 350 520 285 330 315", delay: "0.7s" },
+    { id: "route-europe", d: "M918 538 C835 340 700 250 622 270", delay: "1.4s" },
+    { id: "route-middle-east", d: "M918 538 C848 498 790 440 748 413", delay: "2.1s" },
+    { id: "route-china", d: "M918 538 C930 470 942 410 940 355", delay: "2.8s" },
+    { id: "route-australia", d: "M918 538 C960 575 990 615 1012 640", delay: "3.5s" },
+    { id: "route-africa", d: "M918 538 C820 635 735 700 670 660", delay: "4.2s" },
   ];
 
   return (
-    <svg viewBox="0 0 1000 520" className="h-full w-full" role="img" aria-label="Animated export routes from Indonesia to global markets">
-      <defs>
-        <radialGradient id="mapGlow" cx="50%" cy="50%" r="60%">
-          <stop offset="0%" stopColor="#4ade80" stopOpacity="0.16" />
-          <stop offset="100%" stopColor="#4ade80" stopOpacity="0" />
-        </radialGradient>
-      </defs>
-      <rect width="1000" height="520" fill="url(#mapGlow)" opacity="0.9" />
-      <g className="world-land">
-        <path d="M72 154 L104 118 L160 96 L230 105 L285 132 L328 174 L350 218 L314 238 L280 222 L248 236 L225 270 L195 286 L162 270 L138 294 L112 274 L118 228 L92 203 Z" />
-        <path d="M216 280 L250 308 L272 354 L268 405 L246 462 L220 420 L190 382 L180 330 Z" />
-        <path d="M365 88 L412 66 L466 78 L500 110 L485 145 L420 154 L370 132 Z" />
-        <path d="M415 154 L462 130 L532 136 L574 164 L556 194 L504 202 L454 192 L420 178 Z" />
-        <path d="M480 206 L540 202 L592 236 L622 296 L604 370 L550 445 L500 416 L468 342 L456 278 Z" />
-        <path d="M550 145 L632 112 L735 102 L842 125 L922 182 L918 232 L855 252 L792 226 L738 252 L666 238 L612 206 L562 194 Z" />
-        <path d="M650 254 L704 260 L742 296 L720 334 L670 320 Z" />
-        <path d="M724 310 L754 318 L780 342 L764 366 L730 350 Z" />
-        <path d="M802 370 L858 354 L918 374 L950 414 L902 444 L842 432 L790 400 Z" />
-        <path d="M910 112 L948 104 L978 128 L988 152 L950 158 L920 140 Z" />
-        <path d="M690 300 L712 306 L700 325 L676 318 Z" />
-        <path d="M732 322 L748 330 L738 344 L718 337 Z" />
-      </g>
-      <g className="world-routes">
-        {routes.map((route) => (
-          <path key={route.id} id={route.id} d={route.d} />
-        ))}
-      </g>
-      <g>
-        {routes.map((route) => (
-          <circle key={`${route.id}-pulse`} r="5" className="route-pulse">
-            <animateMotion dur="6s" begin={route.delay} repeatCount="indefinite">
-              <mpath href={`#${route.id}`} />
-            </animateMotion>
-          </circle>
-        ))}
-      </g>
-      {ports.map((p) => (
-        <g key={p.name}>
-          <circle cx={p.x} cy={p.y} r={p.home ? 12 : 8} fill="#4ade80" opacity={p.home ? 0.26 : 0.18} />
-          <circle cx={p.x} cy={p.y} r={p.home ? 5 : 3.5} fill="#4ade80" />
-          {p.home && <circle cx={p.x} cy={p.y} r="18" fill="none" stroke="#4ade80" strokeWidth="2" opacity="0.25" />}
+    <div className="relative h-full w-full">
+      <img
+        src={globalFootprintMap}
+        alt="World map showing PT Artha Global Prima export destinations"
+        loading="lazy"
+        className="h-full w-full object-cover"
+      />
+      <svg
+        viewBox="0 0 1264 877"
+        className="pointer-events-none absolute inset-0 h-full w-full"
+        role="img"
+        aria-label="Animated export routes from Indonesia to global markets"
+      >
+        <g className="world-routes">
+          {routes.map((route) => (
+            <path key={route.id} id={route.id} d={route.d} />
+          ))}
         </g>
-      ))}
-    </svg>
+        <g>
+          {routes.map((route) => (
+            <circle key={`${route.id}-pulse`} r="7" className="route-pulse">
+              <animateMotion dur="6s" begin={route.delay} repeatCount="indefinite">
+                <mpath href={`#${route.id}`} />
+              </animateMotion>
+            </circle>
+          ))}
+        </g>
+        {ports.map((p) => (
+          <g key={p.name}>
+            <circle cx={p.x} cy={p.y} r={p.home ? 16 : 11} fill="#4ade80" opacity={p.home ? 0.3 : 0.2} />
+            <circle cx={p.x} cy={p.y} r={p.home ? 6 : 4.5} fill="#4ade80" />
+            {p.home && <circle cx={p.x} cy={p.y} r="25" fill="none" stroke="#4ade80" strokeWidth="2.5" opacity="0.3" />}
+          </g>
+        ))}
+      </svg>
+    </div>
   );
 }
 
 /* ───────────── Gallery ───────────── */
 
 const GALLERY = [
-  { label: "Warehouse", img: imgCocoPeat },
-  { label: "Production Floor", img: imgCocoFiber },
-  { label: "QC Inspection", img: trustPremiumQuality },
-  { label: "Container Loading", img: trustPackaging },
-  { label: "Port Operations", img: heroPort },
-  { label: "Our Team", img: trustDocumentation },
+  { label: "Warehouse", img: operationWarehouse },
+  { label: "Production Floor", img: operationProductionFloor },
+  { label: "QC Inspection", img: operationQcInspection },
+  { label: "Container Loading", img: operationContainerLoading },
+  { label: "Port Operations", img: operationPortOperations },
+  { label: "Our Team", img: operationExportTeam },
 ];
 
 function Gallery({ lang }: { lang: Lang }) {
   const copy = UI_COPY[lang].gallery;
+  const slides = [...GALLERY, ...GALLERY];
   return (
-    <section id="gallery" className="bg-background py-20 sm:py-28">
+    <section id="gallery" className="overflow-hidden bg-background py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow={copy.eyebrow}
           title={copy.title}
         />
-        <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
-          {GALLERY.map((g, i) => {
-            const label = copy.labels[i] ?? g.label;
+      </div>
+      <div className="operation-carousel mt-12 overflow-hidden">
+        <div className="operation-track flex w-max gap-4 px-5 sm:px-8">
+          {slides.map((g, i) => {
+            const originalIndex = i % GALLERY.length;
+            const label = copy.labels[originalIndex] ?? g.label;
             return (
-            <div
-              key={g.label}
-              className={`lift-panel hover:lift-panel-hover group relative overflow-hidden rounded-2xl shadow-soft ${
-                i === 0 ? "col-span-2 row-span-2 aspect-[4/3] sm:aspect-auto" : "aspect-[4/3] sm:aspect-square"
-              }`}
-            >
-              <img
-                src={g.img}
-                alt={label}
-                loading="lazy"
-                className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/90 via-navy-deep/20 to-transparent" />
-              <div className="absolute bottom-3 left-3 right-3 text-[11px] font-bold uppercase tracking-wider text-white">
-                {label}
+              <div
+                key={`${g.label}-${i}`}
+                className="operation-card lift-panel hover:lift-panel-hover group relative h-[220px] w-[320px] shrink-0 overflow-hidden rounded-[1.35rem] shadow-soft sm:h-[250px] sm:w-[390px] lg:h-[270px] lg:w-[430px]"
+                aria-hidden={i >= GALLERY.length ? true : undefined}
+              >
+                <img
+                  src={g.img}
+                  alt={label}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/88 via-navy-deep/16 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="inline-flex rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white shadow-[0_16px_40px_-28px_rgba(0,0,0,0.9)]">
+                    {label}
+                  </div>
+                </div>
               </div>
-            </div>
             );
           })}
         </div>
@@ -2492,9 +2512,19 @@ function RFQ({ lang }: { lang: Lang }) {
             {copy.desc}
           </p>
           <div id="contact" className="mt-10 grid gap-4">
-            <ContactLine icon={MessageCircle} title="WhatsApp" value="+62 812-3456-7890" />
-            <ContactLine icon={Mail} title="Email" value="sales@arthaprimaglobal.com" />
-            <ContactLine icon={Phone} title="Phone" value="+62 21 5550 1234" />
+            <ContactLine
+              icon={MessageCircle}
+              title="WhatsApp"
+              value={WHATSAPP_DISPLAY}
+              href={createWhatsAppUrl()}
+            />
+            <ContactLine
+              icon={Mail}
+              title="Email"
+              value={SALES_EMAIL}
+              href={`mailto:${SALES_EMAIL}`}
+            />
+            <ContactLine icon={Phone} title="Phone" value={WHATSAPP_DISPLAY} href={`tel:+${WHATSAPP_NUMBER}`} />
             <ContactLine
               icon={MapPin}
               title={copy.office}
@@ -2511,7 +2541,27 @@ function RFQ({ lang }: { lang: Lang }) {
         <form
           onSubmit={(e) => {
             e.preventDefault();
+            const formData = new FormData(e.currentTarget);
+            const name = String(formData.get("name") ?? "");
+            const company = String(formData.get("company") ?? "");
+            const email = String(formData.get("email") ?? "");
+            const country = String(formData.get("country") ?? "");
+            const product = String(formData.get("product") ?? "");
+            const quantity = String(formData.get("qty") ?? "");
+            const message = String(formData.get("message") ?? "");
+            const whatsappMessage = [
+              "Hello PT Artha Global Prima, I would like to request a quotation.",
+              "",
+              `Name: ${name || "-"}`,
+              `Company: ${company || "-"}`,
+              `Email: ${email || "-"}`,
+              `Destination country: ${country || "-"}`,
+              `Product: ${product || "-"}`,
+              `Quantity / FCL: ${quantity || "-"}`,
+              `Message: ${message || "-"}`,
+            ].join("\n");
             setSubmitted(true);
+            window.location.href = createWhatsAppUrl(whatsappMessage);
           }}
           className="rfq-panel lift-panel hover:lift-panel-hover rounded-3xl border p-6 sm:p-8"
         >
@@ -2569,13 +2619,15 @@ function ContactLine({
   icon: Icon,
   title,
   value,
+  href,
 }: {
   icon: typeof Mail;
   title: string;
   value: string;
+  href?: string;
 }) {
-  return (
-    <div className="rfq-contact-line flex items-start gap-4 rounded-2xl border p-4">
+  const content = (
+    <>
       <div className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-[var(--brand-green)]/15 ring-1 ring-[var(--brand-green)]/30">
         <Icon className="h-5 w-5 text-[var(--brand-green)]" />
       </div>
@@ -2583,6 +2635,25 @@ function ContactLine({
         <div className="text-[11px] font-bold uppercase tracking-wider text-white/60">{title}</div>
         <div className="truncate text-sm font-semibold text-white">{value}</div>
       </div>
+    </>
+  );
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        target={href.startsWith("http") ? "_blank" : undefined}
+        rel={href.startsWith("http") ? "noreferrer" : undefined}
+        className="rfq-contact-line flex items-start gap-4 rounded-2xl border p-4 transition hover:border-[var(--brand-green)]/40 hover:brightness-110"
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <div className="rfq-contact-line flex items-start gap-4 rounded-2xl border p-4">
+      {content}
     </div>
   );
 }
