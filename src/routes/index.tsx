@@ -18,7 +18,6 @@ import {
   Menu,
   MessageCircle,
   Package,
-  Phone,
   Quote,
   Send,
   Ship,
@@ -155,11 +154,35 @@ const LANGUAGES: { code: Lang; label: string; short: string }[] = [
 ];
 
 const WHATSAPP_NUMBER = "6281196984949";
-const WHATSAPP_DISPLAY = "+62 811-9698-4949";
 const SALES_EMAIL = "sales.arthaglobalprima@gmail.com";
 
 function createWhatsAppUrl(message = "Hello PT Artha Global Prima, I would like to request a quotation.") {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+}
+
+function WhatsAppIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 32 32" aria-hidden="true" className={className} fill="currentColor">
+      <path d="M16 3C8.83 3 3 8.83 3 16c0 2.32.61 4.58 1.77 6.57L3.18 28.82l6.4-1.53A12.9 12.9 0 0 0 16 29c7.17 0 13-5.83 13-13S23.17 3 16 3Zm0 23.55c-2 0-3.94-.56-5.62-1.63l-.4-.25-3.64.87.91-3.56-.27-.42A10.39 10.39 0 0 1 5.45 16C5.45 10.18 10.18 5.45 16 5.45S26.55 10.18 26.55 16 21.82 26.55 16 26.55Zm5.81-7.78c-.32-.16-1.88-.93-2.17-1.03-.29-.11-.5-.16-.71.16-.21.32-.82 1.03-1.01 1.24-.18.21-.37.24-.69.08-.32-.16-1.34-.49-2.55-1.57-.94-.84-1.58-1.88-1.77-2.2-.18-.32-.02-.49.14-.65.14-.14.32-.37.48-.55.16-.19.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.71-1.72-.98-2.35-.26-.62-.52-.54-.71-.55h-.61c-.21 0-.56.08-.85.4-.29.32-1.11 1.08-1.11 2.64 0 1.56 1.14 3.07 1.3 3.28.16.21 2.24 3.41 5.42 4.79.76.33 1.35.52 1.81.67.76.24 1.45.21 2 .13.61-.09 1.88-.77 2.14-1.51.27-.74.27-1.37.19-1.51-.08-.13-.29-.21-.61-.37Z" />
+    </svg>
+  );
+}
+
+function FloatingWhatsAppButton() {
+  return (
+    <a
+      href={createWhatsAppUrl(
+        "Hello PT Artha Global Prima, I would like to discuss Indonesian natural products export sourcing.",
+      )}
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Chat with PT Artha Global Prima on WhatsApp"
+      className="fixed bottom-5 right-5 z-[80] inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_18px_45px_rgba(15,35,55,0.35)] ring-4 ring-white/70 transition hover:-translate-y-1 hover:brightness-105 sm:bottom-7 sm:right-7 sm:h-auto sm:w-auto sm:gap-2 sm:px-5 sm:py-3"
+    >
+      <WhatsAppIcon className="h-7 w-7" />
+      <span className="hidden text-sm font-extrabold sm:inline">WhatsApp</span>
+    </a>
+  );
 }
 
 const COPY = {
@@ -1751,6 +1774,22 @@ function Calculator({ lang }: { lang: Lang }) {
       container: c,
     };
   }, [product, container, qty]);
+  const selectedProductName =
+    PRODUCTS.find((x) => x.id === product || (product === "charcoal" && x.id === "charcoal"))?.name ?? product;
+  const calculatorWhatsAppMessage = [
+    "Hello PT Artha Global Prima, I would like to send this container calculation to your sales team.",
+    "",
+    `Product: ${selectedProductName}`,
+    `Packaging unit: ${result.density.label}`,
+    `Quantity: ${numberFormat.format(qty)} units`,
+    `Container type: ${result.container.label}`,
+    `Estimated containers needed: ${result.containersNeeded < 1 ? "< 1" : result.containersNeeded.toFixed(2)}`,
+    `Estimated max units per container: ${numberFormat.format(result.unitsPerContainer)}`,
+    `Estimated total weight: ${(result.totalWeight / 1000).toFixed(2)} MT (${numberFormat.format(result.totalWeight)} kg)`,
+    `Estimated total volume: ${result.totalVolume.toFixed(2)} m³`,
+    "",
+    "Please help me confirm loading plan, pricing, and lead time.",
+  ].join("\n");
 
   return (
     <section id="calculator" className="bg-secondary py-20 sm:py-28">
@@ -1863,7 +1902,7 @@ function Calculator({ lang }: { lang: Lang }) {
               {copy.note}
             </p>
             <a
-              href={createWhatsAppUrl("Hello PT Artha Global Prima, I would like to discuss my container calculation and request a quotation.")}
+              href={createWhatsAppUrl(calculatorWhatsAppMessage)}
               target="_blank"
               rel="noreferrer"
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-[var(--brand-green)] px-5 py-2.5 text-sm font-bold text-navy-deep"
@@ -2513,18 +2552,11 @@ function RFQ({ lang }: { lang: Lang }) {
           </p>
           <div id="contact" className="mt-10 grid gap-4">
             <ContactLine
-              icon={MessageCircle}
-              title="WhatsApp"
-              value={WHATSAPP_DISPLAY}
-              href={createWhatsAppUrl()}
-            />
-            <ContactLine
               icon={Mail}
               title="Email"
               value={SALES_EMAIL}
               href={`mailto:${SALES_EMAIL}`}
             />
-            <ContactLine icon={Phone} title="Phone" value={WHATSAPP_DISPLAY} href={`tel:+${WHATSAPP_NUMBER}`} />
             <ContactLine
               icon={MapPin}
               title={copy.office}
@@ -2802,6 +2834,7 @@ function Index() {
       <Blog lang={lang} />
       <RFQ lang={lang} />
       <Footer lang={lang} />
+      <FloatingWhatsAppButton />
     </main>
   );
 }
