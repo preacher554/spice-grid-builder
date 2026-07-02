@@ -211,18 +211,18 @@ const COPY = {
     },
     about: {
       eyebrow: "About Us",
-      title: "A dependable Indonesian export partner for premium natural products.",
+      title: "Welcome to PT Artha Global Prima",
       lead:
-        "PT Artha Global Prima connects the richness of Indonesia's natural resources with global buyers through carefully selected coconut products, palm sugar, biomass, and selected spices.",
+        "PT Artha Global Prima is an Indonesian export company for coconut products, biomass, and premium spices, serving importers, distributors, wholesalers, manufacturers, and industrial buyers worldwide.",
       body:
-        "We work through trusted supplier networks and experienced export professionals to support importers, wholesalers, distributors, manufacturers, and retailers with reliable sourcing, strict quality control, professional documentation, and timely delivery.",
+        "We deliver reliable sourcing, strict quality control, professional export documentation, competitive pricing, and on-time shipment so global buyers can access Indonesia's natural products with confidence.",
       welcome: {
         label: "Company Profile",
-        title: "Welcome to PT Artha Global Prima",
+        title: "Indonesian Export Company for Coconut Products, Biomass, and Premium Spices",
         paragraphs: [
-          "PT Artha Global Prima is an Indonesian export company specializing in premium coconut products, biomass, and spices. We are committed to becoming a trusted export partner that connects Indonesia's natural wealth with global markets through high-quality products, competitive pricing, and professional service.",
-          "Supported by selected producer networks, strict quality control, and export processes aligned with international standards, we are ready to serve importers, distributors, manufacturers, and industries across multiple countries.",
-          "We believe the best business relationships are built on trust, quality, and long-term commitment.",
+          "PT Artha Global Prima specializes in premium coconut products, biomass, and selected Indonesian spices for international trade. Our company helps global buyers source export-ready natural products from Indonesia with consistent quality and dependable service.",
+          "With selected supplier networks, disciplined quality assurance, and export handling aligned with international standards, we support importers, distributors, wholesalers, retailers, and manufacturers across multiple markets.",
+          "We believe strong business partnerships are built through trust, product consistency, transparent communication, and long-term commitment.",
         ],
       },
       quote: "We don't just export products. We build lasting partnerships.",
@@ -264,18 +264,18 @@ const COPY = {
     },
     about: {
       eyebrow: "Tentang Kami",
-      title: "Mitra ekspor Indonesia yang andal untuk produk alami premium.",
+      title: "Selamat Datang di PT Artha Global Prima",
       lead:
-        "PT Artha Global Prima menghubungkan kekayaan sumber daya alam Indonesia dengan pembeli global melalui produk kelapa, gula aren, biomassa, dan rempah pilihan.",
+        "PT Artha Global Prima adalah perusahaan ekspor Indonesia untuk produk kelapa, biomassa, dan rempah premium, melayani importir, distributor, wholesaler, manufaktur, dan kebutuhan industri di pasar global.",
       body:
-        "Kami bekerja dengan jaringan pemasok terpercaya dan profesional ekspor berpengalaman untuk mendukung importir, grosir, distributor, manufaktur, dan retail melalui sourcing yang andal, kontrol kualitas ketat, dokumentasi profesional, dan pengiriman tepat waktu.",
+        "Kami menghadirkan sourcing yang andal, kontrol kualitas yang ketat, dokumentasi ekspor profesional, harga kompetitif, dan pengiriman tepat waktu agar buyer internasional dapat memperoleh produk alami Indonesia dengan lebih percaya diri.",
       welcome: {
         label: "Profil Perusahaan",
-        title: "Welcome to PT Artha Global Prima",
+        title: "Perusahaan Ekspor Indonesia untuk Produk Kelapa, Biomassa, dan Rempah Premium",
         paragraphs: [
-          "PT Artha Global Prima adalah perusahaan ekspor Indonesia yang bergerak di bidang produk kelapa, biomassa, dan rempah-rempah berkualitas premium. Kami berkomitmen menjadi mitra ekspor terpercaya yang menghubungkan kekayaan alam Indonesia dengan pasar global melalui produk berkualitas tinggi, harga yang kompetitif, dan layanan profesional.",
-          "Didukung jaringan produsen pilihan, sistem pengendalian mutu yang ketat, serta proses ekspor yang sesuai standar internasional, kami siap memenuhi kebutuhan importir, distributor, manufaktur, hingga industri di berbagai negara.",
-          "Kami percaya bahwa hubungan bisnis terbaik dibangun atas dasar kepercayaan, kualitas, dan komitmen jangka panjang.",
+          "PT Artha Global Prima berfokus pada ekspor produk kelapa, biomassa, dan rempah pilihan Indonesia untuk kebutuhan perdagangan internasional. Kami membantu buyer global mendapatkan produk alami Indonesia yang siap ekspor dengan kualitas yang konsisten dan layanan yang profesional.",
+          "Didukung jaringan pemasok terpilih, sistem quality control yang disiplin, serta penanganan ekspor yang sesuai standar internasional, kami siap melayani importir, distributor, wholesaler, retailer, dan manufaktur di berbagai negara.",
+          "Kami percaya kemitraan bisnis yang kuat dibangun melalui kepercayaan, konsistensi produk, komunikasi yang transparan, dan komitmen jangka panjang.",
         ],
       },
       quote: "Kami tidak hanya mengekspor produk. Kami membangun kemitraan jangka panjang.",
@@ -317,18 +317,18 @@ const COPY = {
     },
     about: {
       eyebrow: "关于我们",
-      title: "值得信赖的印尼天然产品出口伙伴。",
+      title: "欢迎来到 PT Artha Global Prima",
       lead:
-        "PT Artha Global Prima 通过精选椰子产品、棕榈糖、生物质和印尼香料，将印度尼西亚丰富的天然资源连接到全球买家。",
+        "PT Artha Global Prima 是一家专注于椰子产品、生物质和优质香料的印度尼西亚出口公司，为全球进口商、分销商、批发商、制造商和工业买家提供服务。",
       body:
-        "我们依托可信赖的供应商网络和经验丰富的出口团队，为进口商、批发商、分销商、制造商和零售商提供稳定采购、严格质检、专业出口文件和准时交付。",
+        "我们提供可靠采购、严格质量控制、专业出口文件、有竞争力的价格以及准时发运，让全球买家能够更安心地采购印尼天然产品。",
       welcome: {
         label: "公司简介",
-        title: "欢迎来到 PT Artha Global Prima",
+        title: "印度尼西亚椰子产品、生物质与优质香料出口公司",
         paragraphs: [
-          "PT Artha Global Prima 是一家印度尼西亚出口公司，专注于高品质椰子产品、生物质和香料。我们致力于成为值得信赖的出口伙伴，通过高质量产品、具有竞争力的价格和专业服务，将印度尼西亚丰富的自然资源连接到全球市场。",
-          "凭借精选生产商网络、严格的质量控制体系，以及符合国际标准的出口流程，我们能够服务不同国家的进口商、分销商、制造商和各类行业客户。",
-          "我们相信，最好的商业关系建立在信任、品质和长期承诺之上。",
+          "PT Artha Global Prima 专注于椰子产品、生物质以及精选印尼香料的国际出口业务。我们帮助全球买家采购来自印度尼西亚、适合出口的天然产品，并提供稳定品质与专业服务。",
+          "凭借精选供应网络、严格质量管理以及符合国际标准的出口流程，我们服务于进口商、分销商、批发商、零售商和制造企业。",
+          "我们相信，稳固的商业合作建立在信任、产品一致性、透明沟通和长期承诺之上。",
         ],
       },
       quote: "我们不只是出口产品。我们建立长期合作伙伴关系。",
@@ -370,18 +370,18 @@ const COPY = {
     },
     about: {
       eyebrow: "من نحن",
-      title: "شريك تصدير إندونيسي موثوق للمنتجات الطبيعية الفاخرة.",
+      title: "مرحبا بكم في PT Artha Global Prima",
       lead:
-        "تربط PT Artha Global Prima ثراء الموارد الطبيعية الإندونيسية بالمشترين حول العالم من خلال منتجات جوز الهند وسكر النخيل والكتلة الحيوية والتوابل المختارة.",
+        "PT Artha Global Prima هي شركة تصدير إندونيسية لمنتجات جوز الهند والكتلة الحيوية والتوابل الفاخرة، وتخدم المستوردين والموزعين وتجار الجملة والمصنعين والعملاء الصناعيين حول العالم.",
       body:
-        "نعمل عبر شبكة موردين موثوقة وفريق تصدير محترف لدعم المستوردين وتجار الجملة والموزعين والمصنعين وتجار التجزئة بحلول توريد موثوقة ورقابة جودة صارمة ووثائق تصدير احترافية وتسليم في الوقت المحدد.",
+        "نقدم حلولا موثوقة للتوريد ورقابة جودة صارمة ووثائق تصدير احترافية وأسعارا تنافسية وشحنا في الوقت المحدد حتى يتمكن المشترون العالميون من الحصول على المنتجات الطبيعية الإندونيسية بثقة أكبر.",
       welcome: {
         label: "الملف التعريفي للشركة",
-        title: "مرحبا بكم في PT Artha Global Prima",
+        title: "شركة تصدير إندونيسية لمنتجات جوز الهند والكتلة الحيوية والتوابل الفاخرة",
         paragraphs: [
-          "PT Artha Global Prima هي شركة تصدير إندونيسية متخصصة في منتجات جوز الهند والكتلة الحيوية والتوابل الفاخرة. نلتزم بأن نكون شريك تصدير موثوقا يربط ثروات إندونيسيا الطبيعية بالأسواق العالمية من خلال منتجات عالية الجودة وأسعار تنافسية وخدمة احترافية.",
-          "بدعم من شبكة منتجين مختارين ونظام صارم لمراقبة الجودة وعمليات تصدير متوافقة مع المعايير الدولية، نحن مستعدون لتلبية احتياجات المستوردين والموزعين والمصنعين والصناعات في مختلف الدول.",
-          "نؤمن بأن أفضل العلاقات التجارية تبنى على الثقة والجودة والالتزام طويل الأمد.",
+          "تركز PT Artha Global Prima على تصدير منتجات جوز الهند والكتلة الحيوية والتوابل الإندونيسية المختارة للأسواق الدولية. نحن نساعد المشترين العالميين على الحصول على منتجات طبيعية إندونيسية جاهزة للتصدير بجودة مستقرة وخدمة احترافية.",
+          "وبفضل شبكة الموردين المختارة وإجراءات الجودة المنضبطة والتعامل التصديري المتوافق مع المعايير الدولية، نخدم المستوردين والموزعين وتجار الجملة وتجار التجزئة والمصنعين في أسواق متعددة.",
+          "نؤمن أن الشراكات التجارية القوية تبنى على الثقة وثبات جودة المنتج والتواصل الواضح والالتزام طويل الأمد.",
         ],
       },
       quote: "نحن لا نصدر المنتجات فقط. نحن نبني شراكات مستدامة.",
@@ -1209,9 +1209,26 @@ const RFQ_PRODUCT_OPTIONS = PORTFOLIO_GROUPS.flatMap((group) => group.items);
 
 function AboutSection({ lang }: { lang: Lang }) {
   const t = COPY[lang];
-  const ui = UI_COPY[lang];
+  const aboutIntroRef = useRef<HTMLDivElement | null>(null);
+  const [aboutIntroEntered, setAboutIntroEntered] = useState(false);
   const welcomeRef = useRef<HTMLDivElement | null>(null);
   const [welcomeEntered, setWelcomeEntered] = useState(false);
+
+  useEffect(() => {
+    const node = aboutIntroRef.current;
+    if (!node || !("IntersectionObserver" in window)) {
+      setAboutIntroEntered(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setAboutIntroEntered(Boolean(entry?.isIntersecting && entry.intersectionRatio >= 0.14)),
+      { threshold: [0, 0.14, 0.3], rootMargin: "-8% 0px -14% 0px" },
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const node = welcomeRef.current;
@@ -1234,17 +1251,14 @@ function AboutSection({ lang }: { lang: Lang }) {
       <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-navy-deep/5 to-transparent" />
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <div className="mx-auto max-w-5xl">
-          <div className="text-center">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[var(--brand-green)]/40 bg-[var(--brand-green)]/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--brand-green-dark)]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-green)]" /> {t.about.eyebrow}
-            </div>
-            <h2 className="mx-auto mt-5 max-w-4xl text-2xl font-extrabold text-navy-deep text-balance sm:text-4xl md:text-6xl">
+          <div ref={aboutIntroRef} data-entered={aboutIntroEntered} className="text-center">
+            <h2 className="about-intro-title mx-auto max-w-4xl bg-[linear-gradient(90deg,var(--navy-950)_0%,var(--navy-950)_74%,var(--brand-green-dark)_100%)] bg-clip-text text-3xl font-extrabold leading-[1.04] text-transparent text-balance sm:text-5xl md:text-6xl">
               {t.about.title}
             </h2>
-            <p className="mx-auto mt-5 max-w-3xl text-base leading-7 text-muted-foreground sm:mt-6 sm:text-lg sm:leading-8">
+            <p className="about-intro-copy mx-auto mt-5 max-w-3xl text-base leading-7 text-muted-foreground sm:mt-6 sm:text-lg sm:leading-8">
               {t.about.lead}
             </p>
-            <p className="mx-auto mt-4 max-w-3xl leading-7 text-muted-foreground">
+            <p className="about-intro-copy about-intro-copy-delay mx-auto mt-4 max-w-3xl leading-7 text-muted-foreground">
               {t.about.body}
             </p>
           </div>
@@ -1255,10 +1269,7 @@ function AboutSection({ lang }: { lang: Lang }) {
             className="about-welcome-panel mt-10 overflow-hidden rounded-[2rem] border border-border bg-[linear-gradient(135deg,#ffffff_0%,#f7fbff_56%,rgba(185,243,93,0.12)_100%)] p-6 text-start shadow-soft sm:mt-12 sm:p-8 lg:grid lg:grid-cols-[0.8fr_1.2fr] lg:gap-10 lg:p-10"
           >
             <div className="about-welcome-left">
-              <div className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[var(--brand-green-dark)]">
-                {t.about.welcome.label}
-              </div>
-              <h3 className="mt-4 bg-[linear-gradient(90deg,var(--navy-950)_0%,var(--navy-950)_72%,var(--brand-green-dark)_100%)] bg-clip-text text-2xl font-extrabold leading-tight text-transparent text-balance sm:text-4xl">
+              <h3 className="bg-[linear-gradient(90deg,var(--navy-950)_0%,var(--navy-950)_72%,var(--brand-green-dark)_100%)] bg-clip-text text-2xl font-extrabold leading-tight text-transparent text-balance sm:text-4xl">
                 {t.about.welcome.title}
               </h3>
               <div className="mt-5 h-px w-40 bg-gradient-to-r from-[#d2a53a] via-[var(--brand-green)] to-transparent" />
@@ -2803,8 +2814,8 @@ function Testimonials({ lang }: { lang: Lang }) {
 /* ───────────── Blog ───────────── */
 
 const POSTS = [
-  { img: imgCinnamon },
   { img: imgCocoPeat },
+  { img: imgCharcoalBriquette },
   { img: heroPort },
 ];
 
