@@ -159,9 +159,18 @@ const LANGUAGES: { code: Lang; label: string; short: string }[] = [
 
 const WHATSAPP_NUMBER = "6281196984949";
 const SALES_EMAIL = "sales.arthaglobalprima@gmail.com";
+const FACEBOOK_URL = "https://www.facebook.com/share/1JNdTKrvnN/";
+const LINKEDIN_URL =
+  "https://www.linkedin.com/in/pt-artha-global-prima-55136841b?utm_source=share_via&utm_content=profile&utm_medium=member_android";
 
 function createWhatsAppUrl(message = "Hello PT Artha Global Prima, I would like to request a quotation.") {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+}
+
+function createFooterWhatsAppUrl(topic: string) {
+  return createWhatsAppUrl(
+    `Hello PT Artha Global Prima, I found your website and would like to contact your team about ${topic}.`,
+  );
 }
 
 function WhatsAppIcon({ className = "" }: { className?: string }) {
@@ -3486,6 +3495,15 @@ function SelectField({
 
 function Footer({ lang }: { lang: Lang }) {
   const copy = UI_COPY[lang].footer;
+  const companyLinks = [
+    "#about",
+    "#why",
+    "#certifications",
+    "#gallery",
+    "#blog",
+    "#contact",
+  ];
+
   return (
     <footer className="bg-navy-deep pb-10 pt-16 text-white/70">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
@@ -3498,15 +3516,24 @@ function Footer({ lang }: { lang: Lang }) {
           </div>
           <FooterCol
             title={copy.products}
-            items={PRODUCTS.map((p) => p.name)}
+            items={PRODUCTS.map((p) => ({ label: p.name, href: "#products" }))}
           />
           <FooterCol
             title={copy.company}
-            items={[...copy.companyItems]}
+            items={copy.companyItems.map((item, index) => ({
+              label: item,
+              href: companyLinks[index] ?? "#about",
+            }))}
           />
           <FooterCol
             title={copy.connect}
-            items={["WhatsApp", "Email", "LinkedIn", "Google Maps", "RFQ Form"]}
+            items={[
+              { label: "WhatsApp", href: createFooterWhatsAppUrl("a quotation and export product information") },
+              { label: "Email", href: createFooterWhatsAppUrl(`email communication via ${SALES_EMAIL}`) },
+              { label: "Facebook", href: FACEBOOK_URL },
+              { label: "LinkedIn", href: LINKEDIN_URL },
+              { label: "RFQ Form", href: createFooterWhatsAppUrl("an RFQ for Indonesian natural products") },
+            ]}
           />
         </div>
         <div className="flex flex-col items-start justify-between gap-3 pt-6 text-xs text-white/50 sm:flex-row sm:items-center">
@@ -3518,18 +3545,31 @@ function Footer({ lang }: { lang: Lang }) {
   );
 }
 
-function FooterCol({ title, items }: { title: string; items: string[] }) {
+type FooterItem = string | { label: string; href: string };
+
+function FooterCol({ title, items }: { title: string; items: FooterItem[] }) {
   return (
     <div>
       <div className="text-[11px] font-bold uppercase tracking-wider text-white">{title}</div>
       <ul className="mt-4 space-y-2.5 text-sm">
-        {items.map((i) => (
-          <li key={i}>
-            <a href="#" className="text-white/65 transition hover:text-white">
-              {i}
-            </a>
-          </li>
-        ))}
+        {items.map((item) => {
+          const label = typeof item === "string" ? item : item.label;
+          const href = typeof item === "string" ? "#" : item.href;
+          const isExternal = href.startsWith("http") || href.startsWith("mailto:");
+
+          return (
+            <li key={label}>
+              <a
+                href={href}
+                target={isExternal && href.startsWith("http") ? "_blank" : undefined}
+                rel={isExternal && href.startsWith("http") ? "noreferrer" : undefined}
+                className="text-white/65 transition hover:text-white"
+              >
+                {label}
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
