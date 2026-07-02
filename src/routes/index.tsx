@@ -1209,6 +1209,7 @@ const RFQ_PRODUCT_OPTIONS = PORTFOLIO_GROUPS.flatMap((group) => group.items);
 
 function AboutSection({ lang }: { lang: Lang }) {
   const t = COPY[lang];
+  const ui = UI_COPY[lang];
   const aboutIntroRef = useRef<HTMLDivElement | null>(null);
   const [aboutIntroEntered, setAboutIntroEntered] = useState(false);
   const welcomeRef = useRef<HTMLDivElement | null>(null);
