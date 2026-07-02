@@ -203,10 +203,10 @@ const COPY = {
     },
     cta: "Request Quotation",
     hero: {
-      kicker: "Indonesia's Trusted Exporter of",
+      kicker: "Your Trusted Source for Indonesia's Finest Natural Products",
       titleTop: "Coconut Products &",
       titleAccent: "Premium Spices",
-      tagline: "Supplying consistent quality to buyers worldwide",
+      tagline: "Trusted Export Partner\nDelivering Indonesia's Finest Natural Products to the World.",
       profile: "Download Company Profile",
     },
     about: {
@@ -232,8 +232,8 @@ const COPY = {
     },
     products: {
       eyebrow: "Our Products",
-      title: "Export-ready natural products from Indonesia.",
-      desc: "Core commercial lines for agriculture, food industries, biomass energy, manufacturing, and retail distribution.",
+      title: "Indonesia's Flagship Export Products.",
+      desc: "Our leading export product lines, prepared to serve global demand with consistent quality and dependable supply.",
     },
     vision: {
       eyebrow: "Our Vision",
@@ -256,10 +256,10 @@ const COPY = {
     },
     cta: "Minta Penawaran",
     hero: {
-      kicker: "Eksportir Terpercaya Indonesia untuk",
+      kicker: "Sumber Terpercaya Anda untuk Produk Alami Terbaik Indonesia",
       titleTop: "Produk Kelapa &",
       titleAccent: "Rempah Premium",
-      tagline: "Menyuplai kualitas konsisten untuk pembeli di seluruh dunia",
+      tagline: "Trusted Export Partner\nMenghadirkan Produk Alami Terbaik Indonesia ke Seluruh Dunia.",
       profile: "Unduh Company Profile",
     },
     about: {
@@ -285,8 +285,8 @@ const COPY = {
     },
     products: {
       eyebrow: "Produk Kami",
-      title: "Produk unggulan export kami.",
-      desc: "Lini komersial utama untuk pertanian, industri makanan, energi biomassa, manufaktur, dan distribusi retail.",
+      title: "Produk Unggulan Export Indonesia",
+      desc: "Lini produk ekspor utama kami, siap dipasok secara konsisten untuk kebutuhan pasar global.",
     },
     vision: {
       eyebrow: "Visi Kami",
@@ -309,10 +309,10 @@ const COPY = {
     },
     cta: "获取报价",
     hero: {
-      kicker: "印度尼西亚可信赖出口商",
+      kicker: "您值得信赖的印尼优质天然产品来源",
       titleTop: "椰子产品与",
       titleAccent: "优质香料",
-      tagline: "为全球买家稳定供应一致品质",
+      tagline: "值得信赖的出口伙伴\n将印度尼西亚优质天然产品带向世界。",
       profile: "下载公司简介",
     },
     about: {
@@ -338,8 +338,8 @@ const COPY = {
     },
     products: {
       eyebrow: "我们的产品",
-      title: "来自印度尼西亚的出口级天然产品。",
-      desc: "适用于农业、食品工业、生物质能源、制造业和零售分销的核心产品线。",
+      title: "印度尼西亚出口主打产品",
+      desc: "我们的核心出口产品线，以稳定品质与可靠供应服务全球市场需求。",
     },
     vision: {
       eyebrow: "我们的愿景",
@@ -362,10 +362,10 @@ const COPY = {
     },
     cta: "طلب عرض سعر",
     hero: {
-      kicker: "المصدر الإندونيسي الموثوق",
+      kicker: "مصدرك الموثوق لأفضل المنتجات الطبيعية الإندونيسية",
       titleTop: "لمنتجات جوز الهند و",
       titleAccent: "التوابل الفاخرة",
-      tagline: "توريد جودة ثابتة للمشترين حول العالم",
+      tagline: "شريك تصدير موثوق\nنقدم أفضل المنتجات الطبيعية الإندونيسية إلى العالم.",
       profile: "تحميل الملف التعريفي",
     },
     about: {
@@ -391,8 +391,8 @@ const COPY = {
     },
     products: {
       eyebrow: "منتجاتنا",
-      title: "منتجات طبيعية إندونيسية جاهزة للتصدير.",
-      desc: "خطوط تجارية رئيسية للزراعة والصناعات الغذائية وطاقة الكتلة الحيوية والتصنيع والتوزيع.",
+      title: "أبرز منتجات التصدير الإندونيسية",
+      desc: "خطوطنا التصديرية الرئيسية جاهزة لتلبية احتياجات الأسواق العالمية بجودة مستقرة وإمداد موثوق.",
     },
     vision: {
       eyebrow: "رؤيتنا",
@@ -1044,7 +1044,7 @@ function Hero({ lang, setLang }: { lang: Lang; setLang: (lang: Lang) => void }) 
           </h1>
           <div className="hero-text-reveal hero-delay-3 mt-6 flex items-center gap-3">
             <span className="hero-tagline-rule h-px w-10 bg-white" />
-            <p className="text-xs font-bold uppercase tracking-[0.12em] text-white text-shadow-lg sm:text-sm sm:tracking-[0.22em]">
+            <p className="whitespace-pre-line text-xs font-bold uppercase tracking-[0.12em] text-white text-shadow-lg sm:text-sm sm:tracking-[0.22em]">
               {t.hero.tagline}
             </p>
           </div>
