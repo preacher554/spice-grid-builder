@@ -36,6 +36,10 @@ import imgCinnamon from "@/assets/cinnamon.jpg";
 import imgCharcoal from "@/assets/product-charcoal.jpeg";
 import imgCharcoalBriquette from "@/assets/product-bricket.jpeg";
 import imgCoconutStickBroom from "@/assets/product-coconut-stick-broom.jpeg";
+import imgHardwoodCharcoal from "@/assets/product-hardwood-charcoal.jpeg";
+import imgGinger from "@/assets/product-ginger.jpeg";
+import imgTurmeric from "@/assets/product-turmeric.jpeg";
+import imgLemongrass from "@/assets/product-lemongrass.jpeg";
 import arthaPrimaLogo from "@/assets/artha-global-prima-wide-transparent.png";
 import trustDocumentation from "@/assets/trust-documentation.png";
 import trustPackaging from "@/assets/trust-packaging.png";
@@ -212,6 +216,15 @@ const COPY = {
         "PT Artha Global Prima connects the richness of Indonesia's natural resources with global buyers through carefully selected coconut products, palm sugar, biomass, and selected spices.",
       body:
         "We work through trusted supplier networks and experienced export professionals to support importers, wholesalers, distributors, manufacturers, and retailers with reliable sourcing, strict quality control, professional documentation, and timely delivery.",
+      welcome: {
+        label: "Company Profile",
+        title: "Welcome to PT Artha Global Prima",
+        paragraphs: [
+          "PT Artha Global Prima is an Indonesian export company specializing in premium coconut products, biomass, and spices. We are committed to becoming a trusted export partner that connects Indonesia's natural wealth with global markets through high-quality products, competitive pricing, and professional service.",
+          "Supported by selected producer networks, strict quality control, and export processes aligned with international standards, we are ready to serve importers, distributors, manufacturers, and industries across multiple countries.",
+          "We believe the best business relationships are built on trust, quality, and long-term commitment.",
+        ],
+      },
       quote: "We don't just export products. We build lasting partnerships.",
       quoteBody:
         "Our goal is to help businesses worldwide access Indonesia's finest natural products while creating sustainable value for customers, suppliers, and local communities.",
@@ -256,6 +269,15 @@ const COPY = {
         "PT Artha Global Prima menghubungkan kekayaan sumber daya alam Indonesia dengan pembeli global melalui produk kelapa, gula aren, biomassa, dan rempah pilihan.",
       body:
         "Kami bekerja dengan jaringan pemasok terpercaya dan profesional ekspor berpengalaman untuk mendukung importir, grosir, distributor, manufaktur, dan retail melalui sourcing yang andal, kontrol kualitas ketat, dokumentasi profesional, dan pengiriman tepat waktu.",
+      welcome: {
+        label: "Profil Perusahaan",
+        title: "Welcome to PT Artha Global Prima",
+        paragraphs: [
+          "PT Artha Global Prima adalah perusahaan ekspor Indonesia yang bergerak di bidang produk kelapa, biomassa, dan rempah-rempah berkualitas premium. Kami berkomitmen menjadi mitra ekspor terpercaya yang menghubungkan kekayaan alam Indonesia dengan pasar global melalui produk berkualitas tinggi, harga yang kompetitif, dan layanan profesional.",
+          "Didukung jaringan produsen pilihan, sistem pengendalian mutu yang ketat, serta proses ekspor yang sesuai standar internasional, kami siap memenuhi kebutuhan importir, distributor, manufaktur, hingga industri di berbagai negara.",
+          "Kami percaya bahwa hubungan bisnis terbaik dibangun atas dasar kepercayaan, kualitas, dan komitmen jangka panjang.",
+        ],
+      },
       quote: "Kami tidak hanya mengekspor produk. Kami membangun kemitraan jangka panjang.",
       quoteBody:
         "Tujuan kami adalah membantu bisnis dunia mengakses produk alami terbaik Indonesia sambil menciptakan nilai berkelanjutan bagi pelanggan, pemasok, dan komunitas lokal.",
@@ -300,6 +322,15 @@ const COPY = {
         "PT Artha Global Prima 通过精选椰子产品、棕榈糖、生物质和印尼香料，将印度尼西亚丰富的天然资源连接到全球买家。",
       body:
         "我们依托可信赖的供应商网络和经验丰富的出口团队，为进口商、批发商、分销商、制造商和零售商提供稳定采购、严格质检、专业出口文件和准时交付。",
+      welcome: {
+        label: "公司简介",
+        title: "欢迎来到 PT Artha Global Prima",
+        paragraphs: [
+          "PT Artha Global Prima 是一家印度尼西亚出口公司，专注于高品质椰子产品、生物质和香料。我们致力于成为值得信赖的出口伙伴，通过高质量产品、具有竞争力的价格和专业服务，将印度尼西亚丰富的自然资源连接到全球市场。",
+          "凭借精选生产商网络、严格的质量控制体系，以及符合国际标准的出口流程，我们能够服务不同国家的进口商、分销商、制造商和各类行业客户。",
+          "我们相信，最好的商业关系建立在信任、品质和长期承诺之上。",
+        ],
+      },
       quote: "我们不只是出口产品。我们建立长期合作伙伴关系。",
       quoteBody:
         "我们的目标是帮助全球企业获得印尼优质天然产品，并为客户、供应商和当地社区创造可持续价值。",
@@ -344,6 +375,15 @@ const COPY = {
         "تربط PT Artha Global Prima ثراء الموارد الطبيعية الإندونيسية بالمشترين حول العالم من خلال منتجات جوز الهند وسكر النخيل والكتلة الحيوية والتوابل المختارة.",
       body:
         "نعمل عبر شبكة موردين موثوقة وفريق تصدير محترف لدعم المستوردين وتجار الجملة والموزعين والمصنعين وتجار التجزئة بحلول توريد موثوقة ورقابة جودة صارمة ووثائق تصدير احترافية وتسليم في الوقت المحدد.",
+      welcome: {
+        label: "الملف التعريفي للشركة",
+        title: "مرحبا بكم في PT Artha Global Prima",
+        paragraphs: [
+          "PT Artha Global Prima هي شركة تصدير إندونيسية متخصصة في منتجات جوز الهند والكتلة الحيوية والتوابل الفاخرة. نلتزم بأن نكون شريك تصدير موثوقا يربط ثروات إندونيسيا الطبيعية بالأسواق العالمية من خلال منتجات عالية الجودة وأسعار تنافسية وخدمة احترافية.",
+          "بدعم من شبكة منتجين مختارين ونظام صارم لمراقبة الجودة وعمليات تصدير متوافقة مع المعايير الدولية، نحن مستعدون لتلبية احتياجات المستوردين والموزعين والمصنعين والصناعات في مختلف الدول.",
+          "نؤمن بأن أفضل العلاقات التجارية تبنى على الثقة والجودة والالتزام طويل الأمد.",
+        ],
+      },
       quote: "نحن لا نصدر المنتجات فقط. نحن نبني شراكات مستدامة.",
       quoteBody:
         "هدفنا هو مساعدة الشركات حول العالم على الوصول إلى أفضل المنتجات الطبيعية الإندونيسية مع خلق قيمة مستدامة للعملاء والموردين والمجتمعات المحلية.",
@@ -371,6 +411,7 @@ const COPY = {
     title: string;
     lead: string;
     body: string;
+    welcome: { label: string; title: string; paragraphs: string[] };
     quote: string;
     quoteBody: string;
     stats: string[];
@@ -474,8 +515,17 @@ const UI_COPY = {
       eyebrow: "Request for Quotation",
       title: "Tell us what you need. We'll quote within 24h.",
       desc: "Share product, quantity, destination port, and any special requirements. Our sales team will reply with pricing, lead time, and packaging options.",
+      headOffice: "Head Office",
       office: "Office",
       loadingPorts: "Loading ports",
+      commitment: {
+        eyebrow: "Our Commitment",
+        title: "Every shipment carries our reputation.",
+        body: "PT Artha Global Prima is committed to delivering reliable quality, professional service, competitive pricing, and on-time delivery to build strong and sustainable business partnerships.",
+        growthTitle: "Let's Grow Together",
+        growthBody: "We invite importers, distributors, wholesalers, and industrial buyers worldwide to build long-term cooperation with PT Artha Global Prima.",
+        closing: "With us, you get more than a supplier - you gain a trusted Indonesian export partner.",
+      },
       thanksTitle: "Thank you!",
       thanksDesc: "Your inquiry has been received. A member of our export team will reach out within one business day.",
       fullName: "Full name",
@@ -598,8 +648,17 @@ const UI_COPY = {
       eyebrow: "Permintaan Penawaran",
       title: "Ceritakan kebutuhan Anda. Kami kirim penawaran dalam 24 jam.",
       desc: "Bagikan produk, jumlah, pelabuhan tujuan, dan kebutuhan khusus. Tim sales kami akan membalas dengan harga, lead time, dan opsi kemasan.",
+      headOffice: "Head Office",
       office: "Kantor",
       loadingPorts: "Pelabuhan loading",
+      commitment: {
+        eyebrow: "Komitmen Kami",
+        title: "Setiap produk yang kami kirim mencerminkan reputasi perusahaan.",
+        body: "Oleh karena itu, PT Artha Global Prima berkomitmen untuk menghadirkan kualitas terbaik, pelayanan profesional, harga yang kompetitif, dan pengiriman yang tepat waktu guna membangun kemitraan bisnis yang kuat dan berkelanjutan.",
+        growthTitle: "Mari Bertumbuh Bersama",
+        growthBody: "Kami mengundang importir, distributor, wholesaler, dan pelaku industri dari seluruh dunia untuk membangun kerja sama jangka panjang bersama PT Artha Global Prima.",
+        closing: "Bersama kami, Anda mendapatkan lebih dari sekadar pemasok - Anda mendapatkan mitra ekspor terpercaya dari Indonesia.",
+      },
       thanksTitle: "Terima kasih!",
       thanksDesc: "Inquiry Anda sudah kami terima. Tim ekspor kami akan menghubungi Anda dalam satu hari kerja.",
       fullName: "Nama lengkap",
@@ -658,7 +717,7 @@ const UI_COPY = {
     gallery: { eyebrow: "运营现场", title: "从农场和仓库到船舶甲板。", labels: ["仓库", "生产车间", "质检", "集装箱装载", "港口作业", "我们的团队"] },
     testimonials: { eyebrow: "客户评价", title: "来自 4 大洲的买家持续复购。" },
     blog: { eyebrow: "资讯", title: "来自印尼出口一线的记录。", desc: "面向买家的产品、等级和进口流程说明。", read: "阅读文章", posts: [["产品指南", "进口前如何评估 coco peat block", "关于 EC、湿度、膨胀率和装载要点的实用指南。"], ["质量控制", "订购炭块前买家应询问什么", "灰分、固定碳、燃烧时间、包装和文件检查点。"], ["物流", "印尼出口流程 7 步", "文件、熏蒸、COO，以及从 PO 到提单的标准时间线。"]] },
-    rfq: { eyebrow: "获取报价", title: "告诉我们您的需求。我们将在 24 小时内报价。", desc: "请提供产品、数量、目的港和特殊要求。销售团队将回复价格、交期和包装选项。", office: "办公室", loadingPorts: "装货港", thanksTitle: "谢谢！", thanksDesc: "您的询盘已收到。我们的出口团队将在一个工作日内联系您。", fullName: "姓名", namePlaceholder: "您的姓名", company: "公司", companyPlaceholder: "公司名称", email: "邮箱", emailPlaceholder: "you@company.com", country: "国家", countryPlaceholder: "目的国家", product: "产品", quantity: "数量 / FCL", qtyPlaceholder: "例如：2 x 40 HQ", message: "留言", messagePlaceholder: "规格、包装、目的港、时间...", submit: "提交询盘", privacy: "提交即表示您同意我们的销售团队就询盘联系您。" },
+    rfq: { eyebrow: "获取报价", title: "告诉我们您的需求。我们将在 24 小时内报价。", desc: "请提供产品、数量、目的港和特殊要求。销售团队将回复价格、交期和包装选项。", headOffice: "总部办公室", office: "办公室", loadingPorts: "装货港", commitment: { eyebrow: "我们的承诺", title: "每一次出货都代表公司的信誉。", body: "PT Artha Global Prima 致力于提供稳定品质、专业服务、具有竞争力的价格和准时交付，帮助客户建立强大且可持续的商业合作。", growthTitle: "携手共同成长", growthBody: "我们诚邀全球进口商、经销商、批发商和工业客户与 PT Artha Global Prima 建立长期合作。", closing: "与我们合作，您得到的不只是供应商，而是来自印尼值得信赖的出口伙伴。" }, thanksTitle: "谢谢！", thanksDesc: "您的询盘已收到。我们的出口团队将在一个工作日内联系您。", fullName: "姓名", namePlaceholder: "您的姓名", company: "公司", companyPlaceholder: "公司名称", email: "邮箱", emailPlaceholder: "you@company.com", country: "国家", countryPlaceholder: "目的国家", product: "产品", quantity: "数量 / FCL", qtyPlaceholder: "例如：2 x 40 HQ", message: "留言", messagePlaceholder: "规格、包装、目的港、时间...", submit: "提交询盘", privacy: "提交即表示您同意我们的销售团队就询盘联系您。" },
     footer: { desc: "PT Artha Global Prima 是可信赖的印尼出口公司，供应椰子产品、棕榈糖、生物质和精选印尼香料。", products: "产品", company: "公司", connect: "联系", companyItems: ["关于", "愿景与使命", "文件", "图库", "资讯", "联系"], copyright: "版权所有。", tagline: "将印尼优质天然产品带向世界。" },
   },
   ar: {
@@ -691,7 +750,7 @@ const UI_COPY = {
     gallery: { eyebrow: "داخل العمليات", title: "من المزرعة والمستودع إلى سطح السفينة.", labels: ["المستودع", "خط الإنتاج", "فحص الجودة", "تحميل الحاوية", "عمليات الميناء", "فريقنا"] },
     testimonials: { eyebrow: "آراء العملاء", title: "مشترون من 4 قارات يكررون الطلب." },
     blog: { eyebrow: "رؤى", title: "ملاحظات ميدانية من أرض التصدير الإندونيسية.", desc: "شروحات مناسبة للمشترين حول المنتجات والدرجات وإجراءات الاستيراد منا.", read: "اقرأ المقال", posts: [["دليل المنتج", "كيفية تقييم كتل coco peat قبل الاستيراد", "دليل عملي حول EC والرطوبة ونسبة التمدد وملاحظات التحميل."], ["رقابة الجودة", "ما الذي يجب سؤاله قبل طلب briquettes", "نقاط فحص الرماد والكربون الثابت ومدة الاحتراق والتعبئة والوثائق."], ["اللوجستيات", "إجراءات التصدير من إندونيسيا في 7 خطوات", "المستندات والتبخير وشهادة المنشأ والجدول الزمني من أمر الشراء إلى بوليصة الشحن."]] },
-    rfq: { eyebrow: "طلب عرض سعر", title: "أخبرنا بما تحتاجه. سنرسل عرضا خلال 24 ساعة.", desc: "شارك المنتج والكمية وميناء الوجهة وأي متطلبات خاصة. سيرد فريق المبيعات بالسعر ومدة التوريد وخيارات التعبئة.", office: "المكتب", loadingPorts: "موانئ التحميل", thanksTitle: "شكرا لك!", thanksDesc: "تم استلام طلبك. سيتواصل معك أحد أعضاء فريق التصدير خلال يوم عمل واحد.", fullName: "الاسم الكامل", namePlaceholder: "اسمك", company: "الشركة", companyPlaceholder: "اسم الشركة", email: "البريد الإلكتروني", emailPlaceholder: "you@company.com", country: "الدولة", countryPlaceholder: "دولة الوجهة", product: "المنتج", quantity: "الكمية / FCL", qtyPlaceholder: "مثال: 2 x 40 HQ", message: "الرسالة", messagePlaceholder: "المواصفات، التعبئة، ميناء الوجهة، التوقيت...", submit: "إرسال RFQ", privacy: "بإرسالك النموذج فإنك توافق على تواصل فريق المبيعات معك بخصوص طلبك." },
+    rfq: { eyebrow: "طلب عرض سعر", title: "أخبرنا بما تحتاجه. سنرسل عرضا خلال 24 ساعة.", desc: "شارك المنتج والكمية وميناء الوجهة وأي متطلبات خاصة. سيرد فريق المبيعات بالسعر ومدة التوريد وخيارات التعبئة.", headOffice: "المكتب الرئيسي", office: "المكتب", loadingPorts: "موانئ التحميل", commitment: { eyebrow: "التزامنا", title: "كل شحنة تعكس سمعة شركتنا.", body: "تلتزم PT Artha Global Prima بتقديم جودة موثوقة وخدمة احترافية وأسعار تنافسية وتسليم في الوقت المحدد لبناء شراكات تجارية قوية ومستدامة.", growthTitle: "لننمو معا", growthBody: "ندعو المستوردين والموزعين وتجار الجملة والجهات الصناعية حول العالم لبناء تعاون طويل الأمد مع PT Artha Global Prima.", closing: "معنا تحصلون على أكثر من مورد - تحصلون على شريك تصدير موثوق من إندونيسيا." }, thanksTitle: "شكرا لك!", thanksDesc: "تم استلام طلبك. سيتواصل معك أحد أعضاء فريق التصدير خلال يوم عمل واحد.", fullName: "الاسم الكامل", namePlaceholder: "اسمك", company: "الشركة", companyPlaceholder: "اسم الشركة", email: "البريد الإلكتروني", emailPlaceholder: "you@company.com", country: "الدولة", countryPlaceholder: "دولة الوجهة", product: "المنتج", quantity: "الكمية / FCL", qtyPlaceholder: "مثال: 2 x 40 HQ", message: "الرسالة", messagePlaceholder: "المواصفات، التعبئة، ميناء الوجهة، التوقيت...", submit: "إرسال RFQ", privacy: "بإرسالك النموذج فإنك توافق على تواصل فريق المبيعات معك بخصوص طلبك." },
     footer: { desc: "PT Artha Global Prima شركة تصدير إندونيسية موثوقة لمنتجات جوز الهند وسكر النخيل والكتلة الحيوية والتوابل المختارة.", products: "المنتجات", company: "الشركة", connect: "تواصل", companyItems: ["من نحن", "الرؤية والمهمة", "المستندات", "المعرض", "رؤى", "اتصال"], copyright: "جميع الحقوق محفوظة.", tagline: "نقدم أفضل المنتجات الطبيعية الإندونيسية إلى العالم." },
   },
 } as const;
@@ -902,6 +961,9 @@ function HeroBadgeIcon({ type }: { type: HeroBadgeIconType }) {
 
 function Hero({ lang, setLang }: { lang: Lang; setLang: (lang: Lang) => void }) {
   const t = COPY[lang];
+  const heroRef = useRef<HTMLElement | null>(null);
+  const heroWasVisibleRef = useRef(false);
+  const [heroRevealKey, setHeroRevealKey] = useState(0);
   const slides = [
     { src: imgCocoPeat, alt: "Coco peat" },
     { src: imgCocoFiber, alt: "Coco fiber" },
@@ -911,8 +973,29 @@ function Hero({ lang, setLang }: { lang: Lang; setLang: (lang: Lang) => void }) 
     { src: imgCharcoal, alt: "Coconut charcoal" },
     { src: imgCharcoalBriquette, alt: "Coconut charcoal briquette" },
   ];
+
+  useEffect(() => {
+    const node = heroRef.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !heroWasVisibleRef.current) {
+          heroWasVisibleRef.current = true;
+          setHeroRevealKey((key) => key + 1);
+        } else if (!entry.isIntersecting) {
+          heroWasVisibleRef.current = false;
+        }
+      },
+      { threshold: 0.38 },
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section id="top" className="relative isolate overflow-hidden">
+    <section ref={heroRef} id="top" className="relative isolate overflow-hidden">
       {/* Background media: fading product slideshow */}
       <div className="absolute inset-0 -z-10 bg-navy-deep">
         {slides.map((s, i) => (
@@ -936,7 +1019,10 @@ function Hero({ lang, setLang }: { lang: Lang; setLang: (lang: Lang) => void }) 
 
       <Header lang={lang} setLang={setLang} />
 
-      <div className="hero-brand-lockup absolute left-[max(1.25rem,calc((100vw-80rem)/2+2rem))] top-[12.6rem] z-20 hidden lg:block">
+      <div
+        key={`hero-brand-${heroRevealKey}`}
+        className="hero-brand-lockup absolute left-[max(1.25rem,calc((100vw-80rem)/2+2rem))] top-[12.6rem] z-20 hidden lg:block"
+      >
         <div className="hero-gradient-text font-display bg-[linear-gradient(90deg,#ffffff_0%,#ffffff_80%,#b9f35d_100%)] bg-clip-text text-5xl font-extrabold uppercase leading-none tracking-[-0.055em] text-transparent drop-shadow-[0_5px_16px_rgba(0,0,0,0.62)] xl:text-6xl">
           ARTHA GLOBAL PRIMA
         </div>
@@ -944,7 +1030,10 @@ function Hero({ lang, setLang }: { lang: Lang; setLang: (lang: Lang) => void }) 
       </div>
 
       <div className="mx-auto grid min-h-[760px] max-w-7xl items-end px-5 pb-12 pt-32 sm:min-h-[min(820px,100svh)] sm:px-8 sm:pb-16 lg:pt-44">
-        <div className="max-w-3xl rounded-[1.5rem] bg-black/18 p-5 backdrop-blur-[2px] sm:rounded-[2rem] sm:bg-black/10 sm:p-7 sm:backdrop-blur-[1px] lg:bg-transparent lg:p-0 lg:backdrop-blur-0">
+        <div
+          key={`hero-copy-${heroRevealKey}`}
+          className="max-w-3xl rounded-[1.5rem] bg-black/18 p-5 backdrop-blur-[2px] sm:rounded-[2rem] sm:bg-black/10 sm:p-7 sm:backdrop-blur-[1px] lg:bg-transparent lg:p-0 lg:backdrop-blur-0"
+        >
           <p className="hero-text-reveal hero-delay-1 text-xs font-bold uppercase tracking-[0.18em] text-white text-shadow-lg sm:text-sm sm:tracking-[0.25em]">
             {t.hero.kicker}
           </p>
@@ -1034,24 +1123,21 @@ const PORTFOLIO_GROUPS = [
   {
     title: "Coconut Products",
     items: [
+      "Coconut Shell Charcoal",
+      "Coconut Charcoal Briquette",
       "Coco Peat",
+      "Coco Fiber",
       "Coco Bristle",
       "Coconut Stick Broom",
-      "Coconut Charcoal",
-      "Coconut Charcoal Briquettes",
     ],
   },
   {
-    title: "Palm Sugar Products",
-    items: ["Palm Sugar Powder", "Palm Sugar Block", "Organic Palm Sugar"],
-  },
-  {
     title: "Biomass Products",
-    items: ["Wood Pellets"],
+    items: ["Hardwood Charcoal", "Wood Pellet"],
   },
   {
     title: "Indonesian Spices",
-    items: ["Cinnamon", "Cloves", "Nutmeg", "Black Pepper", "White Pepper", "Turmeric", "Ginger"],
+    items: ["Cinnamon", "Ginger", "Turmeric", "Lemongrass"],
   },
 ];
 
@@ -1124,6 +1210,25 @@ const RFQ_PRODUCT_OPTIONS = PORTFOLIO_GROUPS.flatMap((group) => group.items);
 function AboutSection({ lang }: { lang: Lang }) {
   const t = COPY[lang];
   const ui = UI_COPY[lang];
+  const welcomeRef = useRef<HTMLDivElement | null>(null);
+  const [welcomeEntered, setWelcomeEntered] = useState(false);
+
+  useEffect(() => {
+    const node = welcomeRef.current;
+    if (!node || !("IntersectionObserver" in window)) {
+      setWelcomeEntered(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setWelcomeEntered(Boolean(entry?.isIntersecting && entry.intersectionRatio >= 0.18)),
+      { threshold: [0, 0.18, 0.34], rootMargin: "-8% 0px -18% 0px" },
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section id="about" className="relative overflow-hidden bg-background py-16 sm:py-28">
       <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-navy-deep/5 to-transparent" />
@@ -1142,6 +1247,27 @@ function AboutSection({ lang }: { lang: Lang }) {
             <p className="mx-auto mt-4 max-w-3xl leading-7 text-muted-foreground">
               {t.about.body}
             </p>
+          </div>
+
+          <div
+            ref={welcomeRef}
+            data-entered={welcomeEntered}
+            className="about-welcome-panel mt-10 overflow-hidden rounded-[2rem] border border-border bg-[linear-gradient(135deg,#ffffff_0%,#f7fbff_56%,rgba(185,243,93,0.12)_100%)] p-6 text-start shadow-soft sm:mt-12 sm:p-8 lg:grid lg:grid-cols-[0.8fr_1.2fr] lg:gap-10 lg:p-10"
+          >
+            <div className="about-welcome-left">
+              <div className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[var(--brand-green-dark)]">
+                {t.about.welcome.label}
+              </div>
+              <h3 className="mt-4 bg-[linear-gradient(90deg,var(--navy-950)_0%,var(--navy-950)_72%,var(--brand-green-dark)_100%)] bg-clip-text text-2xl font-extrabold leading-tight text-transparent text-balance sm:text-4xl">
+                {t.about.welcome.title}
+              </h3>
+              <div className="mt-5 h-px w-40 bg-gradient-to-r from-[#d2a53a] via-[var(--brand-green)] to-transparent" />
+            </div>
+            <div className="about-welcome-right mt-6 space-y-4 text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8 lg:mt-0">
+              {t.about.welcome.paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
           </div>
 
           <div className="mt-10 overflow-hidden rounded-[1.5rem] border border-border bg-white shadow-soft sm:mt-12 sm:rounded-[2rem]">
@@ -1261,150 +1387,283 @@ function AboutSection({ lang }: { lang: Lang }) {
 
 type Product = {
   id: string;
+  category: "coconut" | "biomass" | "spice";
   icon: string;
   name: string;
   img: string;
   tag: string;
   blurb: string;
+  details?: { label: string; items: string[] }[];
   spec: { label: string; value: string }[];
 };
 
+const PRODUCT_CATEGORIES = [
+  { id: "coconut", title: "Coconut Products" },
+  { id: "biomass", title: "Biomass Products" },
+  { id: "spice", title: "Indonesian Spices" },
+] as const;
+
 const PRODUCTS: Product[] = [
   {
-    id: "coco-peat",
-    icon: "🌴",
-    name: "Coco Peat",
-    img: imgCocoPeat,
-    tag: "Horticulture grade",
-    blurb:
-      "Low-EC, high water retention coco peat blocks ideal for greenhouse, hydroponics, and nursery growers.",
-    spec: [
-      { label: "Packing", value: "5 kg blocks / palletized" },
-      { label: "MOQ", value: "1 x 40 HQ" },
-      { label: "Capacity", value: "60 FCL / month" },
-      { label: "Lead time", value: "14–21 days" },
-      { label: "Loading", value: "~22 MT per 40 HQ" },
-    ],
-  },
-  {
-    id: "coco-fiber",
-    icon: "🌴",
-    name: "Coco Fiber",
-    img: imgCocoFiber,
-    tag: "Long-strand coir",
-    blurb:
-      "Cleaned, sun-dried coconut fiber used for mattresses, ropes, geotextiles, and erosion control products.",
-    spec: [
-      { label: "Packing", value: "Pressed bales 110–130 kg" },
-      { label: "MOQ", value: "1 x 40 HQ" },
-      { label: "Capacity", value: "40 FCL / month" },
-      { label: "Lead time", value: "10–18 days" },
-      { label: "Loading", value: "~14 MT per 40 HQ" },
-    ],
-  },
-  {
-    id: "coco-bristle",
-    icon: "🌴",
-    name: "Coco Bristle",
-    img: imgCocoBristle,
-    tag: "Stiff brush fiber",
-    blurb:
-      "Premium long bristle fiber suitable for brush, broom, and brush-roller manufacturing across export markets.",
-    spec: [
-      { label: "Packing", value: "Bundles 25 kg" },
-      { label: "MOQ", value: "10 MT" },
-      { label: "Capacity", value: "80 MT / month" },
-      { label: "Lead time", value: "14–25 days" },
-      { label: "Loading", value: "~12 MT per 40 HQ" },
-    ],
-  },
-  {
-    id: "coconut-stick-broom",
-    icon: "🌴",
-    name: "Coconut Stick Broom",
-    img: imgCoconutStickBroom,
-    tag: "Natural household goods",
-    blurb:
-      "Durable coconut stick brooms produced from selected coconut leaf ribs for household, garden, and commercial cleaning.",
-    spec: [
-      { label: "Packing", value: "Bundles / export carton" },
-      { label: "MOQ", value: "1 x 20 ft" },
-      { label: "Capacity", value: "50,000 pcs / month" },
-      { label: "Lead time", value: "14–25 days" },
-      { label: "Loading", value: "Custom by packing" },
-    ],
-  },
-  {
-    id: "wood-pellet",
-    icon: "🌴",
-    name: "Wood Pellet",
-    img: imgWoodPellet,
-    tag: "Biomass fuel",
-    blurb:
-      "EN-Plus aligned wood pellets from sustainable plantations — high calorific value, low ash, stable supply.",
-    spec: [
-      { label: "Packing", value: "15 kg PE bags / jumbo" },
-      { label: "MOQ", value: "1 x 40 HQ" },
-      { label: "Capacity", value: "3,000 MT / month" },
-      { label: "Lead time", value: "20–30 days" },
-      { label: "Loading", value: "~24 MT per 40 HQ" },
-    ],
-  },
-  {
-    id: "cinnamon",
-    icon: "🌿",
-    name: "Cinnamon",
-    img: imgCinnamon,
-    tag: "Korintje / Cassia",
-    blurb:
-      "Indonesian Korintje cinnamon sticks and broken — graded AA, ABB, KA, and KB with full phytosanitary docs.",
-    spec: [
-      { label: "Packing", value: "12.5 kg cartons" },
-      { label: "MOQ", value: "5 MT" },
-      { label: "Capacity", value: "150 MT / month" },
-      { label: "Lead time", value: "21–35 days" },
-      { label: "Loading", value: "~16 MT per 40 HQ" },
-    ],
-  },
-  {
     id: "coconut-charcoal",
+    category: "coconut",
     icon: "🌴",
-    name: "Coconut Charcoal",
+    name: "Coconut Shell Charcoal",
     img: imgCharcoal,
-    tag: "Coconut shell charcoal",
+    tag: "Activated carbon / energy grade",
     blurb:
-      "Natural coconut shell charcoal for industrial, filtration, and further processing needs with stable carbon content.",
+      "Premium coconut shell charcoal with high fixed carbon for activated carbon, briquette production, and energy applications.",
+    details: [
+      { label: "Ideal for", items: ["Activated carbon industry", "Briquette production", "Energy and industrial fuel"] },
+    ],
     spec: [
-      { label: "Packing", value: "PP bags / jumbo bags" },
-      { label: "MOQ", value: "1 x 40 HQ" },
-      { label: "Capacity", value: "200 MT / month" },
-      { label: "Lead time", value: "14–30 days" },
-      { label: "Loading", value: "~20 MT per 40 HQ" },
+      { label: "Packing", value: "PP woven bag" },
+      { label: "Weight", value: "25 kg / bag" },
+      { label: "Dimension", value: "75 × 45 × 20 cm" },
+      { label: "Volume", value: "0.068 m³ / bag" },
+      { label: "20 FT", value: "880 bags (22 ton)" },
+      { label: "40 HC", value: "1,040 bags (26 ton)" },
     ],
   },
   {
     id: "charcoal",
+    category: "coconut",
     icon: "🌴",
     name: "Coconut Charcoal Briquette",
     img: imgCharcoalBriquette,
     tag: "Shisha / BBQ grade",
     blurb:
-      "Pure coconut shell briquettes — long burn time, low ash, no chemicals. Customizable sizes for shisha & BBQ.",
+      "Premium coconut shell charcoal briquettes for BBQ, shisha, restaurants, hotels, and retail distribution.",
+    details: [
+      { label: "Suitable for", items: ["BBQ", "Shisha", "Restaurants", "Hotels", "Retail"] },
+      { label: "Advantages", items: ["Long burning time", "Low ash", "Odorless", "Eco friendly", "Stable heat"] },
+    ],
     spec: [
-      { label: "Packing", value: "Inner / master boxes" },
-      { label: "MOQ", value: "1 x 40 HQ" },
-      { label: "Capacity", value: "180 MT / month" },
-      { label: "Lead time", value: "21–35 days" },
-      { label: "Loading", value: "~18 MT per 40 HQ" },
+      { label: "Packing", value: "Master carton" },
+      { label: "Weight", value: "10 kg / carton" },
+      { label: "Dimension", value: "40 × 30 × 25 cm" },
+      { label: "Volume", value: "0.030 m³ / carton" },
+      { label: "20 FT", value: "2,200 cartons" },
+      { label: "40 HC", value: "2,600 cartons" },
+    ],
+  },
+  {
+    id: "coco-peat",
+    category: "coconut",
+    icon: "🌴",
+    name: "Coco Peat",
+    img: imgCocoPeat,
+    tag: "Horticulture grade",
+    blurb:
+      "High-quality organic growing media for greenhouse, horticulture, hydroponics, nursery, and modern agriculture.",
+    details: [
+      { label: "Suitable for", items: ["Greenhouse", "Horticulture", "Hydroponics", "Nursery", "Modern agriculture"] },
+      { label: "Available", items: ["5 kg block", "Grow bag", "Loose cocopeat"] },
+    ],
+    spec: [
+      { label: "Packing", value: "PE wrapped block" },
+      { label: "Weight", value: "5 kg / block" },
+      { label: "Dimension", value: "30 × 30 × 12 cm" },
+      { label: "Volume", value: "0.011 m³ / block" },
+      { label: "20 FT", value: "4,400 blocks" },
+      { label: "40 HC", value: "5,200 blocks" },
+    ],
+  },
+  {
+    id: "coco-fiber",
+    category: "coconut",
+    icon: "🌴",
+    name: "Coco Fiber",
+    img: imgCocoFiber,
+    tag: "Long-strand coir",
+    blurb:
+      "Premium coconut fiber for mattress industry, geotextile, rope, erosion control, and automotive applications.",
+    details: [
+      { label: "Used for", items: ["Mattress industry", "Geotextile", "Rope", "Erosion control", "Automotive industry"] },
+    ],
+    spec: [
+      { label: "Packing", value: "Compressed bale" },
+      { label: "Weight", value: "100 kg / bale" },
+      { label: "Dimension", value: "100 × 80 × 50 cm" },
+      { label: "Volume", value: "0.400 m³ / bale" },
+      { label: "20 FT", value: "220 bales (22 ton)" },
+      { label: "40 HC", value: "260 bales (26 ton)" },
+    ],
+  },
+  {
+    id: "coco-bristle",
+    category: "coconut",
+    icon: "🌴",
+    name: "Coco Bristle",
+    img: imgCocoBristle,
+    tag: "Stiff brush fiber",
+    blurb:
+      "Selected coconut bristle fiber for brush industry, broom, cleaning equipment, and industrial applications.",
+    details: [
+      { label: "Used for", items: ["Brush industry", "Broom", "Cleaning equipment", "Industrial applications"] },
+    ],
+    spec: [
+      { label: "Packing", value: "Compressed bale" },
+      { label: "Weight", value: "100 kg / bale" },
+      { label: "Dimension", value: "100 × 80 × 45 cm" },
+      { label: "Volume", value: "0.360 m³ / bale" },
+      { label: "20 FT", value: "220 bales" },
+      { label: "40 HC", value: "260 bales" },
+    ],
+  },
+  {
+    id: "coconut-stick-broom",
+    category: "coconut",
+    icon: "🌴",
+    name: "Coconut Stick Broom",
+    img: imgCoconutStickBroom,
+    tag: "Natural household goods",
+    blurb:
+      "Export-quality coconut stick broom that is strong, lightweight, durable, and suitable for household or commercial cleaning.",
+    spec: [
+      { label: "Packing", value: "Bundle" },
+      { label: "Weight", value: "25 pcs / bundle" },
+      { label: "Dimension", value: "120 × 35 × 35 cm" },
+      { label: "Volume", value: "0.147 m³ / bundle" },
+      { label: "20 FT", value: "±220 bundles" },
+      { label: "40 HC", value: "±450 bundles" },
+    ],
+  },
+  {
+    id: "hardwood-charcoal",
+    category: "biomass",
+    icon: "🌿",
+    name: "Hardwood Charcoal",
+    img: imgHardwoodCharcoal,
+    tag: "High calorific fuel",
+    blurb:
+      "Premium hardwood charcoal with high heating value for BBQ, restaurants, industrial fuel, and metallurgical needs.",
+    details: [
+      { label: "Ideal for", items: ["BBQ", "Restaurant", "Industrial fuel", "Metallurgical industry"] },
+      { label: "Advantages", items: ["High heating value", "Long burning time", "Low smoke", "Low moisture"] },
+    ],
+    spec: [
+      { label: "Packing", value: "PP woven bag" },
+      { label: "Weight", value: "25 kg / bag" },
+      { label: "Dimension", value: "75 × 45 × 20 cm" },
+      { label: "Volume", value: "0.068 m³ / bag" },
+      { label: "20 FT", value: "880 bags (22 ton)" },
+      { label: "40 HC", value: "1,040 bags (26 ton)" },
+    ],
+  },
+  {
+    id: "wood-pellet",
+    category: "biomass",
+    icon: "🌿",
+    name: "Wood Pellet",
+    img: imgWoodPellet,
+    tag: "Biomass fuel",
+    blurb:
+      "Eco-friendly biomass fuel for biomass power plants, industrial boilers, heating systems, and renewable energy.",
+    details: [
+      { label: "Used for", items: ["Biomass power plant", "Industrial boiler", "Heating system", "Renewable energy"] },
+      { label: "Advantages", items: ["High calorific value", "Low ash", "Low moisture", "Eco friendly"] },
+    ],
+    spec: [
+      { label: "Packing", value: "PP bag" },
+      { label: "Weight", value: "25 kg / bag" },
+      { label: "Dimension", value: "70 × 45 × 15 cm" },
+      { label: "Volume", value: "0.047 m³ / bag" },
+      { label: "20 FT", value: "880 bags (22 ton)" },
+      { label: "40 HC", value: "1,040 bags (26 ton)" },
+    ],
+  },
+  {
+    id: "cinnamon",
+    category: "spice",
+    icon: "🌿",
+    name: "Cinnamon",
+    img: imgCinnamon,
+    tag: "Korintje / Cassia",
+    blurb:
+      "Authentic Indonesian cinnamon with distinctive aroma and export quality, available as stick, broken, and powder.",
+    details: [
+      { label: "Available", items: ["Cinnamon stick", "Broken cinnamon", "Cinnamon powder"] },
+    ],
+    spec: [
+      { label: "Packing", value: "PP bag" },
+      { label: "Weight", value: "25 kg / bag" },
+      { label: "Dimension", value: "60 × 40 × 20 cm" },
+      { label: "Volume", value: "0.048 m³ / bag" },
+      { label: "20 FT", value: "880 bags" },
+      { label: "40 HC", value: "1,040 bags" },
+    ],
+  },
+  {
+    id: "ginger",
+    category: "spice",
+    icon: "🌿",
+    name: "Ginger",
+    img: imgGinger,
+    tag: "Fresh / dry / powder",
+    blurb:
+      "Hygienically processed Indonesian ginger for food, beverage, herbal, and industrial applications.",
+    details: [
+      { label: "Available", items: ["Fresh ginger", "Dry ginger", "Ginger powder"] },
+    ],
+    spec: [
+      { label: "Packing", value: "Plastic crate / PP bag / kraft paper bag" },
+      { label: "Weight", value: "20 kg crate or 25 kg bag" },
+      { label: "Dimension", value: "60 × 40 × 25 cm / 60 × 40 × 20 cm" },
+      { label: "Volume", value: "0.060 m³ crate / 0.048 m³ bag" },
+      { label: "20 FT", value: "1,100 crates or 880 bags" },
+      { label: "40 HC", value: "1,300 crates or 1,040 bags" },
+    ],
+  },
+  {
+    id: "turmeric",
+    category: "spice",
+    icon: "🌿",
+    name: "Turmeric",
+    img: imgTurmeric,
+    tag: "Fresh / dry / powder",
+    blurb:
+      "Curcumin-rich Indonesian turmeric suitable for food, herbal, natural colorant, and industrial needs.",
+    details: [
+      { label: "Available", items: ["Fresh turmeric", "Dry turmeric", "Turmeric powder"] },
+    ],
+    spec: [
+      { label: "Packing", value: "Plastic crate / PP bag" },
+      { label: "Weight", value: "20 kg crate or 25 kg bag" },
+      { label: "Dimension", value: "60 × 40 × 25 cm / 60 × 40 × 20 cm" },
+      { label: "Volume", value: "0.060 m³ crate / 0.048 m³ bag" },
+      { label: "20 FT", value: "1,100 crates or 880 bags" },
+      { label: "40 HC", value: "1,300 crates or 1,040 bags" },
+    ],
+  },
+  {
+    id: "lemongrass",
+    category: "spice",
+    icon: "🌿",
+    name: "Lemongrass",
+    img: imgLemongrass,
+    tag: "Fresh / dried / powder",
+    blurb:
+      "Fresh aromatic Indonesian lemongrass widely used for food, beverage, seasoning, and essential oil industries.",
+    details: [
+      { label: "Available", items: ["Fresh lemongrass", "Dried lemongrass", "Lemongrass powder"] },
+    ],
+    spec: [
+      { label: "Packing", value: "Plastic crate / kraft paper bag" },
+      { label: "Weight", value: "20 kg crate or 25 kg bag" },
+      { label: "Dimension", value: "60 × 40 × 25 cm / 60 × 40 × 20 cm" },
+      { label: "Volume", value: "0.060 m³ crate / 0.048 m³ bag" },
+      { label: "20 FT", value: "1,100 crates or 880 bags" },
+      { label: "40 HC", value: "1,300 crates or 1,040 bags" },
     ],
   },
 ];
 
 const PRODUCT_SPEC_LABELS: Record<Lang, Record<string, string>> = {
-  en: { Packing: "Packing", MOQ: "MOQ", Capacity: "Capacity", "Lead time": "Lead time", Loading: "Loading" },
-  id: { Packing: "Kemasan", MOQ: "MOQ", Capacity: "Kapasitas", "Lead time": "Waktu produksi", Loading: "Loading" },
-  zh: { Packing: "包装", MOQ: "起订量", Capacity: "产能", "Lead time": "交期", Loading: "装载" },
-  ar: { Packing: "التعبئة", MOQ: "الحد الأدنى", Capacity: "الطاقة", "Lead time": "مدة التجهيز", Loading: "التحميل" },
+  en: { Packing: "Packing", Weight: "Weight", Dimension: "Dimension", Volume: "Volume", "20 FT": "20 FT", "40 HC": "40 HC", MOQ: "MOQ", Capacity: "Capacity", "Lead time": "Lead time", Loading: "Loading" },
+  id: { Packing: "Kemasan", Weight: "Berat", Dimension: "Dimensi", Volume: "Volume", "20 FT": "20 FT", "40 HC": "40 HC", MOQ: "MOQ", Capacity: "Kapasitas", "Lead time": "Waktu produksi", Loading: "Loading" },
+  zh: { Packing: "包装", Weight: "重量", Dimension: "尺寸", Volume: "体积", "20 FT": "20 尺柜", "40 HC": "40 高柜", MOQ: "起订量", Capacity: "产能", "Lead time": "交期", Loading: "装载" },
+  ar: { Packing: "التعبئة", Weight: "الوزن", Dimension: "الأبعاد", Volume: "الحجم", "20 FT": "20 قدم", "40 HC": "40 HC", MOQ: "الحد الأدنى", Capacity: "الطاقة", "Lead time": "مدة التجهيز", Loading: "التحميل" },
 };
 
 const PRODUCT_TEXT: Partial<Record<Lang, Record<string, { tag: string; blurb: string }>>> = {
@@ -1522,51 +1781,68 @@ function ProductsSection({ lang }: { lang: Lang }) {
 
         <div className={`mt-12 grid gap-10 transition-all duration-500 ${active ? "lg:grid-cols-[0.92fr_1.08fr]" : ""}`}>
           {/* Product grid */}
-          <div className={`grid gap-4 transition-all duration-500 ${active ? "sm:grid-cols-2" : "mx-auto w-full max-w-6xl sm:grid-cols-2 lg:grid-cols-6"}`}>
-            {PRODUCTS.map((p, index) => {
-              const isActive = p.id === active?.id;
-              const productText = getProductText(p, lang);
-              const entryVector = PRODUCT_ENTRY_VECTORS[index % PRODUCT_ENTRY_VECTORS.length];
-              const shouldCenterLastRow =
-                !active && PRODUCTS.length % 3 === 2 && index === PRODUCTS.length - 2;
+          <div className={`space-y-9 transition-all duration-500 ${active ? "" : "mx-auto w-full max-w-6xl"}`}>
+            {PRODUCT_CATEGORIES.map((category) => {
+              const categoryProducts = PRODUCTS.filter((product) => product.category === category.id);
+              const categoryStartIndex = PRODUCTS.findIndex((product) => product.category === category.id);
               return (
-                <button
-                  key={p.id}
-                  onClick={() => setActive(p)}
-                  data-entered={productGridEntered}
-                  style={{
-                    "--fly-x": entryVector.x,
-                    "--fly-y": entryVector.y,
-                    "--fly-rotate": entryVector.rotate,
-                    "--reveal-delay": `${index * 320}ms`,
-                  } as CSSProperties}
-                  className={`product-card-reveal group relative overflow-hidden rounded-2xl border bg-card text-left shadow-soft ${
-                    !active ? "lg:col-span-2" : ""
-                  } ${shouldCenterLastRow ? "lg:col-start-2" : ""} ${
-                    isActive
-                      ? "border-[var(--brand-green)] ring-2 ring-[var(--brand-green)]/40"
-                      : "border-border hover:border-navy-soft/35"
-                  }`}
-                >
-                  <div className="aspect-[16/9] overflow-hidden bg-navy-deep">
-                    <img
-                      src={p.img}
-                      alt={p.name}
-                      loading="lazy"
-                      width={800}
-                      height={450}
-                      className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="flex min-h-[96px] flex-col justify-center p-4">
-                    <div className="text-[11px] font-semibold uppercase tracking-wider text-[var(--brand-green-dark)]">
-                      {productText.tag}
+                <div key={category.id}>
+                  <div className="mb-4 flex items-center gap-4">
+                    <div className="text-[11px] font-extrabold uppercase tracking-[0.22em] text-[var(--brand-green-dark)]">
+                      {category.title}
                     </div>
-                    <div className="mt-1 text-base font-bold text-navy-deep">
-                      {p.icon} {p.name}
-                    </div>
+                    <div className="h-px flex-1 bg-gradient-to-r from-[var(--brand-green)]/45 to-transparent" />
                   </div>
-                </button>
+                  <div className={`grid gap-4 ${active ? "sm:grid-cols-2" : "sm:grid-cols-2 lg:grid-cols-6"}`}>
+                    {categoryProducts.map((p, index) => {
+                      const absoluteIndex = categoryStartIndex + index;
+                      const isActive = p.id === active?.id;
+                      const productText = getProductText(p, lang);
+                      const entryVector = PRODUCT_ENTRY_VECTORS[absoluteIndex % PRODUCT_ENTRY_VECTORS.length];
+                      const shouldCenterLastRow =
+                        !active && categoryProducts.length % 3 === 2 && index === categoryProducts.length - 2;
+                      return (
+                        <button
+                          key={p.id}
+                          onClick={() => setActive(p)}
+                          data-entered={productGridEntered}
+                          style={{
+                            "--fly-x": entryVector.x,
+                            "--fly-y": entryVector.y,
+                            "--fly-rotate": entryVector.rotate,
+                            "--reveal-delay": `${absoluteIndex * 320}ms`,
+                          } as CSSProperties}
+                          className={`product-card-reveal group relative overflow-hidden rounded-2xl border bg-card text-left shadow-soft ${
+                            !active ? "lg:col-span-2" : ""
+                          } ${shouldCenterLastRow ? "lg:col-start-2" : ""} ${
+                            isActive
+                              ? "border-[var(--brand-green)] ring-2 ring-[var(--brand-green)]/40"
+                              : "border-border hover:border-navy-soft/35"
+                          }`}
+                        >
+                          <div className="aspect-[16/9] overflow-hidden bg-navy-deep">
+                            <img
+                              src={p.img}
+                              alt={p.name}
+                              loading="lazy"
+                              width={800}
+                              height={450}
+                              className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                            />
+                          </div>
+                          <div className="flex min-h-[96px] flex-col justify-center p-4">
+                            <div className="text-[11px] font-semibold uppercase tracking-wider text-[var(--brand-green-dark)]">
+                              {productText.tag}
+                            </div>
+                            <div className="mt-1 text-base font-bold text-navy-deep">
+                              {p.icon} {p.name}
+                            </div>
+                          </div>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
               );
             })}
           </div>
@@ -1605,6 +1881,27 @@ function ProductsSection({ lang }: { lang: Lang }) {
               </div>
               <div className="p-6 sm:p-7">
                 <p className="text-sm text-white/80">{activeText.blurb}</p>
+                {active.details && (
+                  <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                    {active.details.map((section) => (
+                      <div key={section.label} className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                        <div className="text-[11px] font-bold uppercase tracking-wider text-[var(--brand-green)]">
+                          {section.label}
+                        </div>
+                        <div className="mt-3 flex flex-wrap gap-2">
+                          {section.items.map((item) => (
+                            <span
+                              key={item}
+                              className="rounded-full border border-white/10 bg-white/7 px-3 py-1 text-[12px] font-semibold text-white/80"
+                            >
+                              {item}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
                 <dl className="mt-6 divide-y divide-white/10 border-y border-white/10">
                   {active.spec.map((s) => (
                     <div key={s.label} className="flex items-center justify-between gap-4 py-2.5">
@@ -1729,64 +2026,372 @@ function Certifications({ lang }: { lang: Lang }) {
 
 /* ───────────── Container Calculator ───────────── */
 
-const PRODUCT_DENSITY: Record<string, { weight: number; volume: number; label: string }> = {
-  // weight (kg per unit), volume (m3 per unit)
-  "coco-peat": { weight: 5, volume: 0.008, label: "5 kg block" },
-  "coco-fiber": { weight: 120, volume: 0.5, label: "bale" },
-  "coco-bristle": { weight: 25, volume: 0.12, label: "bundle" },
-  "coconut-stick-broom": { weight: 1.5, volume: 0.012, label: "bundle" },
-  "wood-pellet": { weight: 15, volume: 0.022, label: "15 kg bag" },
-  cinnamon: { weight: 12.5, volume: 0.06, label: "carton" },
-  "coconut-charcoal": { weight: 25, volume: 0.04, label: "bag" },
-  charcoal: { weight: 10, volume: 0.018, label: "master box" },
+type CalculatorProduct = {
+  id: string;
+  category: (typeof PRODUCT_CATEGORIES)[number]["id"];
+  name: string;
+  packageType: string;
+  packageUnit: string;
+  packageWeightLabel: string;
+  unitWeightKg: number;
+  dimension: string;
+  volumeM3: number;
+  loading20: string;
+  loading40: string;
 };
+
+const CALCULATOR_PRODUCTS: CalculatorProduct[] = [
+  {
+    id: "coconut-charcoal",
+    category: "coconut",
+    name: "Coconut Shell Charcoal",
+    packageType: "PP Woven Bag",
+    packageUnit: "bags",
+    packageWeightLabel: "25 kg",
+    unitWeightKg: 25,
+    dimension: "75 x 45 x 20 cm",
+    volumeM3: 0.068,
+    loading20: "880 bags (22 ton)",
+    loading40: "1,040 bags (26 ton)",
+  },
+  {
+    id: "charcoal",
+    category: "coconut",
+    name: "Coconut Charcoal Briquette",
+    packageType: "Master Carton",
+    packageUnit: "cartons",
+    packageWeightLabel: "10 kg",
+    unitWeightKg: 10,
+    dimension: "40 x 30 x 25 cm",
+    volumeM3: 0.03,
+    loading20: "2,200 cartons",
+    loading40: "2,600 cartons",
+  },
+  {
+    id: "coco-peat",
+    category: "coconut",
+    name: "Cocopeat Block",
+    packageType: "PE Wrapped Block",
+    packageUnit: "blocks",
+    packageWeightLabel: "5 kg",
+    unitWeightKg: 5,
+    dimension: "30 x 30 x 12 cm",
+    volumeM3: 0.011,
+    loading20: "4,400 blocks",
+    loading40: "5,200 blocks",
+  },
+  {
+    id: "coco-fiber",
+    category: "coconut",
+    name: "Coco Fiber",
+    packageType: "Compressed Bale",
+    packageUnit: "bales",
+    packageWeightLabel: "100 kg",
+    unitWeightKg: 100,
+    dimension: "100 x 80 x 50 cm",
+    volumeM3: 0.4,
+    loading20: "220 bales (22 ton)",
+    loading40: "260 bales (26 ton)",
+  },
+  {
+    id: "coco-bristle",
+    category: "coconut",
+    name: "Coco Bristle",
+    packageType: "Compressed Bale",
+    packageUnit: "bales",
+    packageWeightLabel: "100 kg",
+    unitWeightKg: 100,
+    dimension: "100 x 80 x 45 cm",
+    volumeM3: 0.36,
+    loading20: "220 bales",
+    loading40: "260 bales",
+  },
+  {
+    id: "coconut-stick-broom",
+    category: "coconut",
+    name: "Coconut Stick Broom",
+    packageType: "Bundle",
+    packageUnit: "bundles",
+    packageWeightLabel: "25 pcs",
+    unitWeightKg: 25,
+    dimension: "120 x 35 x 35 cm",
+    volumeM3: 0.147,
+    loading20: "±220 bundles",
+    loading40: "±450 bundles",
+  },
+  {
+    id: "hardwood-charcoal",
+    category: "biomass",
+    name: "Hardwood Charcoal",
+    packageType: "PP Woven Bag",
+    packageUnit: "bags",
+    packageWeightLabel: "25 kg",
+    unitWeightKg: 25,
+    dimension: "75 x 45 x 20 cm",
+    volumeM3: 0.068,
+    loading20: "880 bags (22 ton)",
+    loading40: "1,040 bags (26 ton)",
+  },
+  {
+    id: "wood-pellet",
+    category: "biomass",
+    name: "Wood Pellet",
+    packageType: "PP Bag",
+    packageUnit: "bags",
+    packageWeightLabel: "25 kg",
+    unitWeightKg: 25,
+    dimension: "70 x 45 x 15 cm",
+    volumeM3: 0.047,
+    loading20: "880 bags (22 ton)",
+    loading40: "1,040 bags (26 ton)",
+  },
+  {
+    id: "cinnamon",
+    category: "spice",
+    name: "Cinnamon",
+    packageType: "PP Bag",
+    packageUnit: "bags",
+    packageWeightLabel: "25 kg",
+    unitWeightKg: 25,
+    dimension: "60 x 40 x 20 cm",
+    volumeM3: 0.048,
+    loading20: "880 bags",
+    loading40: "1,040 bags",
+  },
+  {
+    id: "fresh-ginger",
+    category: "spice",
+    name: "Fresh Ginger",
+    packageType: "Plastic Crate",
+    packageUnit: "crates",
+    packageWeightLabel: "20 kg",
+    unitWeightKg: 20,
+    dimension: "60 x 40 x 25 cm",
+    volumeM3: 0.06,
+    loading20: "1,100 crates",
+    loading40: "1,300 crates",
+  },
+  {
+    id: "dry-ginger",
+    category: "spice",
+    name: "Dry Ginger",
+    packageType: "PP Bag",
+    packageUnit: "bags",
+    packageWeightLabel: "25 kg",
+    unitWeightKg: 25,
+    dimension: "60 x 40 x 20 cm",
+    volumeM3: 0.048,
+    loading20: "880 bags",
+    loading40: "1,040 bags",
+  },
+  {
+    id: "ginger-powder",
+    category: "spice",
+    name: "Ginger Powder",
+    packageType: "Kraft Paper Bag",
+    packageUnit: "bags",
+    packageWeightLabel: "25 kg",
+    unitWeightKg: 25,
+    dimension: "60 x 40 x 20 cm",
+    volumeM3: 0.048,
+    loading20: "880 bags",
+    loading40: "1,040 bags",
+  },
+  {
+    id: "fresh-turmeric",
+    category: "spice",
+    name: "Fresh Turmeric",
+    packageType: "Plastic Crate",
+    packageUnit: "crates",
+    packageWeightLabel: "20 kg",
+    unitWeightKg: 20,
+    dimension: "60 x 40 x 25 cm",
+    volumeM3: 0.06,
+    loading20: "1,100 crates",
+    loading40: "1,300 crates",
+  },
+  {
+    id: "dry-turmeric",
+    category: "spice",
+    name: "Dry Turmeric",
+    packageType: "PP Bag",
+    packageUnit: "bags",
+    packageWeightLabel: "25 kg",
+    unitWeightKg: 25,
+    dimension: "60 x 40 x 20 cm",
+    volumeM3: 0.048,
+    loading20: "880 bags",
+    loading40: "1,040 bags",
+  },
+  {
+    id: "fresh-lemongrass",
+    category: "spice",
+    name: "Fresh Lemongrass",
+    packageType: "Plastic Crate",
+    packageUnit: "crates",
+    packageWeightLabel: "20 kg",
+    unitWeightKg: 20,
+    dimension: "60 x 40 x 25 cm",
+    volumeM3: 0.06,
+    loading20: "1,100 crates",
+    loading40: "1,300 crates",
+  },
+  {
+    id: "lemongrass-powder",
+    category: "spice",
+    name: "Lemongrass Powder",
+    packageType: "Kraft Paper Bag",
+    packageUnit: "bags",
+    packageWeightLabel: "25 kg",
+    unitWeightKg: 25,
+    dimension: "60 x 40 x 20 cm",
+    volumeM3: 0.048,
+    loading20: "880 bags",
+    loading40: "1,040 bags",
+  },
+];
 
 const CONTAINERS = {
   "20ft": { volume: 33, payload: 22000, label: "20 ft Standard" },
   "40ft": { volume: 67, payload: 26000, label: "40 ft High Cube" },
 };
 
+type WeightUnit = "kg" | "ton";
+
+const CALCULATOR_LABELS: Record<Lang, Record<string, string>> = {
+  en: {
+    targetWeight: "Desired weight",
+    unit: "Unit",
+    productSpec: "Package specification",
+    packageType: "Package type",
+    packageWeight: "Weight / package",
+    dimension: "Dimension",
+    volumePerPackage: "Volume / package",
+    referenceLoading: "Reference loading",
+    packageCount: "Packages",
+    totalWeight: "Total weight",
+    totalVolume: "Estimated volume",
+    usedCapacity: "Container usage",
+    remainingCapacity: "Remaining capacity",
+    containersNeeded: "Containers needed",
+    inputHint: "Enter the buyer's target shipment weight.",
+  },
+  id: {
+    targetWeight: "Berat yang diinginkan",
+    unit: "Satuan",
+    productSpec: "Spesifikasi kemasan",
+    packageType: "Jenis kemasan",
+    packageWeight: "Berat / kemasan",
+    dimension: "Dimensi",
+    volumePerPackage: "Volume / kemasan",
+    referenceLoading: "Referensi muatan",
+    packageCount: "Jumlah kemasan",
+    totalWeight: "Total berat",
+    totalVolume: "Estimasi volume",
+    usedCapacity: "Kapasitas terpakai",
+    remainingCapacity: "Sisa kapasitas",
+    containersNeeded: "Estimasi kontainer",
+    inputHint: "Masukkan target berat pengiriman buyer.",
+  },
+  zh: {
+    targetWeight: "目标重量",
+    unit: "单位",
+    productSpec: "包装规格",
+    packageType: "包装类型",
+    packageWeight: "每件重量",
+    dimension: "尺寸",
+    volumePerPackage: "每件体积",
+    referenceLoading: "参考装载量",
+    packageCount: "包装数量",
+    totalWeight: "总重量",
+    totalVolume: "预计体积",
+    usedCapacity: "集装箱使用率",
+    remainingCapacity: "剩余容量",
+    containersNeeded: "所需集装箱",
+    inputHint: "请输入买方计划装运重量。",
+  },
+  ar: {
+    targetWeight: "الوزن المطلوب",
+    unit: "الوحدة",
+    productSpec: "مواصفات التعبئة",
+    packageType: "نوع التعبئة",
+    packageWeight: "الوزن / عبوة",
+    dimension: "الأبعاد",
+    volumePerPackage: "الحجم / عبوة",
+    referenceLoading: "مرجع التحميل",
+    packageCount: "عدد العبوات",
+    totalWeight: "إجمالي الوزن",
+    totalVolume: "الحجم التقديري",
+    usedCapacity: "استخدام الحاوية",
+    remainingCapacity: "السعة المتبقية",
+    containersNeeded: "الحاويات المطلوبة",
+    inputHint: "أدخل وزن الشحنة المطلوب للمشتري.",
+  },
+};
+
 function Calculator({ lang }: { lang: Lang }) {
   const copy = UI_COPY[lang].calculator;
+  const labels = CALCULATOR_LABELS[lang];
   const numberFormat = useMemo(() => {
     const locale = lang === "id" ? "id-ID" : lang === "zh" ? "zh-CN" : lang === "ar" ? "ar-EG" : "en-US";
     return new Intl.NumberFormat(locale);
   }, [lang]);
-  const [product, setProduct] = useState<keyof typeof PRODUCT_DENSITY>("coco-peat");
+  const [product, setProduct] = useState(CALCULATOR_PRODUCTS[2].id);
   const [container, setContainer] = useState<keyof typeof CONTAINERS>("40ft");
-  const [qty, setQty] = useState(1000);
+  const [targetWeight, setTargetWeight] = useState(26000);
+  const [weightUnit, setWeightUnit] = useState<WeightUnit>("kg");
+
+  const selectedProduct =
+    CALCULATOR_PRODUCTS.find((item) => item.id === product) ?? CALCULATOR_PRODUCTS[2];
 
   const result = useMemo(() => {
-    const d = PRODUCT_DENSITY[product];
     const c = CONTAINERS[container];
-    const totalWeight = d.weight * qty; // kg
-    const totalVolume = d.volume * qty; // m3
-    const containersByWeight = totalWeight / c.payload;
-    const containersByVolume = totalVolume / c.volume;
-    const containersNeeded = Math.max(containersByWeight, containersByVolume);
+    const requestedWeightKg = Math.max(0, weightUnit === "ton" ? targetWeight * 1000 : targetWeight);
+    const packageCount = requestedWeightKg > 0 ? Math.ceil(requestedWeightKg / selectedProduct.unitWeightKg) : 0;
+    const totalWeight = packageCount * selectedProduct.unitWeightKg;
+    const totalVolume = packageCount * selectedProduct.volumeM3;
+    const weightUse = c.payload > 0 ? (totalWeight / c.payload) * 100 : 0;
+    const volumeUse = c.volume > 0 ? (totalVolume / c.volume) * 100 : 0;
+    const limitingUse = Math.max(weightUse, volumeUse);
+    const containersNeeded = packageCount > 0 ? Math.max(1, Math.ceil(limitingUse / 100)) : 0;
+
     return {
+      packageCount,
+      requestedWeightKg,
       totalWeight,
       totalVolume,
+      weightUse,
+      volumeUse,
+      limitingUse,
+      remainingWeight: Math.max(0, c.payload - totalWeight),
+      remainingVolume: Math.max(0, c.volume - totalVolume),
       containersNeeded,
-      utilization: Math.min(1, 1 / containersNeeded) * containersNeeded > 0 ? Math.min(100, (containersNeeded - Math.floor(containersNeeded)) * 100) : 0,
-      unitsPerContainer: Math.floor(Math.min(c.payload / d.weight, c.volume / d.volume)),
-      density: d,
       container: c,
+      referenceLoading: container === "20ft" ? selectedProduct.loading20 : selectedProduct.loading40,
     };
-  }, [product, container, qty]);
-  const selectedProductName =
-    PRODUCTS.find((x) => x.id === product || (product === "charcoal" && x.id === "charcoal"))?.name ?? product;
+  }, [container, selectedProduct, targetWeight, weightUnit]);
+
+  const formatKg = (value: number) => `${numberFormat.format(Math.round(value))} kg`;
+  const formatWeight = (value: number) =>
+    value >= 1000 ? `${(value / 1000).toFixed(2)} MT` : formatKg(value);
+
   const calculatorWhatsAppMessage = [
     "Hello PT Artha Global Prima, I would like to send this container calculation to your sales team.",
     "",
-    `Product: ${selectedProductName}`,
-    `Packaging unit: ${result.density.label}`,
-    `Quantity: ${numberFormat.format(qty)} units`,
+    `Product: ${selectedProduct.name}`,
+    `Package type: ${selectedProduct.packageType}`,
+    `Weight per package: ${selectedProduct.packageWeightLabel}`,
+    `Dimension: ${selectedProduct.dimension}`,
+    `Volume per package: ${selectedProduct.volumeM3.toFixed(3)} m³`,
+    `Target weight: ${formatWeight(result.requestedWeightKg)} (${formatKg(result.requestedWeightKg)})`,
     `Container type: ${result.container.label}`,
-    `Estimated containers needed: ${result.containersNeeded < 1 ? "< 1" : result.containersNeeded.toFixed(2)}`,
-    `Estimated max units per container: ${numberFormat.format(result.unitsPerContainer)}`,
-    `Estimated total weight: ${(result.totalWeight / 1000).toFixed(2)} MT (${numberFormat.format(result.totalWeight)} kg)`,
-    `Estimated total volume: ${result.totalVolume.toFixed(2)} m³`,
+    `Estimated packages: ${numberFormat.format(result.packageCount)} ${selectedProduct.packageUnit}`,
+    `Total calculated weight: ${formatWeight(result.totalWeight)} (${formatKg(result.totalWeight)})`,
+    `Estimated used volume: ${result.totalVolume.toFixed(2)} m³`,
+    `Container utilization: ${result.limitingUse.toFixed(1)}%`,
+    `Remaining capacity: ${formatKg(result.remainingWeight)} / ${result.remainingVolume.toFixed(2)} m³`,
+    `Estimated containers needed: ${numberFormat.format(result.containersNeeded)}`,
+    `Reference max loading: ${result.referenceLoading}`,
     "",
     "Please help me confirm loading plan, pricing, and lead time.",
   ].join("\n");
@@ -1800,31 +2405,27 @@ function Calculator({ lang }: { lang: Lang }) {
           description={copy.desc}
         />
 
-        <div className="lift-panel hover:lift-panel-hover mt-12 grid gap-6 overflow-hidden rounded-3xl bg-card shadow-elevated lg:grid-cols-[1fr_1.1fr]">
-          {/* Inputs */}
+        <div className="lift-panel hover:lift-panel-hover mt-12 grid gap-6 overflow-hidden rounded-3xl bg-card shadow-elevated lg:grid-cols-[0.92fr_1.08fr]">
           <div className="space-y-6 border-b border-border p-6 sm:p-8 lg:border-b-0 lg:border-r">
             <div>
               <label className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
                 {copy.product}
               </label>
-              <div className="mt-2 grid grid-cols-2 gap-2 sm:grid-cols-3">
-                {Object.entries(PRODUCT_DENSITY).map(([id]) => {
-                  const p = PRODUCTS.find((x) => x.id === id || (id === "charcoal" && x.id === "charcoal"));
-                  return (
-                    <button
-                      key={id}
-                      onClick={() => setProduct(id as keyof typeof PRODUCT_DENSITY)}
-                      className={`rounded-xl border px-3 py-2.5 text-left text-xs font-semibold transition ${
-                        product === id
-                          ? "border-[var(--brand-green)] bg-[var(--brand-green)]/10 text-navy-deep"
-                          : "border-border text-navy-deep hover:border-navy-soft"
-                      }`}
-                    >
-                      {p?.name ?? id}
-                    </button>
-                  );
-                })}
-              </div>
+              <select
+                value={product}
+                onChange={(event) => setProduct(event.target.value)}
+                className="mt-2 w-full rounded-2xl border border-border bg-white px-4 py-3 text-sm font-bold text-navy-deep outline-none transition focus:border-[var(--brand-green)] focus:ring-4 focus:ring-[var(--brand-green)]/15"
+              >
+                {PRODUCT_CATEGORIES.map((category) => (
+                  <optgroup key={category.id} label={category.title}>
+                    {CALCULATOR_PRODUCTS.filter((item) => item.category === category.id).map((item) => (
+                      <option key={item.id} value={item.id}>
+                        {item.name} - {item.packageType}
+                      </option>
+                    ))}
+                  </optgroup>
+                ))}
+              </select>
             </div>
 
             <div>
@@ -1835,6 +2436,7 @@ function Calculator({ lang }: { lang: Lang }) {
                 {Object.entries(CONTAINERS).map(([id, c]) => (
                   <button
                     key={id}
+                    type="button"
                     onClick={() => setContainer(id as keyof typeof CONTAINERS)}
                     className={`rounded-xl border px-4 py-3 text-left transition ${
                       container === id
@@ -1852,60 +2454,110 @@ function Calculator({ lang }: { lang: Lang }) {
             </div>
 
             <div>
-              <div className="flex items-center justify-between">
-                <label className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
-                  {copy.quantity} ({PRODUCT_DENSITY[product].label}s)
-                </label>
-                <span className="text-sm font-bold text-navy-deep">{numberFormat.format(qty)}</span>
+              <div className="flex items-end justify-between gap-3">
+                <div>
+                  <label className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
+                    {labels.targetWeight}
+                  </label>
+                  <p className="mt-1 text-xs text-muted-foreground">{labels.inputHint}</p>
+                </div>
+                <div className="flex rounded-full border border-border bg-secondary p-1">
+                  {(["kg", "ton"] as WeightUnit[]).map((unit) => (
+                    <button
+                      key={unit}
+                      type="button"
+                      onClick={() => setWeightUnit(unit)}
+                      className={`rounded-full px-3 py-1 text-xs font-bold transition ${
+                        weightUnit === unit
+                          ? "bg-navy-deep text-white"
+                          : "text-navy-deep hover:bg-white"
+                      }`}
+                    >
+                      {unit}
+                    </button>
+                  ))}
+                </div>
               </div>
               <input
-                type="range"
-                min={50}
-                max={5000}
-                step={50}
-                value={qty}
-                onChange={(e) => setQty(Number(e.target.value))}
-                className="mt-3 w-full accent-[var(--brand-green)]"
+                type="number"
+                min={0}
+                step={weightUnit === "ton" ? 0.5 : 100}
+                value={targetWeight}
+                onChange={(event) => setTargetWeight(Number(event.target.value))}
+                className="mt-3 w-full rounded-2xl border border-border bg-white px-4 py-3 text-2xl font-extrabold text-navy-deep outline-none transition focus:border-[var(--brand-green)] focus:ring-4 focus:ring-[var(--brand-green)]/15"
               />
-              <div className="mt-1 flex justify-between text-[11px] text-muted-foreground">
-                <span>50</span>
-                <span>5,000</span>
+            </div>
+
+            <div className="rounded-2xl border border-border bg-secondary/70 p-4">
+              <div className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
+                {labels.productSpec}
               </div>
+              <dl className="mt-3 grid gap-3 text-sm sm:grid-cols-2">
+                <div>
+                  <dt className="text-muted-foreground">{labels.packageType}</dt>
+                  <dd className="font-bold text-navy-deep">{selectedProduct.packageType}</dd>
+                </div>
+                <div>
+                  <dt className="text-muted-foreground">{labels.packageWeight}</dt>
+                  <dd className="font-bold text-navy-deep">{selectedProduct.packageWeightLabel}</dd>
+                </div>
+                <div>
+                  <dt className="text-muted-foreground">{labels.dimension}</dt>
+                  <dd className="font-bold text-navy-deep">{selectedProduct.dimension}</dd>
+                </div>
+                <div>
+                  <dt className="text-muted-foreground">{labels.volumePerPackage}</dt>
+                  <dd className="font-bold text-navy-deep">{selectedProduct.volumeM3.toFixed(3)} m³</dd>
+                </div>
+              </dl>
             </div>
           </div>
 
-          {/* Results */}
           <div className="bg-navy-deep p-6 text-white sm:p-8">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid gap-4 sm:grid-cols-2">
               <Stat
-                label={copy.containersNeeded}
-                value={result.containersNeeded < 1 ? "< 1" : result.containersNeeded.toFixed(2)}
-                hint={`${CONTAINERS[container].label}`}
+                label={labels.packageCount}
+                value={`${numberFormat.format(result.packageCount)} ${selectedProduct.packageUnit}`}
+                hint={selectedProduct.packageType}
               />
               <Stat
-                label={copy.maxUnits}
-                value={numberFormat.format(result.unitsPerContainer)}
-                hint={copy.maxHint}
+                label={labels.containersNeeded}
+                value={numberFormat.format(result.containersNeeded)}
+                hint={result.container.label}
               />
               <Stat
-                label={copy.totalWeight}
-                value={`${(result.totalWeight / 1000).toFixed(2)} MT`}
-                hint={`${numberFormat.format(result.totalWeight)} kg`}
+                label={labels.totalWeight}
+                value={formatWeight(result.totalWeight)}
+                hint={formatKg(result.totalWeight)}
               />
               <Stat
-                label={copy.totalVolume}
+                label={labels.totalVolume}
                 value={`${result.totalVolume.toFixed(2)} m³`}
-                hint={`${copy.volumeHint} ${result.density.volume} m³`}
+                hint={`${selectedProduct.volumeM3.toFixed(3)} m³ / ${selectedProduct.packageUnit}`}
+              />
+              <Stat
+                label={labels.usedCapacity}
+                value={`${result.limitingUse.toFixed(1)}%`}
+                hint={`Weight ${result.weightUse.toFixed(1)}% · Volume ${result.volumeUse.toFixed(1)}%`}
+              />
+              <Stat
+                label={labels.remainingCapacity}
+                value={formatKg(result.remainingWeight)}
+                hint={`${result.remainingVolume.toFixed(2)} m³`}
               />
             </div>
-            <p className="mt-6 text-xs text-white/60">
-              {copy.note}
-            </p>
+            <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 p-4">
+              <div className="text-[10px] font-bold uppercase tracking-wider text-white/60">
+                {labels.referenceLoading}
+              </div>
+              <div className="mt-1 text-lg font-extrabold">{result.referenceLoading}</div>
+              <p className="mt-2 text-xs text-white/55">{copy.note}</p>
+            </div>
             <a
               href={createWhatsAppUrl(calculatorWhatsAppMessage)}
               target="_blank"
               rel="noreferrer"
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-[var(--brand-green)] px-5 py-2.5 text-sm font-bold text-navy-deep"
+              className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[var(--brand-green)] px-5 py-3 text-sm font-bold text-navy-deep transition hover:brightness-110 sm:w-auto"
             >
               {copy.cta} <Send className="h-4 w-4" />
             </a>
@@ -2537,9 +3189,63 @@ function ArticleLanding({
 function RFQ({ lang }: { lang: Lang }) {
   const copy = UI_COPY[lang].rfq;
   const [submitted, setSubmitted] = useState(false);
+  const commitmentRef = useRef<HTMLDivElement>(null);
+  const [commitmentEntered, setCommitmentEntered] = useState(false);
+
+  useEffect(() => {
+    const node = commitmentRef.current;
+    if (!node || !("IntersectionObserver" in window)) {
+      setCommitmentEntered(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setCommitmentEntered(Boolean(entry?.isIntersecting && entry.intersectionRatio >= 0.18)),
+      { threshold: [0, 0.18, 0.35], rootMargin: "-6% 0px -16% 0px" },
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section id="rfq" className="rfq-section bg-navy-deep py-20 text-white sm:py-28">
-      <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[1fr_1.05fr] lg:items-start">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+        <div
+          ref={commitmentRef}
+          data-entered={commitmentEntered}
+          className="rfq-commitment-panel relative mb-12 overflow-hidden rounded-[2rem] border p-6 shadow-elevated sm:p-8 lg:p-10"
+        >
+          <div className="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-[var(--brand-green)]/20 blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-24 left-12 h-56 w-56 rounded-full bg-white/10 blur-3xl" />
+          <div className="relative grid gap-8 lg:grid-cols-[0.86fr_1.14fr] lg:items-center">
+            <div className="rfq-commitment-left">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[var(--brand-green)]/40 bg-[var(--brand-green)]/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--brand-green)]">
+                <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-green)]" /> {copy.commitment.eyebrow}
+              </div>
+              <h2 className="mt-4 text-3xl font-extrabold leading-tight text-balance sm:text-4xl">
+                {copy.commitment.title}
+              </h2>
+              <p className="mt-4 max-w-xl text-sm leading-7 text-white/72 sm:text-base sm:leading-8">
+                {copy.commitment.body}
+              </p>
+            </div>
+            <div className="rfq-commitment-right rounded-3xl border border-white/12 bg-white/8 p-5 backdrop-blur sm:p-6">
+              <div className="grid h-12 w-12 place-items-center rounded-2xl bg-[var(--brand-green)] text-navy-deep shadow-[0_18px_50px_-20px_rgba(74,222,128,0.8)]">
+                <Sparkles className="h-5 w-5" />
+              </div>
+              <h3 className="mt-5 text-2xl font-extrabold">{copy.commitment.growthTitle}</h3>
+              <p className="mt-3 text-sm leading-7 text-white/72 sm:text-base sm:leading-8">
+                {copy.commitment.growthBody}
+              </p>
+              <div className="mt-5 rounded-2xl border border-[var(--brand-green)]/25 bg-[var(--brand-green)]/10 p-4 text-sm font-semibold leading-7 text-white">
+                {copy.commitment.closing}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid gap-12 lg:grid-cols-[1fr_1.05fr] lg:items-start">
         <div>
           <div className="inline-flex items-center gap-2 rounded-full border border-[var(--brand-green)]/40 bg-[var(--brand-green)]/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--brand-green)]">
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-green)]" /> {copy.eyebrow}
@@ -2559,8 +3265,8 @@ function RFQ({ lang }: { lang: Lang }) {
             />
             <ContactLine
               icon={MapPin}
-              title={copy.office}
-              value="Jakarta, Indonesia · Mon–Sat · 08:00–17:00 WIB"
+              title={copy.headOffice}
+              value={"Gamersi Residence Blok C14\nGondangrejo, Solo\nJawa Tengah - Indonesia"}
             />
             <ContactLine
               icon={Anchor}
@@ -2642,6 +3348,7 @@ function RFQ({ lang }: { lang: Lang }) {
             </div>
           )}
         </form>
+        </div>
       </div>
     </section>
   );
@@ -2665,7 +3372,7 @@ function ContactLine({
       </div>
       <div className="min-w-0">
         <div className="text-[11px] font-bold uppercase tracking-wider text-white/60">{title}</div>
-        <div className="truncate text-sm font-semibold text-white">{value}</div>
+        <div className="whitespace-pre-line text-sm font-semibold leading-6 text-white">{value}</div>
       </div>
     </>
   );
