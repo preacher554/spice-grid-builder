@@ -285,7 +285,7 @@ const COPY = {
     },
     products: {
       eyebrow: "Produk Kami",
-      title: "Produk alami Indonesia yang siap ekspor.",
+      title: "Produk unggulan export kami.",
       desc: "Lini komersial utama untuk pertanian, industri makanan, energi biomassa, manufaktur, dan distribusi retail.",
     },
     vision: {
